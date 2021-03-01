@@ -1,0 +1,112 @@
+.bg-dark-color{
+  background: #1E2533
+}
+.tx-gray{
+  color: #4A4A4A;
+}
+.tx-grayy{
+  color: #9EA0A5;
+}
+.aside-body{
+  width: 95px!important;
+  padding: 24px!important;
+}
+@media (min-width:1200px){
+  .aside-fixed + .content{
+    margin-left: 0px;
+  }
+  .content-body{
+    margin-left: 100px!important;
+  }
+}
+.aside-header{
+  height: 70px!important;
+  min-width: 200px!important;
+}
+.content-header{
+display: block;
+min-height: 250px;
+border-bottom: 0;
+}
+.header-row{
+  padding: 0px 24px;
+}
+.nav-aside .nav-item.active .nav-link{
+  color: #fff!important;
+  font-weight: 700;
+}
+.nav-aside .nav-item.active svg{
+  color: #fff!important;
+  font-weight: 700;
+}
+.nav-aside .nav-item.active .nav-link::before{
+  border-left: 0;
+}
+.nav-aside .nav-link{
+  color:#FFFFFF80;
+}
+.nav-aside svg{
+  color:#FFFFFF80;
+  width: 24px;
+  height: 24px;
+}
+.nav-aside .nav-item + .nav-item{
+  margin-top: 24px;
+}
+.welcome{
+  background:linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/placehold.jpg);
+  background-position: center;
+}
+.header{
+  position: fixed;
+  height: 100px;
+  width: 100%;
+  display: block;
+  /* background-color: aqua; */
+}
+.aside-fixed{
+  top: 70px;
+  height: 100vh;
+}
+.offset-div{
+  margin-top: -10%;
+}
+.overlay {
+  position: fixed;
+  /* display: none; */
+  width: 100%;
+  height: 0%;
+  margin-top: 24px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(62, 88, 88, 0.5);
+  /* z-index: 2; */
+  cursor: pointer;
+}
+.dashboard-img{
+  height: 175px!important;
+}
+@media (max-width: 576px) {
+  .offset-div{
+    margin-top: -40%;
+  }
+  .dashboard-img {
+    min-height: 30vh !important;
+  }
+}
+.bg-red{
+  background-color: #B11E1E;
+}
+.image-box{
+  background: #FFFFFF4D;
+  height: 50%;
+  border-radius: 5px;
+}
+
+.image-boxx{
+  background: #F7E8E8;
+  height: 50%;
+  border-radius: 5px;
+  color: #B11E1E;
+}
