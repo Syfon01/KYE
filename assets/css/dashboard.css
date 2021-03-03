@@ -66,6 +66,7 @@ border-bottom: 0;
   height: 100px;
   width: 100%;
   display: block;
+  z-index: 9999;
   /* background-color: aqua; */
 }
 .aside-fixed{
@@ -129,6 +130,13 @@ border-bottom: 0;
 .block-nav{
   display: block!important;
 }
+.search-form button {
+  border-left-width: 1px
+}
+.content{
+  background-color: #EFEFEF;
+  /* height: 120vh; */
+}
 
 /* ===========================================================
 employee section
@@ -186,7 +194,30 @@ employee section
   width: 16px;
   height: 16px;
 }
-
+.collapse-btn,.back-icon{
+  cursor: pointer;
+}
+.fixed-card{
+  position: fixed;
+  width: 370px;
+  height: 100%;
+  z-index: 999;
+  
+}
+.profile-link{
+  color: #1E2533;
+}
+.profile-link:hover{
+  border-left: 3px solid #B11E1E;
+  border-right: 1px solid #B11E1E;
+  border-top: 1px solid #B11E1E;
+  border-bottom: 1px solid #B11E1E;
+  color: #1E2533;
+}
+.profile-employ{
+  width: 100px;
+  height: 100px;
+}
 /*==============================================================
  end of employee section  
  =============================================================*/
