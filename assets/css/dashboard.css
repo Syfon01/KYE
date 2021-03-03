@@ -8,15 +8,16 @@
   color: #9EA0A5;
 }
 .aside-body{
-  width: 95px!important;
-  padding: 24px!important;
+  max-width: 100px!important;
+  padding: 0px!important;
 }
 @media (min-width:1200px){
   .aside-fixed + .content{
     margin-left: 0px;
   }
   .content-body{
-    margin-left: 100px!important;
+    margin-left: 110px!important;
+    margin-bottom: 200px;
   }
 }
 .aside-header{
@@ -31,28 +32,31 @@ border-bottom: 0;
 .header-row{
   padding: 0px 24px;
 }
-.nav-aside .nav-item.active .nav-link{
+.nav-asid .nav-item.active .nav-link{
   color: #fff!important;
   font-weight: 700;
 }
-.nav-aside .nav-item.active svg{
+.nav-asid .nav-item.active svg{
   color: #fff!important;
   font-weight: 700;
 }
-.nav-aside .nav-item.active .nav-link::before{
+.nav-asid .nav-item.active .nav-link::before{
   border-left: 0;
 }
-.nav-aside .nav-link{
+.nav-asid .nav-link{
   color:#FFFFFF80;
 }
-.nav-aside svg{
+.nav-asid svg{
   color:#FFFFFF80;
   width: 24px;
   height: 24px;
 }
-.nav-aside .nav-item + .nav-item{
-  margin-top: 24px;
+.nav-asid .nav-item + .nav-item{
+  margin-top: 20px;
 }
+.nav.nav-asid li{
+  text-align: center!important;
+  }
 .welcome{
   background:linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/placehold.jpg);
   background-position: center;
@@ -65,7 +69,7 @@ border-bottom: 0;
   /* background-color: aqua; */
 }
 .aside-fixed{
-  top: 70px;
+  top: 65px;
   height: 100vh;
 }
 .offset-div{
@@ -110,3 +114,79 @@ border-bottom: 0;
   border-radius: 5px;
   color: #B11E1E;
 }
+.tx-gray-activity{
+  color: #95A8B8;
+}
+.dropdown-link svg {
+  width: 26px!important;
+  height: 26px!important;
+  color: #B11E1E;
+}
+.nav-logo{
+  width: 75px;
+  height: 35px;
+}
+.block-nav{
+  display: block!important;
+}
+
+/* ===========================================================
+employee section
+================================================================  */
+.thead-bg{
+  background-color: #F3F3F4;
+}
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+  background-color: #B11E1E1A;
+  border-top: 1px solid #B11E1E;
+  border-bottom: 1px solid #B11E1E;
+
+}
+.fa-star.checked{
+  color: #EAA22E;
+}
+.favourite-icon{
+  color: #B11E1E;
+}
+.print-icon{
+  width: 20px!important;
+  height: 20px!important;
+}
+
+/*filter modal*/
+
+.modal.right .modal-dialog {
+  position: fixed;
+  margin: auto;
+  width: 370px;
+  height: 100%;
+  -webkit-transform: translate3d(0%, 0, 0);
+      -ms-transform: translate3d(0%, 0, 0);
+       -o-transform: translate3d(0%, 0, 0);
+          transform: translate3d(0%, 0, 0);
+}
+
+.modal.right .modal-content {
+  height: 100%;
+  overflow-y: auto;
+}
+
+
+.modal.right.fade .modal-dialog {
+  right: 0px;
+  -webkit-transition: opacity 0.3s linear, right 0.3s ease-out;
+     -moz-transition: opacity 0.3s linear, right 0.3s ease-out;
+       -o-transition: opacity 0.3s linear, right 0.3s ease-out;
+          transition: opacity 0.3s linear, right 0.3s ease-out;
+}
+.search-form .tt-hint, .search-form .tt-input{
+  border-right-width: 0px!important
+}
+.add-icon{
+  width: 16px;
+  height: 16px;
+}
+
+/*==============================================================
+ end of employee section  
+ =============================================================*/

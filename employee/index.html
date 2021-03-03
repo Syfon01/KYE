@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="UBA - Know Your Employee">
+    <title>UBA - Know Your Employee</title>
+
+    <!-- Required External CSS -->
+    <link href="../assets/lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="../assets/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="../assets/lib/jqvmap/jqvmap.min.css" rel="stylesheet">
+
+    <link href="../assets/lib/prismjs/themes/prism-vs.css" rel="stylesheet">
+    <link href="../assets/lib/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="../assets/lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet">
+    <link href="../assets/lib/select2/css/select2.min.css" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png">
+
+    <!-- DashForge CSS -->
+    <link rel="stylesheet" href="../assets/css/dashforge.css">
+
+    <!-- Page CSS --> 
+    <link rel="stylesheet" href="../assets/css/dashboard.css">
+    
+
+  </head>
+  <body>
+<div class="header">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow">
+    <div class="row header-row">
+      <div class="avatar avatar-md"><img src="../assets/img/boy.svg" class="img-fluid rounded-circle" alt=""></div>
+      <div class="pd-l-10">
+        <p class="tx-14 tx-gray mb-1">Tony Elumelu</p>
+        <p class="tx-12 tx-grayy mb-0">Chairman</p>
+      </div>
+    </div> 
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto pd-r-40">
+        
+        
+        <li class="nav-item active pd-r-40 pd-t-5">
+          <div class="dropdown dropdown-notification">
+            <a href="" class="dropdown-link new-indicator" data-toggle="dropdown">
+              <i data-feather="bell"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right">
+              <div class="dropdown-header">Notifications</div>
+              <a href="" class="dropdown-item">
+                <div class="media">
+                  <div class="avatar avatar-sm avatar-online"><img src="../assets/img/boy.svg"
+                      class="rounded-circle" alt=""></div>
+                  <div class="media-body mg-l-15">
+                    <p>Congratulate <strong>Socrates Itumay</strong> for work anniversaries</p>
+                    <span>Mar 15 12:32pm</span>
+                  </div>
+                </div>
+              </a>
+              <a href="" class="dropdown-item">
+                <div class="media">
+                  <div class="avatar avatar-sm avatar-online"><img src="../assets/img/boy.svg"
+                      class="rounded-circle" alt=""></div>
+                  <div class="media-body mg-l-15">
+                    <p><strong>Joyce Chua</strong> just created a new blog post</p>
+                    <span>Mar 13 04:16am</span>
+                  </div>
+                </div>
+              </a>
+              <a href="" class="dropdown-item">
+                <div class="media">
+                  <div class="avatar avatar-sm avatar-online"><img src="../assets/img/boy.svg"
+                      class="rounded-circle" alt=""></div>
+                  <div class="media-body mg-l-15">
+                    <p><strong>Althea Cabardo</strong> just created a new blog post</p>
+                    <span>Mar 13 02:56am</span>
+                  </div>
+                </div>
+              </a>
+              <a href="" class="dropdown-item">
+                <div class="media">
+                  <div class="avatar avatar-sm avatar-online"><img src="../assets/img/boy.svg"
+                      class="rounded-circle" alt=""></div>
+                  <div class="media-body mg-l-15">
+                    <p><strong>Adrian Monino</strong> added new comment on your photo</p>
+                    <span>Mar 12 10:40pm</span>
+                  </div>
+                </div>
+              </a>
+              <div class="dropdown-footer"><a href="">View all Notifications</a></div>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item">
+          <img class="uba-logo img-fluid nav-logo" alt="UBA Logo Dark" src="../assets/img/uba_logo_red.svg">
+        </li>
+      
+    </div>
+  </nav>
+  
+</div>
+    <aside class="asid aside-fixed">
+      
+        <!-- <a href="" class="aside-menu-link">
+          <i data-feather="menu"></i>
+          <i data-feather="x"></i>
+        </a> -->
+      </div>
+      <div class="aside-body bd-t-0 bg-dark-color tx-center">
+       
+        <ul class="nav block-nav nav-asid pd-t-20 tx-center">
+          
+          <li class="nav-item ">
+              <a href="../dashboard.html" class="nav-link">
+                <i data-feather="grid"></i>
+                <p class="mb-0">Home</p>
+              </a>   
+            </li>
+          
+          <li class="nav-item active">
+            <a href="./employee/index.html" class="nav-link">
+              <i data-feather="users"></i>
+              <p class="mb-0">Employees</p></a>
+          </li>
+          
+          <li class="nav-item">
+            <a href="project.html" class="nav-link"><i data-feather="file-plus"></i>
+              <p class="mb-0">Projects</p></a>
+          </li>
+
+          <li class="nav-item">
+            <a href="favourite.html" class="nav-link"><i data-feather="heart"></i>
+              <p class="mb-0">Favourites</p></a>
+          </li>
+          
+          <li class="nav-item">
+            <a href="history.html" class="nav-link"><i data-feather="rotate-ccw"></i>
+              <p class="mb-0">History</p></a>
+          </li>
+         
+          <li class="nav-item">
+            <a href="setting.html" class="nav-link"><i data-feather="settings"></i>
+              <p class="mb-0">Settings</p></a>
+          </li>
+         
+        </ul>
+              
+      </div>
+    </aside>
+
+    <div class="content ht-100v pd-0">
+      
+      <div class="content-body pd-t-100">
+       <div>
+         <p class="tx-24 tx-semibold mb-0"> All Employees</p>
+         <p class="tx-14 tx-gray">Here is the list of employees</p>
+       </div>
+       <div class="card mg-t-50">
+         <div class="card-header">
+            <div class="col-12 col-md-5 col-lg-4 offset-md-8 px-0">
+                <div class="row justify-content-between">
+                  <div class="col-5 pd-r-0">
+                    <button class="btn btn-outline-primary w-100" data-toggle="modal" data-target="#exportModal">
+                      <span>
+                        <i data-feather="download" class="mg-r-5"></i>
+                           Export as
+                      </span>
+                    </button>
+                  </div>
+                  <div class="col-4 pd-r-5">
+                    <button class="btn btn-primary w-100" data-toggle="modal" data-target="#filterModal">
+                      <span>
+                        <i data-feather="filter" class="mg-r-5"></i>
+                        Filter
+                      </span>
+                    </button>
+                  </div>
+                  <div class="col pd-x-0">
+                    <button class="btn btn-primary-outline">
+                      <span>
+                        <i data-feather="printer" class="tx-primary mg-r-5 print-icon"></i>
+                        Print
+                      </span>
+                    </button>
+                  </div>
+              </div>
+            </div>
+         </div>
+         <div class="card-body">
+          <table class="table table-hover" id="employee">
+            <thead class="thead-bg">
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Job Role</th>
+                <th scope="col">Grade</th>
+                <th scope="col">Department</th>
+                <th scope="col">Division</th>
+                <th scope="col">Current Performance</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck2">
+                    <label class="custom-control-label" for="customCheck2">
+                      <div class="avatar avatar-sm"><img src="../assets/img/boy.png" class="rounded-circle" alt=""></div>
+                    </label>
+                  </div>
+                </th>
+                <td>Adrian </td>
+                <td>Monino</td>
+                <td>Full Stack Developer</td>
+                <td>Team Lead</td>
+                <td>Development</td>
+                <td>Lagos</td>
+                <td>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    
+                </td>
+                <td>
+                  <i data-feather="heart" class="favourite-icon"></i>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck1">
+                    <label class="custom-control-label" for="customCheck1">
+                      <div class="avatar avatar-sm"><img src="../assets/img/boy.png" class="rounded-circle" alt=""></div>
+                    </label>
+                  </div>
+                </th>
+                <td>Socrates </td>
+                <td>Itumay</td>
+                <td>Chief Operating</td>
+                <td>Assistant Manager</td>
+                <td>Support</td>
+                <td>Abuja</td>
+                <td>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                
+                </td>
+                <td>
+                  <i data-feather="heart" class="favourite-icon"></i>
+                </td>
+              </tr>
+              
+            </tbody>
+          </table>
+         </div>
+        
+       </div>
+
+       <!-- export modal  -->
+        <div class="modal fade" id="exportModal" tabindex="-1" role="dialog" aria-labelledby="exportModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exportModalLabel">EXPORT AS</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p class="tx-13">Select to export your file in any of these formats</p>
+                <div class="custom-control custom-radio pd-y-10">
+                  <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" checked>
+                  <label class="custom-control-label" for="customRadio1">PDF</label>
+                </div>
+
+                <div class="custom-control custom-radio pd-y-10">
+                  <input type="radio" id="customExcel" name="customRadio" class="custom-control-input">
+                  <label class="custom-control-label" for="customExcel">Excel</label>
+                </div>
+
+                <div class="custom-control custom-radio pd-y-10">
+                  <input type="radio" id="customCSV" name="customRadio" class="custom-control-input" >
+                  <label class="custom-control-label" for="customCSV">CSV</label>
+                </div>
+                
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#successModal">Export</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+          <!--filtter Modal -->
+          <div class="modal right fade" id="filterModal" tabindex="-1" role="dialog" aria-labelledby="filterModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <p class=" tx-20 tx-semibold modal-title" id="filterModalLabel">Filter Search</p>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              
+              <div class="modal-body">
+                <p class="tx-14 tx-gray">Narrow down your search with precise data</p>
+                </p>
+                <div class="search-form">
+                  <input type="search" id="theBasics" class="form-control" placeholder="Search by Keywords">
+                  <button class="btn" type="button"><i data-feather="search"></i></button>
+                </div>
+
+                <div id="accordion">
+                  <div class="card mt-4 bd-b-0">
+                    <div class="card-header pd-10" id="headingOne">
+                      <div class="d-flex justify-content-between collapse-btn"  data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <p class="tx-14 mb-0">Custom Projects</p>
+                        <p class="tx-14 tx-normal mb-0"><i class="fas fa-plus ml-2"></i></p>
+                      </div>                   
+                    </div>
+                
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                      <div class="card-body pd-10">
+                        <a href="" class="tx-14">
+                         <i data-feather="plus" class="add-icon"></i>
+                          <span class="tx-grayy">Add Project</span>
+                        </a>
+                        
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="card bd-b-0">
+                    <div class="card-header pd-10" id="headingTwo">
+                      <div class="d-flex justify-content-between collapse-btn"  data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseOne">
+                        <p class="tx-14 mb-0">Department</p>
+                        <p class=" mb-0 panel-title"><i class="fas fa-plus ml-2"></i></p>
+                      </div>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                      <div class="card-body pd-10">
+                        <a href="" class="tx-14">
+                         <i data-feather="plus" class="add-icon"></i>
+                          <span class="tx-grayy">Add Department</span>
+                        </a>
+                        
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card bd-b-0">
+                    <div class="card-header pd-10" id="headingThree">
+                      <div class="d-flex justify-content-between collapse-btn"  data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseOne">
+                        <p class="tx-14 mb-0">Geography</p>
+                        <p class=" mb-0 panel-title"><i class="fas fa-plus ml-2"></i></p>
+                      </div>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                      <div class="card-body pd-10">
+                        <a href="" class="tx-14">
+                         <i data-feather="plus" class="add-icon"></i>
+                          <span class="tx-grayy">Add Geography</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card bd-b-0">
+                    <div class="card-header pd-10" id="headingFour">
+                      <div class="d-flex justify-content-between collapse-btn"  data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseOne">
+                        <p class="tx-14 mb-0">Job Role</p>
+                        <p class=" mb-0 panel-title"><i class="fas fa-plus ml-2"></i></p>
+                      </div>
+                    </div>
+                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                      <div class="card-body pd-10">
+                        <a href="" class="tx-14">
+                         <i data-feather="plus" class="add-icon"></i>
+                          <span class="tx-grayy">Add Job Role</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card bd-b-0">
+                    <div class="card-header pd-10" id="headingFive">
+                      <div class="d-flex justify-content-between collapse-btn"  data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseOne">
+                        <p class="tx-14 mb-0">Years of Experience</p>
+                        <p class=" mb-0 panel-title"><i class="fas fa-plus ml-2"></i></p>
+                      </div>
+                    </div>
+                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                      <div class="card-body pd-10">
+                        <a href="" class="tx-14">
+                         <i data-feather="plus" class="add-icon"></i>
+                          <span class="tx-grayy">Add Years of Experience</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card bd-b-0">
+                    <div class="card-header pd-10" id="headingSix">
+                      <div class="d-flex justify-content-between collapse-btn"  data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseOne">
+                        <p class="tx-14 mb-0">Skills</p>
+                        <p class=" mb-0 panel-title"><i class="fas fa-plus ml-2"></i></p>
+                      </div>
+                    </div>
+                    <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
+                      <div class="card-body pd-10">
+                        <a href="" class="tx-14">
+                         <i data-feather="plus" class="add-icon"></i>
+                          <span class="tx-grayy">Add Skills</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card bd-b-0">
+                    <div class="card-header pd-10" id="headingSeven">
+                      <div class="d-flex justify-content-between collapse-btn"  data-toggle="collapse" data-target="#collapseSeven" aria-expanded="true" aria-controls="collapseOne">
+                        <p class="tx-14 mb-0">Grade Level</p>
+                        <p class=" mb-0 panel-title"><i class="fas fa-plus ml-2"></i></p>
+                      </div>
+                    </div>
+                    <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion">
+                      <div class="card-body pd-10">
+                        <a href="" class="tx-14">
+                         <i data-feather="plus" class="add-icon"></i>
+                          <span class="tx-grayy">Grade Level</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card bd-b-0">
+                    <div class="card-header pd-10" id="headingEight">
+                      <div class="d-flex justify-content-between collapse-btn"  data-toggle="collapse" data-target="#collapseEight" aria-expanded="true" aria-controls="collapseOne">
+                        <p class="tx-14 mb-0">Employment Type</p>
+                        <p class=" mb-0 panel-title"><i class="fas fa-plus ml-2"></i></p>
+                      </div>
+                    </div>
+                    <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordion">
+                      <div class="card-body pd-10">
+                        <a href="" class="tx-14">
+                         <i data-feather="plus" class="add-icon"></i>
+                          <span class="tx-grayy">Employment Type</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card bd-b-0">
+                    <div class="card-header pd-10" id="headingNine">
+                      <div class="d-flex justify-content-between collapse-btn"  data-toggle="collapse" data-target="#collapseNine" aria-expanded="true" aria-controls="collapseOne">
+                        <p class="tx-14 mb-0">Degree</p>
+                        <p class=" mb-0 panel-title"><i class="fas fa-plus ml-2"></i></p>
+                      </div>
+                    </div>
+                    <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordion">
+                      <div class="card-body pd-10">
+                        <a href="" class="tx-14">
+                         <i data-feather="plus" class="add-icon"></i>
+                          <span class="tx-grayy">Degree</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                
+                  <div class="card bd-b-0">
+                    <div class="card-header pd-10" id="headingTen">
+                      <div class="d-flex justify-content-between collapse-btn"  data-toggle="collapse" data-target="#collapseTen" aria-expanded="true" aria-controls="collapseOne">
+                        <p class="tx-14 mb-0">Age</p>
+                        <p class=" mb-0 panel-title"><i class="fas fa-plus ml-2"></i></p>
+                      </div>
+                    </div>
+                    <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#accordion">
+                      <div class="card-body pd-10">
+                        <a href="" class="tx-14">
+                         <i data-feather="plus" class="add-icon"></i>
+                          <span class="tx-grayy">Age</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                
+                  <div class="card bd-b-0">
+                    <div class="card-header pd-10" id="headingEleven">
+                      <div class="d-flex justify-content-between collapse-btn"  data-toggle="collapse" data-target="#collapseEleven" aria-expanded="true" aria-controls="collapseOne">
+                        <p class="tx-14 mb-0">Certifications</p>
+                        <p class=" mb-0 panel-title"><i class="fas fa-plus ml-2"></i></p>
+                      </div>
+                    </div>
+                    <div id="collapseEleven" class="collapse" aria-labelledby="headingEleven" data-parent="#accordion">
+                      <div class="card-body pd-10">
+                        <a href="" class="tx-14">
+                         <i data-feather="plus" class="add-icon"></i>
+                          <span class="tx-grayy">Certifications</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                
+                
+                </div>
+  
+                
+               
+            </div><!-- modal-content -->
+          </div><!-- modal-dialog -->
+        </div><!-- modal -->
+
+
+
+        <!-- export modal  -->
+        <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+            <div class="modal-content">
+              
+              <div class="modal-body tx-center pd-y-20">
+               <p class="tx-18 tx-semibold">Success!</p>
+               <p class="tx-14 tx-gray">Files have been exported successfully</p>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+
+
+    </div><!-- container -->
+      </div>
+    </div>
+
+    <script src="../assets/lib/jquery/jquery.min.js"></script>
+    <script src="../assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/lib/feather-icons/feather.min.js"></script>
+    <script src="../assets/lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+
+    <script src="../assets/lib/prismjs/prism.js"></script>
+    <script src="../assets/lib/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="../assets/lib/datatables.net-dt/js/dataTables.dataTables.min.js"></script>
+    <script src="../assets/lib/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="../assets/lib/datatables.net-responsive-dt/js/responsive.dataTables.min.js"></script>
+    <script src="../assets/lib/typeahead.js/typeahead.jquery.min.js"></script>
+    <script src="../assets/lib/typeahead.js/typeahead.bundle.min.js"></script>
+
+
+    <script src="../assets/lib/chart.js/Chart1.min.js"></script>
+    <script src="../assets/lib/chart.js/utils.js"></script>
+
+    <script src="../assets/js/dashforge.js"></script>
+    <script src="../assets/js/dashforge.aside.js"></script>
+    <script src="../assets/js/dashforge.sampledata.js"></script>
+
+    <!-- append theme customizer -->
+    <script src="../assets/lib/js-cookie/js.cookie.js"></script>
+    <!-- <script src="../assets/js/dashforge.settings.js"></script> -->
+<script>
+  var substringMatcher = function(strs) {
+return function findMatches(q, cb) {
+  var matches, substrRegex;
+
+  // an array that will be populated with substring matches
+  matches = [];
+
+  // regex used to determine if a string contains the substring `q`
+  substrRegex = new RegExp(q, 'i');
+
+  // iterate through the pool of strings and for any string that
+  // contains the substring `q`, add it to the `matches` array
+  $.each(strs, function(i, str) {
+    if (substrRegex.test(str)) {
+      matches.push(str);
+    }
+  });
+
+  cb(matches);
+};
+};
+
+var names = ['Seyi Peters', 'Bassey Elijah', 'Arizona Jones', 'Tammy Abraham', 'California Bill',
+'Isa Seyi', 'Clinton Barack',"Will Smith" , "Dave Dan", 'Kelvin smith'
+];
+
+$('#theBasics').typeahead({
+hint: true,
+highlight: true,
+minLength: 1
+},
+{
+name: 'names',
+source: substringMatcher(names)
+});
+
+</script>
+
+    <script>
+      $('#employee').DataTable({
+        responsive: true,
+        language: {
+          searchPlaceholder: 'Search...',
+          sSearch: '',
+          lengthMenu: '_MENU_ items/page',
+          columnDefs: [{
+              responsivePriority: 1,
+              targets: 0
+            },
+            {
+              responsivePriority: 2,
+              targets: -1
+            }
+          ]
+        }
+      });
+    </script>
+
+    <script>
+      $(document).ready(function(){
+        // Add minus icon for collapse element which is open by default
+        $(".collapse.show").each(function(){
+          $(this).prev(".card-header").find(".fas").addClass("fa-minus").removeClass("fa-plus");
+        });
+        // Toggle plus minus icon on show hide of collapse element
+        $(".collapse").on('show.bs.collapse', function(){
+          $(this).prev(".card-header").find(".fas").removeClass("fa-plus").addClass("fa-minus");
+        }).on('hide.bs.collapse', function(){
+          $(this).prev(".card-header").find(".fas").removeClass("fa-minus").addClass("fa-plus");
+        });
+      });
+      </script>
+
+  </body>
+</html>

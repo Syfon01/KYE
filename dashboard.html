@@ -23,14 +23,10 @@
 
     <!-- DashForge CSS -->
     <link rel="stylesheet" href="assets/css/dashforge.css">
-    <link rel="stylesheet" href="assets/css/dashboard.css">
-    <link rel="stylesheet" href="assets/css/dashforge.dashboard.css">
 
     <!-- Page CSS --> 
+    <link rel="stylesheet" href="assets/css/dashboard.css">
     
-    <link rel="stylesheet" href="assets/css/progress.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-
   </head>
   <body>
 <div class="header">
@@ -44,10 +40,10 @@
     </div> 
   
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto">
+      <ul class="navbar-nav ml-auto pd-r-40">
         
         
-        <li class="nav-item active pd-r-20">
+        <li class="nav-item active pd-r-40 pd-t-5">
           <div class="dropdown dropdown-notification">
             <a href="" class="dropdown-link new-indicator" data-toggle="dropdown">
               <i data-feather="bell"></i>
@@ -99,7 +95,7 @@
           </div>
         </li>
         <li class="nav-item">
-          <img class="uba-logo img-fluid" alt="UBA Logo Dark" src="assets/img/uba_logo_red.svg">
+          <img class="uba-logo img-fluid nav-logo" alt="UBA Logo Dark" src="assets/img/uba_logo_red.svg">
         </li>
       
     </div>
@@ -113,42 +109,41 @@
           <i data-feather="x"></i>
         </a> -->
       </div>
-      <div class="aside-body bd-t-0 bg-dark-color">
+      <div class="aside-body bd-t-0 bg-dark-color tx-center">
        
-        <ul class="nav nav-aside">
-
+        <ul class="nav block-nav nav-asid pd-t-20 tx-center">
+          
           <li class="nav-item active">
-            <div>
               <a href="dashboard.html" class="nav-link">
                 <i data-feather="grid"></i>
-                <span class="marine-active-menu">Dashboard</span>
-              </a>
-            </div>
+                <p class="mb-0">Home</p>
+              </a>   
             </li>
           
           <li class="nav-item">
-            <a href="dashboard.html" class="nav-link"><i data-feather="users"></i>
-              <span>Employees</span></a>
+            <a href="./employee/index.html" class="nav-link">
+              <i data-feather="users"></i>
+              <p class="mb-0">Employees</p></a>
           </li>
           
           <li class="nav-item">
-            <a href="dashboard.html" class="nav-link"><i data-feather="file-plus"></i>
-              <span>Projects</span></a>
+            <a href="project.html" class="nav-link"><i data-feather="file-plus"></i>
+              <p class="mb-0">Projects</p></a>
           </li>
 
           <li class="nav-item">
-            <a href="dashboard.html" class="nav-link"><i data-feather="heart"></i>
-              <span>Favourites</span></a>
+            <a href="favourite.html" class="nav-link"><i data-feather="heart"></i>
+              <p class="mb-0">Favourites</p></a>
           </li>
           
           <li class="nav-item">
-            <a href="dashboard.html" class="nav-link"><i data-feather="rotate-ccw"></i>
-              <span>History</span></a>
+            <a href="history.html" class="nav-link"><i data-feather="rotate-ccw"></i>
+              <p class="mb-0">History</p></a>
           </li>
          
           <li class="nav-item">
-            <a href="dashboard.html" class="nav-link"><i data-feather="settings"></i>
-              <span>Settings</span></a>
+            <a href="setting.html" class="nav-link"><i data-feather="settings"></i>
+              <p class="mb-0">Settings</p></a>
           </li>
          
         </ul>
@@ -177,7 +172,7 @@
       
       <div class="content-body">
         <div class="container pd-x-0">
-          <div class="row col-lg col-12">
+          <div class="row">
             <div class="col-md-3 col-6">
               <div class="card shadow bg-red tx-white">
                 <div class="card-body">
@@ -246,19 +241,92 @@
               </div>
             </div>
           </div>
-          <div class="row">
+          <div class="row mg-t-30 mg-b-200">
             <div class="col-md-8 col-12">
               <div class="card">
-                <div class="card-body">
-                  
+                <div class="card-header pd-y-20 d-md-flex align-items-center justify-content-between bd-b-0">
+                  <p class="mg-b-0 tx-18 tx-semibold white">Total UBA Headcount</p>
+                  <div>
+
+                  </div>
+                </div><!-- card-header -->
+                <div class="card-body pos-relative pd-0">
+  
+                  <!-- Line Chart End -->
+                  <div class="line-chart" style="width:100%; padding:20px;">
+                    <div class="aspect-ratio">
+                      <canvas id="chart"></canvas>
+                    </div>
+                  </div>
+                  <!-- Line Chart End -->
+  
                 </div>
               </div>
             </div>
             <div class="col-md-4 col-12">
+              <div class="card">
+                <div class="card-header">
+                  <div class="d-flex justify-content-between">
+                    <p class="tx-bold tx-18 title-text my-0">Activity Log</p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-2">
+                      <div class="avatar avatar-sm"><img src="../assets/img/birthday1.png" src="notification"></div>
+                    </div>
+                    <div class="col-10">
+                      <p class="tx-16 mb-0">You selected Mary Jane’s profile</p>
+                      <p class="tx-gray-activity">12th January, 2021</p>
+                    </div>
 
+                    <div class="col-2">
+                      <div class="avatar avatar-sm"><img src="../assets/img/birthday1.png" src="notification"></div>
+                    </div>
+                    <div class="col-10">
+                      <p class="tx-16 mb-0">Added Kuye Ayomide to Favourites</p>
+                      <p class="tx-gray-activity">12th January, 2021</p>
+                    </div>
+                 
+                  <div class="col-2">
+                    <div class="avatar avatar-sm"><img src="../assets/img/birthday1.png" src="notification"></div>
+                  </div>
+                  <div class="col-10">
+                    <p class="tx-16 mb-0">You selected Lanre Fasasi’s profile</p>
+                    <p class="tx-gray-activity">12th January, 2021</p>
+                  </div>
+
+                  <div class="col-2">
+                    <div class="avatar avatar-sm"><img src="../assets/img/birthday1.png" src="notification"></div>
+                  </div>
+                  <div class="col-10">
+                    <p class="tx-16 mb-0">You selected Lanre Fasasi’s profile</p>
+                    <p class="tx-gray-activity">12th January, 2021</p>
+                  </div>
+               
+                  <div class="col-2">
+                    <div class="avatar avatar-sm"><img src="../assets/img/birthday1.png" src="notification"></div>
+                  </div>
+                  <div class="col-10">
+                    <p class="tx-16 mb-0">Added Kuye Ayomide to Favourites</p>
+                    <p class="tx-gray-activity">12th January, 2021</p>
+                  </div>
+
+                  <div class="col-2">
+                    <div class="avatar avatar-sm"><img src="../assets/img/birthday1.png" src="notification"></div>
+                  </div>
+                  <div class="col-10">
+                    <p class="tx-16 mb-0">You searched previous history</p>
+                    <p class="tx-gray-activity">12th January, 2021</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          </div><!-- container -->
+
+        </div>
+      </div>
+    </div><!-- container -->
       </div>
     </div>
 
@@ -313,14 +381,14 @@
 
 
       var data = {
-        labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'],
         datasets: [{
-          label: 'Responsiveness',
+          label: 'Monthly',
           backgroundColor: gradient,
           pointBackgroundColor: 'white',
           borderWidth: 2,
           borderColor: '#D70900',
-          data: [64, 25, 55, 45, 54]
+          data: [640, 250, 505, 4500, 547, 1234,3000, 5090, 6709,300,7860,9000]
         }]
       };
 
