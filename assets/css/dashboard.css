@@ -28,6 +28,7 @@
 display: block;
 min-height: 250px;
 border-bottom: 0;
+background-color: transparent;
 }
 .header-row{
   padding: 0px 24px;
@@ -217,6 +218,18 @@ employee section
 .profile-employ{
   width: 100px;
   height: 100px;
+}
+.profile-card-header{
+  background-image: url('../img/placehold.jpg');
+}
+.image-center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+}
+.card-div{
+  margin-top: -20px;
 }
 /*==============================================================
  end of employee section  
