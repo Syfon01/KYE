@@ -123,22 +123,22 @@
           </li>
           
           <li class="nav-item">
-            <a href="project.html" class="nav-link"><i data-feather="file-plus"></i>
+            <a href="../project.html" class="nav-link"><i data-feather="file-plus"></i>
               <p class="mb-0">Projects</p></a>
           </li>
 
           <li class="nav-item">
-            <a href="favourite.html" class="nav-link"><i data-feather="heart"></i>
+            <a href="../favourite.html" class="nav-link"><i data-feather="heart"></i>
               <p class="mb-0">Favourites</p></a>
           </li>
           
           <li class="nav-item">
-            <a href="history.html" class="nav-link"><i data-feather="rotate-ccw"></i>
+            <a href="../history.html" class="nav-link"><i data-feather="rotate-ccw"></i>
               <p class="mb-0">History</p></a>
           </li>
          
           <li class="nav-item">
-            <a href="setting.html" class="nav-link"><i data-feather="settings"></i>
+            <a href="../setting.html" class="nav-link"><i data-feather="settings"></i>
               <p class="mb-0">Settings</p></a>
           </li>
          
@@ -266,14 +266,15 @@
                 <div class="col-md-7 col-12">
                   <div class="row justify-content-between">
                     <div class="col-1">
-                      <a href="http://">
-                         <i data-feather="clock" class="fill-clock mg-t-5"></i>     
-                      </a>
+                      <button class="btn btn-transparent tx-primary pd-x-0" data-toggle="modal" data-target="#timeModal">
+                         <i data-feather="clock" class="fill-clock icon-lg"></i>     
+                      </button>
                     </div>
                     <div class="col-1">
-                      <a href="http://">
-                          <i data-feather="heart" class="fill-heart mg-t-5"></i></i>     
-                      </a>
+                      <button class="btn btn-transparent tx-primary pd-x-0" data-toggle="modal" data-target="#favouriteModal">
+                        <i data-feather="heart" class="fill-clock icon-lg"></i>     
+                     </button>
+                     
                     </div>
                     <div class="col-5">
                       <button class="btn btn-outline-primary profile-export w-100" data-toggle="modal" data-target="#exportModal">
@@ -464,6 +465,60 @@
           </div>
         </div>
 
+
+           <!-- time modal  -->
+           <div class="modal fade" id="timeModal" tabindex="-1" role="dialog" aria-labelledby="timeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="timeModalLabel">What will you like to be reminded of?</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="form-group">
+                      <label for="notes" class="d-block">Add Notes</label>
+                      <textarea class="form-control" placeholder="Description" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                      <label for="date" class="d-block">Set Date</label>
+                      <input type="date" class="form-control">
+                    </div>
+                    <div class="form-group">
+                      <label for="time" class="d-block">Time</label>
+                      <input type="time" class="form-control">
+                    </div>
+                   
+                  </form>
+                  
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary pd-x-20" data-dismiss="modal" data-toggle="modal" data-target="#successModal">Save</button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+  
+                </div>
+              </div>
+            </div>
+          </div>
+  
+            <!-- favourite modal  -->
+        <div class="modal fade" id="favouriteModal" tabindex="-1" role="dialog" aria-labelledby="favouriteModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+            <div class="modal-content">
+              
+              <div class="modal-body tx-center pd-y-20">
+                <div class="pd-y-30">
+                <img src="../assets/img/icon/success.svg" class="img-fluid"/>
+                </div>
+               <p class="tx-18 tx-semibold">Success!</p>
+               <p class="tx-14 tx-gray">This profile has been added to your Favourite list</p>
+              </div>
+              
+            </div>
+          </div>
+        </div>
 
        
 
