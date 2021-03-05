@@ -117,7 +117,7 @@
             </li>
           
           <li class="nav-item active">
-            <a href="./employee/index.html" class="nav-link">
+            <a href="./index.html" class="nav-link">
               <i data-feather="users"></i>
               <p class="mb-0">Employees</p></a>
           </li>
@@ -148,16 +148,15 @@
     </aside>
 
     <div class="content pd-0">
-      ￼
-
-        <div class="content-body pd-t-75">
+     
+        <div class="content-body pd-t-100">
           <div class="row">
             <div class="col-md-4 col-12">
               <div class="">
                 <div class="card">
                   <div class="card-header profile-card-header">
                 <span onclick="goBack()" class="tx-20 tx-bold back-icon"><i data-feather="arrow-left" class="tx-white"></i></span>
-                    <div class="tx-center card-div">
+                    <div class="tx-center card-div tx-white">
                       <div class="image-center">
                         <div class="avatar avatar-xxl"><img src="../assets/img/icon/placeholder.jpg" class="rounded-circle" alt=""></div>
                       </div>
@@ -227,14 +226,33 @@
                       <div class="row">
                         <div class="col-md-7 col-7 pd-y-5">
                           <p class="tx-14 tx-medium mb-0">Nationality</p>
-                          <p class="tx-14">Nigerian</p>
+                          <p class="tx-14"> <img src="../assets/img/icon/flag.svg" class="img-fluid flag-icon"/>
+                            Nigerian</p>
                         </div>
                         <div class="col-md-5 col-5 pd-l-0">
                           <p class="tx-14 tx-medium mb-0">Country of Work</p>
                           <p class="tx-14"> 
+                            <img src="../assets/img/icon/flag.svg" class="img-fluid flag-icon"/>
                             Nigerian
                            </p>
                         </div>
+                      </div>
+                      <hr/>
+                      <div>
+                        <p class="tx-14 tx-medium mb-0">Social Media</p>
+                        <p class="mb-2">
+                          <a href="">
+                            <i class="fab fa-linkedin tx-dark pd-r-10"> </i>
+                            Linkedin.com/taiwo
+                          </a>
+                        </p>
+                        <p>
+                          <a href="">
+                            <i class="fab fa-twitter tx-dark pd-r-10"> </i>
+                            Twitter.com/taiwo
+                          </a>
+                        </p>
+                          
                       </div>
                     </div>
                   </div>
@@ -243,21 +261,308 @@
             <div class="col-md-8 col-12">
               <div class="row">
                 <div class="col-md-5 col-12">
-                  <p class="tx-16 bd-b">Overview</p>
+                  <p class="tx-16 bd-bot w-50 tx-center pd-b-10 mb-0">Overview</p>
                 </div>
-                <div class="col-7 col-12">
+                <div class="col-md-7 col-12">
                   <div class="row justify-content-between">
-                    <div class="col">
+                    <div class="col-1">
                       <a href="http://">
-                         <i data-feather="bell"></i>     
+                         <i data-feather="clock" class="fill-clock mg-t-5"></i>     
                       </a>
                     </div>
+                    <div class="col-1">
+                      <a href="http://">
+                          <i data-feather="heart" class="fill-heart mg-t-5"></i></i>     
+                      </a>
+                    </div>
+                    <div class="col-5">
+                      <button class="btn btn-outline-primary profile-export w-100" data-toggle="modal" data-target="#exportModal">
+                        <span>
+                          <i data-feather="download" class="mg-r-5"></i>
+                             Export as
+                        </span>
+                      </button>
+                    </div>
+                    <div class="col-5">
+                      <button class="btn btn-primary" data-toggle="modal" data-target="#filterModal">
+                         Similar Profiles     
+                      </button>
+                    </div>
                   </div>
+                </div>
+              </div>
+
+              <div class="">
+                <div id="accordion">
+                  <div class="card mt-3 pd-5">
+                    <div class="card-header pd-y-10 pd-x-20 card-header-pink " id="headingOne">
+                      <div class="d-flex justify-content-between collapse-btn"  data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <p class="tx-16 tx-medium mb-0">Work Experience
+                        <span class="mg-l-50 bagde badge-pink">2</span>
+
+                        </p> 
+                        <p class="tx-14 tx-normal mb-0"><i class="fas fa-angle-down ml-2"></i></p>
+                      </div> 
+                    </div>
+
+                    <div class="card-body bd-b">
+                          <p class="tx-16 tx-medium mb-0">Senior Manager</p>
+                          <p class="tx-14 mb-0">Paystack</p>
+                          <p class="tx-14 mb-0">Dec 2018 - Oct 2019</p>
+                  
+                      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div class="pd-t-10 pd-x-0">
+                          <ul class="mb-0">
+                            <li>
+                              Managed a society of 47 members. Launched and hosted the SAIS Africa roundtable series, which featured c-suite executives and senior public sector officials – including four African presidential candidates
+                            </li>
+                          </ul>
+                          
+                        </div>
+                      </div>
+                    </div>                  
+                    <div class="card-body">
+                      <p class="tx-16 tx-medium mb-0">Head of Operations</p>
+                      <p class="tx-14 mb-0">Softcom</p>
+                      <p class="tx-14 mb-0">Dec 2018 - Oct 2019</p>
+              
+                  <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="pd-t-10 pd-x-0">
+                      <ul class="mb-0">
+                        <li>
+                          Managed a society of 47 members. Launched and hosted the SAIS Africa roundtable series, which featured c-suite executives and senior public sector officials – including four African presidential candidates
+                        </li>
+                      </ul>
+                      
+                    </div>
+                  </div>
+                </div>                  
+
+                  </div>
+
+                  <div class="card mt-3 pd-5">
+                    <div class="card-header pd-y-10 pd-x-20 card-header-pink " id="headingTwo">
+                      <div class="d-flex justify-content-between collapse-btn"  data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseOne">
+                        <p class="tx-16 tx-medium mb-0">Academic Background
+                        <span class="mg-l-50 bagde badge-pink">2</span>
+                        </p> 
+                        <p class="tx-14 tx-normal mb-0"><i class="fas fa-angle-down ml-2"></i></p>
+                      </div> 
+                    </div>
+
+                    <div class="card-body">
+                          <p class="tx-16 tx-medium mb-0">Royal Holloway, University of London</p>
+                          <p class="tx-14 mb-0">MBA, Economics</p>
+                          <p class="tx-14 mb-0">Dec 2018 - Oct 2019</p>
+                  
+                      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                        <div class="pd-t-10 pd-x-0">
+                          <p class="tx-16 tx-medium mb-0">University of Lagos</p>
+                          <p class="tx-14 mb-0">BSc, Economics</p>
+                          <p class="tx-14 mb-0">Dec 2014 - Oct 2019</p>
+                   
+                        </div>
+                      </div>
+                    </div>                  
+                    
+                  </div>
+                  
+                  <div class="card mt-3 pd-5">
+                    <div class="card-header pd-y-10 pd-x-20 card-header-pink " id="">
+                      <div class="d-flex justify-content-between"   >
+                        <p class="tx-16 tx-medium mb-0">Skills
+                        <span class="mg-l-50 bagde badge-pink">4</span>
+                        </p> 
+                      </div> 
+                    </div>
+
+                    <div class="card-body">
+                          <p class="tx-14 mb-0">
+                            <span class="bd pd-5 tx-gray mg-x-5">Leadership</span>
+                            <span class="bd pd-5 tx-gray mg-x-5">Customer Service</span>
+                          </p>
+                    </div>                  
+                  </div>
+
+                  <div class="card mt-3 pd-5">
+                    <div class="card-header pd-y-10 pd-x-20 card-header-pink " id="">
+                      <div class="d-flex justify-content-between"   >
+                        <p class="tx-16 tx-medium mb-0">Certifications
+                        <span class="mg-l-50 bagde badge-pink">2</span>
+                        </p> 
+                      </div> 
+                    </div>
+
+                    <div class="card-body">
+                          <p class="tx-14 mb-0">
+                            <span class="bd pd-5 tx-gray mg-x-5">Java Enterprise Certification</span>
+                            <span class="bd pd-5 tx-gray mg-x-5">Oracle Certified Associate</span>
+                          </p>
+                    </div>                  
+                  </div>
+
+                  <div class="card mt-3 pd-5">
+                    <div class="card-header pd-y-10 pd-x-20 card-header-pink " id="">
+                      <div class="d-flex justify-content-between"   >
+                        <p class="tx-16 tx-medium mb-0">Language
+                        <span class="mg-l-50 bagde badge-pink">4</span>
+                        </p> 
+                      </div> 
+                    </div>
+
+                    <div class="card-body">
+                          <p class="tx-14 mb-0">
+                            <span class="bd pd-5 tx-gray mg-x-5">English</span>
+                            <span class="bd pd-5 tx-gray mg-x-5">Portuguese</span>
+                            <span class="bd pd-5 tx-gray mg-x-5">Spanish</span>
+
+                          </p>
+                    </div>                  
+                  </div>
+                  
+                 
+                
                 </div>
               </div>
             </div>
           </div>
           
+          <!-- export modal  -->
+        <div class="modal fade" id="exportModal" tabindex="-1" role="dialog" aria-labelledby="exportModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exportModalLabel">EXPORT AS</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p class="tx-13">Select to export your file in any of these formats</p>
+                <div class="custom-control custom-radio pd-y-10">
+                  <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" checked>
+                  <label class="custom-control-label" for="customRadio1"><img src="../assets/img/icon/pdf.svg" class="img-fluid mg-r-5"/>PDF</label>
+                </div>
+
+                <div class="custom-control custom-radio pd-y-10">
+                  <input type="radio" id="customExcel" name="customRadio" class="custom-control-input">
+                  <label class="custom-control-label" for="customExcel"><img src="../assets/img/icon/excel.svg" class="img-fluid mg-r-5"/>Excel</label>
+                </div>
+
+                <div class="custom-control custom-radio pd-y-10">
+                  <input type="radio" id="customCSV" name="customRadio" class="custom-control-input" >
+                  <label class="custom-control-label" for="customCSV"> <img src="../assets/img/icon/file.svg" class="img-fluid mg-r-5"/> CSV</label>
+                </div>
+                
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#successModal">Export</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+       
+
+        <!-- export modal  -->
+        <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+            <div class="modal-content">
+              
+              <div class="modal-body tx-center pd-y-20">
+                <div class="pd-y-30">
+                <img src="../assets/img/icon/success.svg" class="img-fluid"/>
+                </div>
+               <p class="tx-18 tx-semibold">Success!</p>
+               <p class="tx-14 tx-gray">Files have been exported successfully</p>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+
+
+           <!--Profile Modal -->
+           <div class="modal right large-right fade" id="filterModal" tabindex="-1" role="dialog" aria-labelledby="filterModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <p class=" tx-20 tx-semibold modal-title" id="filterModalLabel">Similar Profiles <span>(7)</span></p>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                
+                <div class="modal-body">
+                  <div class="row">
+                    <div class="col-md-3 col-4 pd-y-10">
+                      <img src="../assets/img/prof.png" class="img-fluid"/>
+                    </div>
+                    <div class="col-md-9 col-8 pd-y-10">
+                      <p class="tx-16 tx-medium mb-0">Sherif Sorunke</p>
+                      <p class="tx-14 tx-light mb-0">Team Lead, Assistant General Manager</p>
+                      <p class="mb-0"><span class="tx-14">Lekki, Lagos |</span> <span class="tx-medium">Full Time</span></p>
+                      <p class="tx-12 tx-medium">15 years experience</p>
+                    </div>
+
+                  </div>
+                  <div class="row">
+                    <div class="col-md-3 col-4 pd-y-10">
+                      <img src="../assets/img/prof.png" class="img-fluid"/>
+                    </div>
+                    <div class="col-md-9 col-8 pd-y-10">
+                      <p class="tx-16 tx-medium mb-0">Sherif Sorunke</p>
+                      <p class="tx-14 tx-light mb-0">Team Lead, Assistant General Manager</p>
+                      <p class="mb-0"><span class="tx-14">Lekki, Lagos |</span> <span class="tx-medium">Full Time</span></p>
+                      <p class="tx-12 tx-medium">15 years experience</p>
+                    </div>
+
+                  </div>
+                  <div class="row">
+                    <div class="col-md-3 col-4 pd-y-10">
+                      <img src="../assets/img/prof.png" class="img-fluid"/>
+                    </div>
+                    <div class="col-md-9 col-8 pd-y-10">
+                      <p class="tx-16 tx-medium mb-0">Sherif Sorunke</p>
+                      <p class="tx-14 tx-light mb-0">Team Lead, Assistant General Manager</p>
+                      <p class="mb-0"><span class="tx-14">Lekki, Lagos |</span> <span class="tx-medium">Full Time</span></p>
+                      <p class="tx-12 tx-medium">15 years experience</p>
+                    </div>
+
+                  </div>
+                  <div class="row">
+                    <div class="col-md-3 col-4 pd-y-10">
+                      <img src="../assets/img/prof.png" class="img-fluid"/>
+                    </div>
+                    <div class="col-md-9 col-8 pd-y-10">
+                      <p class="tx-16 tx-medium mb-0">Sherif Sorunke</p>
+                      <p class="tx-14 tx-light mb-0">Team Lead, Assistant General Manager</p>
+                      <p class="mb-0"><span class="tx-14">Lekki, Lagos |</span> <span class="tx-medium">Full Time</span></p>
+                      <p class="tx-12 tx-medium">15 years experience</p>
+                    </div>
+
+                  </div>
+                  <div class="row">
+                    <div class="col-md-3 col-4 pd-y-10">
+                      <img src="../assets/img/prof.png" class="img-fluid"/>
+                    </div>
+                    <div class="col-md-9 col-8 pd-y-10">
+                      <p class="tx-16 tx-medium mb-0">Sherif Sorunke</p>
+                      <p class="tx-14 tx-light mb-0">Team Lead, Assistant General Manager</p>
+                      <p class="mb-0"><span class="tx-14">Lekki, Lagos |</span> <span class="tx-medium">Full Time</span></p>
+                      <p class="tx-12 tx-medium">15 years experience</p>
+                    </div>
+
+                  </div>
+                  
+                </div> 
+              </div>
+            </div>
+          </div>
+  
       </div>
     </div>
 
@@ -329,17 +634,17 @@ function goBack() {
  
 <script>
   $(document).ready(function(){
-    // Add minus icon for collapse element which is open by default
-    $(".collapse.show").each(function(){
-      $(this).prev(".card-header").find(".fas").addClass("fa-minus").removeClass("fa-plus");
-    });
-    // Toggle plus minus icon on show hide of collapse element
-    $(".collapse").on('show.bs.collapse', function(){
-      $(this).prev(".card-header").find(".fas").removeClass("fa-plus").addClass("fa-minus");
-    }).on('hide.bs.collapse', function(){
-      $(this).prev(".card-header").find(".fas").removeClass("fa-minus").addClass("fa-plus");
-    });
-  });
+        // Add minus icon for collapse element which is open by default
+        $(".collapse.show").each(function(){
+          $(this).prev(".card-header").find(".fas").addClass("fa-angle-up").removeClass("fa-angle-down");
+        });
+        // Toggle plus minus icon on show hide of collapse element
+        $(".collapse").on('show.bs.collapse', function(){
+          $(this).prev(".card-header").find(".fas").removeClass("fa-angle-down").addClass("fa-angle-up");
+        }).on('hide.bs.collapse', function(){
+          $(this).prev(".card-header").find(".fas").removeClass("fa-angle-up").addClass("fa-angle-down");
+        });
+      });
   </script>
 
   </body>

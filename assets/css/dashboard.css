@@ -136,7 +136,7 @@ background-color: transparent;
 }
 .content{
   background-color: #EFEFEF;
-  /* height: 120vh; */
+  height: 100vh!important;
 }
 
 /* ===========================================================
@@ -173,6 +173,11 @@ employee section
       -ms-transform: translate3d(0%, 0, 0);
        -o-transform: translate3d(0%, 0, 0);
           transform: translate3d(0%, 0, 0);
+}
+
+.large-right .modal-dialog {
+  width: 420px!important;
+  top: 60px;
 }
 
 .modal.right .modal-content {
@@ -230,6 +235,30 @@ employee section
 }
 .card-div{
   margin-top: -20px;
+}
+.fill-heart, .fill-clock{
+  fill: white;
+}
+.bd-bot{
+  border-bottom: 2px solid #B11E1E;
+}
+.card-header-pink{
+  background-color: #B11E1E33;
+  border-radius: 4px!important;
+  border-bottom: 0;
+}
+.badge-pink{
+  background-color: rgba(177, 30, 30, 0.2);
+  color: #B11E1E;
+  border-radius: 4px;
+  padding: 3px 8px;
+}
+.flag-icon{
+  width: 24px;
+  height: 24px;
+}
+.profile-export{
+  background-color: #fff;
 }
 /*==============================================================
  end of employee section  

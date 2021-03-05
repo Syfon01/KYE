@@ -278,17 +278,17 @@
                 <p class="tx-13">Select to export your file in any of these formats</p>
                 <div class="custom-control custom-radio pd-y-10">
                   <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" checked>
-                  <label class="custom-control-label" for="customRadio1">PDF</label>
+                  <label class="custom-control-label" for="customRadio1"><img src="../assets/img/icon/pdf.svg" class="img-fluid mg-r-5"/>PDF</label>
                 </div>
 
                 <div class="custom-control custom-radio pd-y-10">
                   <input type="radio" id="customExcel" name="customRadio" class="custom-control-input">
-                  <label class="custom-control-label" for="customExcel">Excel</label>
+                  <label class="custom-control-label" for="customExcel"><img src="../assets/img/icon/excel.svg" class="img-fluid mg-r-5"/>Excel</label>
                 </div>
 
                 <div class="custom-control custom-radio pd-y-10">
                   <input type="radio" id="customCSV" name="customRadio" class="custom-control-input" >
-                  <label class="custom-control-label" for="customCSV">CSV</label>
+                  <label class="custom-control-label" for="customCSV"> <img src="../assets/img/icon/file.svg" class="img-fluid mg-r-5"/> CSV</label>
                 </div>
                 
               </div>
@@ -302,227 +302,7 @@
         </div>
 
 
-          <!--filtter Modal -->
-          <div class="modal right fade" id="filterModal" tabindex="-1" role="dialog" aria-labelledby="filterModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <p class=" tx-20 tx-semibold modal-title" id="filterModalLabel">Filter Search</p>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              
-              <div class="modal-body">
-                <p class="tx-14 tx-gray">Narrow down your search with precise data</p>
-                </p>
-                <div class="search-form">
-                  <input type="search" id="theBasics" class="form-control" placeholder="Search by Keywords">
-                  <button class="btn" type="button"><i data-feather="search"></i></button>
-                </div>
-
-                <div id="accordion">
-                  <div class="card mt-4 bd-b-0">
-                    <div class="card-header pd-10" id="headingOne">
-                      <div class="d-flex justify-content-between collapse-btn"  data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        <p class="tx-14 mb-0">Custom Projects</p>
-                        <p class="tx-14 tx-normal mb-0"><i class="fas fa-plus ml-2"></i></p>
-                      </div>                   
-                    </div>
-                
-                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-                      <div class="card-body pd-10">
-                        <a href="" class="tx-14">
-                         <i data-feather="plus" class="add-icon"></i>
-                          <span class="tx-grayy">Add Project</span>
-                        </a>
-                        
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div class="card bd-b-0">
-                    <div class="card-header pd-10" id="headingTwo">
-                      <div class="d-flex justify-content-between collapse-btn"  data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseOne">
-                        <p class="tx-14 mb-0">Department</p>
-                        <p class=" mb-0 panel-title"><i class="fas fa-plus ml-2"></i></p>
-                      </div>
-                    </div>
-                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                      <div class="card-body pd-10">
-                        <a href="" class="tx-14">
-                         <i data-feather="plus" class="add-icon"></i>
-                          <span class="tx-grayy">Add Department</span>
-                        </a>
-                        
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="card bd-b-0">
-                    <div class="card-header pd-10" id="headingThree">
-                      <div class="d-flex justify-content-between collapse-btn"  data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseOne">
-                        <p class="tx-14 mb-0">Geography</p>
-                        <p class=" mb-0 panel-title"><i class="fas fa-plus ml-2"></i></p>
-                      </div>
-                    </div>
-                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                      <div class="card-body pd-10">
-                        <a href="" class="tx-14">
-                         <i data-feather="plus" class="add-icon"></i>
-                          <span class="tx-grayy">Add Geography</span>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="card bd-b-0">
-                    <div class="card-header pd-10" id="headingFour">
-                      <div class="d-flex justify-content-between collapse-btn"  data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseOne">
-                        <p class="tx-14 mb-0">Job Role</p>
-                        <p class=" mb-0 panel-title"><i class="fas fa-plus ml-2"></i></p>
-                      </div>
-                    </div>
-                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
-                      <div class="card-body pd-10">
-                        <a href="" class="tx-14">
-                         <i data-feather="plus" class="add-icon"></i>
-                          <span class="tx-grayy">Add Job Role</span>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="card bd-b-0">
-                    <div class="card-header pd-10" id="headingFive">
-                      <div class="d-flex justify-content-between collapse-btn"  data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseOne">
-                        <p class="tx-14 mb-0">Years of Experience</p>
-                        <p class=" mb-0 panel-title"><i class="fas fa-plus ml-2"></i></p>
-                      </div>
-                    </div>
-                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
-                      <div class="card-body pd-10">
-                        <a href="" class="tx-14">
-                         <i data-feather="plus" class="add-icon"></i>
-                          <span class="tx-grayy">Add Years of Experience</span>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="card bd-b-0">
-                    <div class="card-header pd-10" id="headingSix">
-                      <div class="d-flex justify-content-between collapse-btn"  data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseOne">
-                        <p class="tx-14 mb-0">Skills</p>
-                        <p class=" mb-0 panel-title"><i class="fas fa-plus ml-2"></i></p>
-                      </div>
-                    </div>
-                    <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
-                      <div class="card-body pd-10">
-                        <a href="" class="tx-14">
-                         <i data-feather="plus" class="add-icon"></i>
-                          <span class="tx-grayy">Add Skills</span>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="card bd-b-0">
-                    <div class="card-header pd-10" id="headingSeven">
-                      <div class="d-flex justify-content-between collapse-btn"  data-toggle="collapse" data-target="#collapseSeven" aria-expanded="true" aria-controls="collapseOne">
-                        <p class="tx-14 mb-0">Grade Level</p>
-                        <p class=" mb-0 panel-title"><i class="fas fa-plus ml-2"></i></p>
-                      </div>
-                    </div>
-                    <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion">
-                      <div class="card-body pd-10">
-                        <a href="" class="tx-14">
-                         <i data-feather="plus" class="add-icon"></i>
-                          <span class="tx-grayy">Grade Level</span>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="card bd-b-0">
-                    <div class="card-header pd-10" id="headingEight">
-                      <div class="d-flex justify-content-between collapse-btn"  data-toggle="collapse" data-target="#collapseEight" aria-expanded="true" aria-controls="collapseOne">
-                        <p class="tx-14 mb-0">Employment Type</p>
-                        <p class=" mb-0 panel-title"><i class="fas fa-plus ml-2"></i></p>
-                      </div>
-                    </div>
-                    <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordion">
-                      <div class="card-body pd-10">
-                        <a href="" class="tx-14">
-                         <i data-feather="plus" class="add-icon"></i>
-                          <span class="tx-grayy">Employment Type</span>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="card bd-b-0">
-                    <div class="card-header pd-10" id="headingNine">
-                      <div class="d-flex justify-content-between collapse-btn"  data-toggle="collapse" data-target="#collapseNine" aria-expanded="true" aria-controls="collapseOne">
-                        <p class="tx-14 mb-0">Degree</p>
-                        <p class=" mb-0 panel-title"><i class="fas fa-plus ml-2"></i></p>
-                      </div>
-                    </div>
-                    <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordion">
-                      <div class="card-body pd-10">
-                        <a href="" class="tx-14">
-                         <i data-feather="plus" class="add-icon"></i>
-                          <span class="tx-grayy">Degree</span>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                
-                  <div class="card bd-b-0">
-                    <div class="card-header pd-10" id="headingTen">
-                      <div class="d-flex justify-content-between collapse-btn"  data-toggle="collapse" data-target="#collapseTen" aria-expanded="true" aria-controls="collapseOne">
-                        <p class="tx-14 mb-0">Age</p>
-                        <p class=" mb-0 panel-title"><i class="fas fa-plus ml-2"></i></p>
-                      </div>
-                    </div>
-                    <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#accordion">
-                      <div class="card-body pd-10">
-                        <a href="" class="tx-14">
-                         <i data-feather="plus" class="add-icon"></i>
-                          <span class="tx-grayy">Age</span>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                
-                  <div class="card bd-b-0">
-                    <div class="card-header pd-10" id="headingEleven">
-                      <div class="d-flex justify-content-between collapse-btn"  data-toggle="collapse" data-target="#collapseEleven" aria-expanded="true" aria-controls="collapseOne">
-                        <p class="tx-14 mb-0">Certifications</p>
-                        <p class=" mb-0 panel-title"><i class="fas fa-plus ml-2"></i></p>
-                      </div>
-                    </div>
-                    <div id="collapseEleven" class="collapse" aria-labelledby="headingEleven" data-parent="#accordion">
-                      <div class="card-body pd-10">
-                        <a href="" class="tx-14">
-                         <i data-feather="plus" class="add-icon"></i>
-                          <span class="tx-grayy">Certifications</span>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                
-                
-                </div>
-  
-                
-               
-            </div><!-- modal-content -->
-          </div><!-- modal-dialog -->
-        </div><!-- modal -->
-
-
+       
 
         <!-- export modal  -->
         <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
@@ -530,6 +310,9 @@
             <div class="modal-content">
               
               <div class="modal-body tx-center pd-y-20">
+                <div class="pd-y-30">
+                <img src="../assets/img/icon/success.svg" class="img-fluid"/>
+                </div>
                <p class="tx-18 tx-semibold">Success!</p>
                <p class="tx-14 tx-gray">Files have been exported successfully</p>
               </div>
@@ -538,9 +321,232 @@
           </div>
         </div>
 
+           <!--filtter Modal -->
+           <div class="modal right fade" id="filterModal" tabindex="-1" role="dialog" aria-labelledby="filterModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <p class=" tx-20 tx-semibold modal-title" id="filterModalLabel">Filter Search</p>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                
+                <div class="modal-body">
+                  <p class="tx-14 tx-gray">Narrow down your search with precise data</p>
+                  </p>
+                  <div class="search-form">
+                    <input type="search" id="theBasics" class="form-control" placeholder="Search by Keywords">
+                    <button class="btn" type="button"><i data-feather="search"></i></button>
+                  </div>
+  
+                  <div id="accordion">
+                    <div class="card mt-4 bd-b-0">
+                      <div class="card-header pd-10" id="headingOne">
+                        <div class="d-flex justify-content-between collapse-btn"  data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          <p class="tx-14 mb-0">Custom Projects</p>
+                          <p class="tx-14 tx-normal mb-0"><i class="fas fa-plus ml-2"></i></p>
+                        </div>                   
+                      </div>
+                  
+                      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div class="card-body pd-10">
+                          <a href="" class="tx-14">
+                           <i data-feather="plus" class="add-icon"></i>
+                            <span class="tx-grayy">Add Project</span>
+                          </a>
+                          
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="card bd-b-0">
+                      <div class="card-header pd-10" id="headingTwo">
+                        <div class="d-flex justify-content-between collapse-btn"  data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseOne">
+                          <p class="tx-14 mb-0">Department</p>
+                          <p class=" mb-0 panel-title"><i class="fas fa-plus ml-2"></i></p>
+                        </div>
+                      </div>
+                      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                        <div class="card-body pd-10">
+                          <a href="" class="tx-14">
+                           <i data-feather="plus" class="add-icon"></i>
+                            <span class="tx-grayy">Add Department</span>
+                          </a>
+                          
+                        </div>
+                      </div>
+                    </div>
+  
+                    <div class="card bd-b-0">
+                      <div class="card-header pd-10" id="headingThree">
+                        <div class="d-flex justify-content-between collapse-btn"  data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseOne">
+                          <p class="tx-14 mb-0">Geography</p>
+                          <p class=" mb-0 panel-title"><i class="fas fa-plus ml-2"></i></p>
+                        </div>
+                      </div>
+                      <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                        <div class="card-body pd-10">
+                          <a href="" class="tx-14">
+                           <i data-feather="plus" class="add-icon"></i>
+                            <span class="tx-grayy">Add Geography</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+  
+                    <div class="card bd-b-0">
+                      <div class="card-header pd-10" id="headingFour">
+                        <div class="d-flex justify-content-between collapse-btn"  data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseOne">
+                          <p class="tx-14 mb-0">Job Role</p>
+                          <p class=" mb-0 panel-title"><i class="fas fa-plus ml-2"></i></p>
+                        </div>
+                      </div>
+                      <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                        <div class="card-body pd-10">
+                          <a href="" class="tx-14">
+                           <i data-feather="plus" class="add-icon"></i>
+                            <span class="tx-grayy">Add Job Role</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+  
+                    <div class="card bd-b-0">
+                      <div class="card-header pd-10" id="headingFive">
+                        <div class="d-flex justify-content-between collapse-btn"  data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseOne">
+                          <p class="tx-14 mb-0">Years of Experience</p>
+                          <p class=" mb-0 panel-title"><i class="fas fa-plus ml-2"></i></p>
+                        </div>
+                      </div>
+                      <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                        <div class="card-body pd-10">
+                          <a href="" class="tx-14">
+                           <i data-feather="plus" class="add-icon"></i>
+                            <span class="tx-grayy">Add Years of Experience</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+  
+                    <div class="card bd-b-0">
+                      <div class="card-header pd-10" id="headingSix">
+                        <div class="d-flex justify-content-between collapse-btn"  data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseOne">
+                          <p class="tx-14 mb-0">Skills</p>
+                          <p class=" mb-0 panel-title"><i class="fas fa-plus ml-2"></i></p>
+                        </div>
+                      </div>
+                      <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
+                        <div class="card-body pd-10">
+                          <a href="" class="tx-14">
+                           <i data-feather="plus" class="add-icon"></i>
+                            <span class="tx-grayy">Add Skills</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+  
+                    <div class="card bd-b-0">
+                      <div class="card-header pd-10" id="headingSeven">
+                        <div class="d-flex justify-content-between collapse-btn"  data-toggle="collapse" data-target="#collapseSeven" aria-expanded="true" aria-controls="collapseOne">
+                          <p class="tx-14 mb-0">Grade Level</p>
+                          <p class=" mb-0 panel-title"><i class="fas fa-plus ml-2"></i></p>
+                        </div>
+                      </div>
+                      <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion">
+                        <div class="card-body pd-10">
+                          <a href="" class="tx-14">
+                           <i data-feather="plus" class="add-icon"></i>
+                            <span class="tx-grayy">Grade Level</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+  
+                    <div class="card bd-b-0">
+                      <div class="card-header pd-10" id="headingEight">
+                        <div class="d-flex justify-content-between collapse-btn"  data-toggle="collapse" data-target="#collapseEight" aria-expanded="true" aria-controls="collapseOne">
+                          <p class="tx-14 mb-0">Employment Type</p>
+                          <p class=" mb-0 panel-title"><i class="fas fa-plus ml-2"></i></p>
+                        </div>
+                      </div>
+                      <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordion">
+                        <div class="card-body pd-10">
+                          <a href="" class="tx-14">
+                           <i data-feather="plus" class="add-icon"></i>
+                            <span class="tx-grayy">Employment Type</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+  
+                    <div class="card bd-b-0">
+                      <div class="card-header pd-10" id="headingNine">
+                        <div class="d-flex justify-content-between collapse-btn"  data-toggle="collapse" data-target="#collapseNine" aria-expanded="true" aria-controls="collapseOne">
+                          <p class="tx-14 mb-0">Degree</p>
+                          <p class=" mb-0 panel-title"><i class="fas fa-plus ml-2"></i></p>
+                        </div>
+                      </div>
+                      <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordion">
+                        <div class="card-body pd-10">
+                          <a href="" class="tx-14">
+                           <i data-feather="plus" class="add-icon"></i>
+                            <span class="tx-grayy">Degree</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  
+                    <div class="card bd-b-0">
+                      <div class="card-header pd-10" id="headingTen">
+                        <div class="d-flex justify-content-between collapse-btn"  data-toggle="collapse" data-target="#collapseTen" aria-expanded="true" aria-controls="collapseOne">
+                          <p class="tx-14 mb-0">Age</p>
+                          <p class=" mb-0 panel-title"><i class="fas fa-plus ml-2"></i></p>
+                        </div>
+                      </div>
+                      <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#accordion">
+                        <div class="card-body pd-10">
+                          <a href="" class="tx-14">
+                           <i data-feather="plus" class="add-icon"></i>
+                            <span class="tx-grayy">Age</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  
+                    <div class="card bd-b-0">
+                      <div class="card-header pd-10" id="headingEleven">
+                        <div class="d-flex justify-content-between collapse-btn"  data-toggle="collapse" data-target="#collapseEleven" aria-expanded="true" aria-controls="collapseOne">
+                          <p class="tx-14 mb-0">Certifications</p>
+                          <p class=" mb-0 panel-title"><i class="fas fa-plus ml-2"></i></p>
+                        </div>
+                      </div>
+                      <div id="collapseEleven" class="collapse" aria-labelledby="headingEleven" data-parent="#accordion">
+                        <div class="card-body pd-10">
+                          <a href="" class="tx-14">
+                           <i data-feather="plus" class="add-icon"></i>
+                            <span class="tx-grayy">Certifications</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  
+                  
+                  </div>
+    
+                  
+                </div> 
+              </div>
+            </div>
+          </div>
+  
+  
 
     </div><!-- container -->
-      </div>
+      
+  
+  
+    </div>
     </div>
 
     <script src="../assets/lib/jquery/jquery.min.js"></script>
