@@ -268,6 +268,12 @@ employee section
   width: 60px;
   height: 60px;
 }
+.table.dataTable thead th{
+  font-weight: 600;
+}
+.table{
+  width: 100%!important;
+}
 /*==============================================================
  end of employee section  
  =============================================================*/
