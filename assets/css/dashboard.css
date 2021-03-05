@@ -251,7 +251,7 @@ employee section
   background-color: rgba(177, 30, 30, 0.2);
   color: #B11E1E;
   border-radius: 4px;
-  padding: 3px 8px;
+  padding: 5px 8px;
 }
 .flag-icon{
   width: 24px;
@@ -263,6 +263,10 @@ employee section
 .icon-lg{
   width: 24px!important;
   height: 24px!important;
+}
+.img-stack{
+  width: 60px;
+  height: 60px;
 }
 /*==============================================================
  end of employee section  
