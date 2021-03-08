@@ -11,9 +11,10 @@
     <!-- Required External CSS -->
     <link href="assets/lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
     <link href="assets/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-    <link href="assets/lib/jqvmap/jqvmap.min.css" rel="stylesheet">
+    <!-- <link href="assets/lib/jqvmap/jqvmap.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 
-    <link href="assets/lib/prismjs/themes/prism-vs.css" rel="stylesheet">
+    <!-- <link href="assets/lib/prismjs/themes/prism-vs.css" rel="stylesheet"> -->
     <link href="assets/lib/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet">
     <link href="assets/lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet">
     <link href="assets/lib/select2/css/select2.min.css" rel="stylesheet">
@@ -151,7 +152,7 @@
       </div>
     </aside>
 
-    <div class="content ht-100v pd-0">
+    <div class="content pd-0">
       <div class="content-header  pd-y-40 pd-x-0">
         
         <div class="">
@@ -246,14 +247,36 @@
               </div>
             </div>
           </div>
-          <div class="row mg-t-30 mg-b-200">
+          <div class="row mg-t-30">
             <div class="col-md-8 col-12">
               <div class="card">
-                <div class="card-header pd-y-20 d-md-flex align-items-center justify-content-between bd-b-0">
-                  <p class="mg-b-0 tx-18 tx-semibold white">Total UBA Headcount</p>
-                  <div>
-
+                <div class="card-header pd-y-20 bd-b-0">
+                  <div class="row">
+                    <div class="col-lg-8 col-12">
+                      <p class="mg-b-0 tx-18 tx-semibold white">Total UBA Headcount</p>
+                    </div>
+                    <div class="col-lg-4 col-12">
+                      <div class="d-flex justify-content-between">
+                        <div>
+                          <select class="custom-select">
+                            <option selected>Filter By</option>
+                            <option value="1">Age</option>
+                            <option value="2">Date</option>
+                            <option value="3"></option>
+                          </select>
+                        </div>
+                        <div>
+                          <select class="custom-select">
+                            <option selected>Monthly</option>
+                            <option value="1">Weekly</option>
+                            <option value="2">Monthly</option>
+                            <option value="3">Yearly</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
                   </div>
+                  
                 </div><!-- card-header -->
                 <div class="card-body pos-relative pd-0">
   
@@ -330,6 +353,113 @@
            
           </div>
 
+          <div class="col-md-6 col-lg-6 col-xl-6 mg-t-20">
+            <div class="card">
+              <div class="card-header">
+                <div class="row">
+                  <div class="col-md-6 col-12">
+                    <p class="tx-18 tx-bold mg-b-0">Distribution by Gender</p>
+                  </div>
+                  <div class="col-md-6 col-12">
+                    <div id="reportrange" class="form-control date-picker tx-13">
+                      <i class="fa fa-calendar"></i>&nbsp;
+                      <span></span> <i class="fa fa-caret-down"></i>
+                  </div>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="card-body ">
+                <div class="chart-seven"><canvas id="chartDonut" class="chartDo"></canvas></div>
+              </div>
+              <div class="card-footer pd-20">
+                <div class="row">
+                  <div class="col-4">
+                    <p class="tx-10 tx-uppercase tx-medium tx-color-01 tx-spacing-1 mg-b-5">Female</p>
+                    <div class="d-flex align-items-center">
+                      <div class="wd-10 ht-10 rounded-circle bg-pink mg-r-5"></div>
+                      <h5 class="tx-normal tx-rubik mg-b-0">1350<small class="tx-color-04 mg-l-4">45%</small></h5>
+                    </div>
+                  </div><!-- col -->
+                  <div class="col-4">
+                    <p class="tx-10 tx-uppercase tx-medium tx-color-01 tx-spacing-1 tx-nowrap mg-b-5">Male</p>
+                    <div class="d-flex align-items-center">
+                      <div class="wd-10 ht-10 rounded-circle bg-deep-red mg-r-5"></div>
+                      <h5 class="tx-normal tx-rubik mg-b-0">920 <small class="tx-color-04 mg-l-4">35%</small></h5>
+                    </div>
+                  </div><!-- col -->
+                  
+                  <div class="col-4">
+                    <p class="tx-10 tx-uppercase tx-medium tx-color-01 tx-spacing-1 mg-b-5">Undisclosed</p>
+                    <div class="d-flex align-items-center">
+                      <div class="wd-10 ht-10 rounded-circle bg-light-blue mg-r-5"></div>
+                      <h5 class="tx-normal tx-rubik mg-b-0">310 <small class="tx-color-04 mg-l-4">20%</small></h5>
+                    </div>
+                  </div><!-- col -->
+                  
+                </div><!-- row -->
+              </div><!-- card-footer -->
+            </div><!-- card -->
+          </div>
+          <div class="col-sm-12 col-lg-6 col-xl-6 mg-t-20">
+            <div class="card">
+              <div class="card-header">
+                <div class="row">
+                  <div class="col-md-6 col-12">
+                      <p class="tx-18 tx-bold mg-b-0">Distribution by Age</p>
+                  </div>
+                  <div class="col-md-6 col-12">
+                    <div id="reportrange" class="form-control date-picker tx-13">
+                      <i class="fa fa-calendar"></i>&nbsp;
+                      <span></span> <i class="fa fa-caret-down"></i>
+                  </div>
+                  </div>
+                </div>
+                
+              </div><!-- card-header -->
+              <div class="card-body">
+                    <div class="chart-thirteen"><canvas id="chartDonut2" class="chartDo"></canvas></div>
+              </div> 
+                    <div class="card-footer pd-20">
+                    <div class="row">
+                      <div class="col-6 col-md-3">
+                        <p class="tx-10 tx-uppercase tx-medium tx-color-01 tx-spacing-1 mg-b-5">Below 24 years</p>
+                        <div class="d-flex align-items-center">
+                          <div class="wd-10 ht-10 rounded-circle bg-pink mg-r-5"></div>
+                          <h5 class="tx-normal tx-rubik mg-b-0">50<small class="tx-color-04 mg-l-4">5%</small></h5>
+                        </div>
+                      </div><!-- col -->
+                      <div class="col-6 col-md-3">
+                        <p class="tx-10 tx-uppercase tx-medium tx-color-01 tx-spacing-1 tx-nowrap mg-b-5">24-40 years</p>
+                        <div class="d-flex align-items-center">
+                          <div class="wd-10 ht-10 rounded-circle bg-deep-red mg-r-5"></div>
+                          <h5 class="tx-normal tx-rubik mg-b-0">920 <small class="tx-color-04 mg-l-4">40%</small></h5>
+                        </div>
+                      </div><!-- col -->
+                      
+                      <div class="col-6 col-md-3">
+                        <p class="tx-10 tx-uppercase tx-medium tx-color-01 tx-spacing-1 mg-b-5">40-50 years</p>
+                        <div class="d-flex align-items-center">
+                          <div class="wd-10 ht-10 rounded-circle bg-yellow mg-r-5"></div>
+                          <h5 class="tx-normal tx-rubik mg-b-0">810 <small class="tx-color-04 mg-l-4">35%</small></h5>
+                        </div>
+                      </div><!-- col -->
+                      <div class="col-6 col-md-3">
+                        <p class="tx-10 tx-uppercase tx-medium tx-color-01 tx-spacing-1 mg-b-5">40-50 years</p>
+                        <div class="d-flex align-items-center">
+                          <div class="wd-10 ht-10 rounded-circle bg-light-blue mg-r-5"></div>
+                          <h5 class="tx-normal tx-rubik mg-b-0">310 <small class="tx-color-04 mg-l-4">15%</small></h5>
+                        </div>
+                      </div><!-- col -->
+                     
+                    </div><!-- row -->
+                  </div><!-- card-footer -->
+                 
+                </div>
+              </div><!-- card-body -->
+            </div><!-- card -->
+          </div><!-- col -->
+
         </div>
       </div>
     </div><!-- container -->
@@ -356,6 +486,8 @@
 
     <!-- append theme customizer -->
     <script src="assets/lib/js-cookie/js.cookie.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
     <!-- <script src="assets/js/dashforge.settings.js"></script> -->
 
     <script>
@@ -376,6 +508,30 @@
           ]
         }
       });
+
+    //date picker
+    var start = moment().subtract(29, 'days');
+    var end = moment();
+
+    function cb(start, end) {
+        $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+    }
+
+    $('#reportrange').daterangepicker({
+        startDate: start,
+        endDate: end,
+        ranges: {
+          'Today': [moment(), moment()],
+          'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+          'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+          'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+          'This Month': [moment().startOf('month'), moment().endOf('month')],
+          'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+        }
+    }, cb);
+
+    cb(start, end);
+  
     </script>
     <script>
       var chart = document.getElementById('chart').getContext('2d'),
@@ -474,6 +630,67 @@
       });
 
       bar.animate(0.77); // Number from 0.0 to 1.0
+    </script>
+    <script>
+
+        /** PIE CHART **/
+        var datapie = {
+          labels: ['Male', 'Female', 'Undisclosed'],
+          datasets: [{
+            data: [35,45,20],
+            backgroundColor: ['#FF91A4', '#B11E1E','#2CD8C5']
+          }]
+        };
+
+        var optionpie = {
+          maintainAspectRatio: false,
+          responsive: true,
+          legend: {
+            display: false,
+          },
+          animation: {
+            animateScale: true,
+            animateRotate: true
+          }
+        };
+
+        // For a pie chart
+        var ctx2 = document.getElementById('chartDonut');
+        var myDonutChart = new Chart(ctx2, {
+          type: 'doughnut',
+          data: datapie,
+          options: optionpie
+        });
+
+ 
+        /** PIE CHART 2 **/
+        var datapie2 = {
+          labels: ['Below 24 years', '24-40 years', '40-45 years', '45-56 years'],
+          datasets: [{
+            data: [5,40,15,35],
+            backgroundColor: ['#FF91A4', '#B11E1E','#2CD8C5','#FFC250']
+          }]
+        };
+
+        var optionpie2 = {
+          maintainAspectRatio: false,
+          responsive: true,
+          legend: {
+            display: false,
+          },
+          animation: {
+            animateScale: true,
+            animateRotate: true
+          }
+        };
+
+        // For a pie chart
+        var ctx2 = document.getElementById('chartDonut2');
+        var myDonutChart = new Chart(ctx2, {
+          type: 'doughnut',
+          data: datapie2,
+          options: optionpie2
+        });
     </script>
   </body>
 </html>

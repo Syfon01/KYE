@@ -17,7 +17,7 @@
   }
   .content-body{
     margin-left: 110px!important;
-    margin-bottom: 200px;
+    /* margin-bottom: 200px; */
   }
 }
 .aside-header{
@@ -136,7 +136,23 @@ background-color: transparent;
 }
 .content{
   background-color: #EFEFEF;
-  height: 100vh!important;
+  /* height: 100vh!important; */
+}
+.bg-pink{
+  background-color:#FF91A4 ;
+}
+
+.bg-deep-red{
+  background-color:#B11E1E ;
+}
+.bg-light-blue{
+  background-color: #2CD8C5;
+}
+.bg-yellow{
+  background-color: #FFC250;
+}
+.chartDo{
+  height: 200px!important;
 }
 
 /* ===========================================================
