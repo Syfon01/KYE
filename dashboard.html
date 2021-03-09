@@ -30,8 +30,17 @@
     
   </head>
   <body>
+
+
+<!-- ===========================
+  start of header and of sidebar 
+  ==================================
+ -->
 <div class="header">
   <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <div class="d-md-none d-lg-none d-xl-none d-block">
+    <button class="openbtn float-left" onclick="openNav()">&#9776;</button>
+    </div>
     <div class="row header-row">
       <div class="avatar avatar-md"><img src="assets/img/icon/chairman.jpg" class="rounded-circle" alt=""></div>
       <div class="pd-l-10">
@@ -103,55 +112,112 @@
   </nav>
   
 </div>
-    <aside class="asid aside-fixed">
+<div class="d-block d-md-none d-lg-none d-xl-none">
+  <aside class="asid aside-fixed sidepanel" id="mySidepanel">
       
-        <!-- <a href="" class="aside-menu-link">
-          <i data-feather="menu"></i>
-          <i data-feather="x"></i>
-        </a> -->
-      </div>
-      <div class="aside-body bd-t-0 bg-dark-color tx-center">
-       
-        <ul class="nav block-nav nav-asid pd-t-20 tx-center">
-          
-          <li class="nav-item active">
-              <a href="./dashboard.html" class="nav-link">
-                <i data-feather="grid"></i>
-                <p class="mb-0">Home</p>
-              </a>   
-            </li>
-          
-          <li class="nav-item">
-            <a href="./employee/index.html" class="nav-link">
-              <i data-feather="users"></i>
-              <p class="mb-0">Employees</p></a>
-          </li>
-          
-          <li class="nav-item">
-            <a href="./project.html" class="nav-link"><i data-feather="file-plus"></i>
-              <p class="mb-0">Projects</p></a>
-          </li>
+    <!-- <a href="" class="aside-menu-link">
+      <i data-feather="menu"></i>
+      <i data-feather="x"></i>
+    </a> -->
+  <!-- </div> -->
+  <div class="aside-body bd-t-0 bg-dark-color tx-center">
+    <div class="float-right">
+        <a href="javascript:void(0)" class="closebtn float-right pd-20" onclick="closeNav()">&times;</a>
+    </div>
+   
+    <ul class="nav block-nav nav-asid pd-t-20 mg-t-40 tx-center">
+      
+      <li class="nav-item active">
+          <a href="./dashboard.html" class="nav-link">
+            <i data-feather="grid"></i>
+            <p class="mb-0">Home</p>
+          </a>   
+        </li>
+      
+      <li class="nav-item">
+        <a href="./employee/index.html" class="nav-link">
+          <i data-feather="users"></i>
+          <p class="mb-0">Employees</p></a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="./project.html" class="nav-link"><i data-feather="file-plus"></i>
+          <p class="mb-0">Projects</p></a>
+      </li>
 
-          <li class="nav-item">
-            <a href="./favourite.html" class="nav-link"><i data-feather="heart"></i>
-              <p class="mb-0">Favourites</p></a>
-          </li>
+      <li class="nav-item">
+        <a href="./favourite.html" class="nav-link"><i data-feather="heart"></i>
+          <p class="mb-0">Favourites</p></a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="history.html" class="nav-link"><i data-feather="rotate-ccw"></i>
+          <p class="mb-0">History</p></a>
+      </li>
+     
+      <li class="nav-item">
+        <a href="setting.html" class="nav-link"><i data-feather="settings"></i>
+          <p class="mb-0">Settings</p></a>
+      </li>
+     
+    </ul>
           
-          <li class="nav-item">
-            <a href="history.html" class="nav-link"><i data-feather="rotate-ccw"></i>
-              <p class="mb-0">History</p></a>
-          </li>
-         
-          <li class="nav-item">
-            <a href="setting.html" class="nav-link"><i data-feather="settings"></i>
-              <p class="mb-0">Settings</p></a>
-          </li>
-         
-        </ul>
-              
-      </div>
-    </aside>
+  </div>
+</aside>
 
+</div>
+<div class="d-none d-md-block d-lg-block d-xl-block">
+  <aside class="asid aside-fixed">
+      
+  <div class="aside-body bd-t-0 bg-dark-color tx-center">
+   
+    <ul class="nav block-nav nav-asid pd-t-20 tx-center">
+      
+      <li class="nav-item active">
+          <a href="./dashboard.html" class="nav-link">
+            <i data-feather="grid"></i>
+            <p class="mb-0">Home</p>
+          </a>   
+        </li>
+      
+      <li class="nav-item">
+        <a href="./employee/index.html" class="nav-link">
+          <i data-feather="users"></i>
+          <p class="mb-0">Employees</p></a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="./project.html" class="nav-link"><i data-feather="file-plus"></i>
+          <p class="mb-0">Projects</p></a>
+      </li>
+
+      <li class="nav-item">
+        <a href="./favourite.html" class="nav-link"><i data-feather="heart"></i>
+          <p class="mb-0">Favourites</p></a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="history.html" class="nav-link"><i data-feather="rotate-ccw"></i>
+          <p class="mb-0">History</p></a>
+      </li>
+     
+      <li class="nav-item">
+        <a href="setting.html" class="nav-link"><i data-feather="settings"></i>
+          <p class="mb-0">Settings</p></a>
+      </li>
+     
+    </ul>
+          
+  </div>
+</aside>
+
+</div>
+
+<!-- ===========================
+  end of sidebar 
+  ==================================
+ -->
+   
     <div class="content pd-0">
       <div class="content-header  pd-y-40 pd-x-0">
         
@@ -159,22 +225,28 @@
           <div class="overlay"></div>
           <img src="./assets/img/icon/dashboard-background.jpg" class="card-img-top img-fluid dashboard-img" alt="dashboard image">
            <div>
-              <div class="offset-div container px-5">
-                <div class="row header-row mg-t-70 tx-white">
-                  <div class="avatar avatar-xxl"><img src="../assets/img/icon/chairman.jpg" class="rounded-circle" alt=""></div>
-                  <div class="pd-l-50 pd-t-20">
-                    <p class="tx-24">Good Morning, Mr Chairman</p>
+              <div class="offset-div container px-lg-5">
+                <div class="row header-row col-md-6 col-12 mg-t-70 tx-white">
+                  <div class="col-4 col-md-3">
+                  <div class="avatar avatar-xxl"><img src="../assets/img/icon/chairman.jpg" class="rounded-circle chairman-image" alt=""></div>
+
                   </div>
+                  <div class="col-8 col-md-9">
+                    <div class="pd-t-20">
+                      <p class="tx-24">Good Morning, Mr Chairman</p>
+                    </div>
+                  </div>
+                  
                 </div>
               </div>
             </div>
         </div>
       </div><!-- content-header -->
       
-      <div class="content-body">
+      <div class="content-body pd-t-70 pd-lg-t-20">
         <div class="container pd-x-0">
-          <div class="row">
-            <div class="col-md-3 col-6">
+          <div class="row mobile-row">
+            <div class="col-md-3 col-12 mg-t-10">
               <div class="card shadow bg-red">
                 <a href="./employee/index.html">
                   <div class="card-body tx-white">
@@ -192,7 +264,7 @@
               </div>
             </div>
 
-            <div class="col-md-3 col-6">
+            <div class="col-md-3 col-12 mg-t-10">
               <div class="card shadow">
                 <a href="./project.html">
                   <div class="card-body tx-dark">
@@ -211,7 +283,7 @@
             </div>
                 
 
-            <div class="col-md-3 col-6">
+            <div class="col-md-3 col-12 mg-t-10">
               <div class="card shadow bg-red ">
                 <a href="./project.html">
                   <div class="card-body tx-white">
@@ -229,7 +301,7 @@
               </div>
             </div>
 
-            <div class="col-md-3 col-6">
+            <div class="col-md-3 col-12 mg-t-10">
               <div class="card shadow ">
                 <a href="./favourite.html">
                   <div class="card-body tx-dark">
@@ -691,6 +763,19 @@
           data: datapie2,
           options: optionpie2
         });
+    </script>
+
+  <!-- for togglesidebar -->
+  <script>
+      /* Set the width of the sidebar to 250px (show it) */
+function openNav() {
+  document.getElementById("mySidepanel").style.width = "250px";
+}
+
+/* Set the width of the sidebar to 0 (hide it) */
+function closeNav() {
+  document.getElementById("mySidepanel").style.width = "0";
+}
     </script>
   </body>
 </html>

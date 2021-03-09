@@ -95,11 +95,31 @@ background-color: transparent;
 }
 @media (max-width: 576px) {
   .offset-div{
-    margin-top: -40%;
+    margin-top: -70%;
   }
+  
   .dashboard-img {
-    min-height: 30vh !important;
+    min-height: 40vh !important;
   }
+  .mobile-row{
+    margin-top: 50px;
+  }
+  .chairman-image{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  }
+  .content-body{
+    /* margin-top: 70px; */
+  }
+  .header-row{
+    padding: 0px 12px;
+  }
+  .aside-body{
+    height: 100vh;
+  }
+  
 }
 .bg-red{
   background-color: #B11E1E;
@@ -294,3 +314,52 @@ employee section
 /*==============================================================
  end of employee section  
  =============================================================*/
+
+
+ /* The sidepanel menu */
+.sidepanel {
+  height: 100vh; /* Specify a height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0;
+  left: 0; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
+}
+
+/* The sidepanel links */
+.sidepanel a {
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidepanel a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: -13px;
+  font-size: 36px;
+  margin-left: 90px;
+  color: #fff!important;
+  padding-top: 10px!important;
+}
+
+/* Style the button that is used to open the sidepanel */
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}

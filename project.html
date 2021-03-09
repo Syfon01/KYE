@@ -30,10 +30,18 @@
 
   </head>
   <body>
+    
+<!-- ===========================
+  start of header and of sidebar 
+  ==================================
+ -->
 <div class="header">
-  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <div class="d-md-none d-lg-none d-xl-none d-block">
+    <button class="openbtn float-left" onclick="openNav()">&#9776;</button>
+    </div>
     <div class="row header-row">
-      <div class="avatar avatar-md"><img src="../assets/img/icon/chairman.jpg" class="img-fluid rounded-circle" alt=""></div>
+      <div class="avatar avatar-md"><img src="assets/img/icon/chairman.jpg" class="rounded-circle" alt=""></div>
       <div class="pd-l-10">
         <p class="tx-14 tx-gray mb-1">Tony Elumelu</p>
         <p class="tx-12 tx-grayy mb-0">Chairman</p>
@@ -53,7 +61,7 @@
               <div class="dropdown-header">Notifications</div>
               <a href="" class="dropdown-item">
                 <div class="media">
-                  <div class="avatar avatar-sm avatar-online"><img src="../assets/img/boy.svg"
+                  <div class="avatar avatar-sm avatar-online"><img src="assets/img/boy.svg"
                       class="rounded-circle" alt=""></div>
                   <div class="media-body mg-l-15">
                     <p>Congratulate <strong>Socrates Itumay</strong> for work anniversaries</p>
@@ -63,7 +71,7 @@
               </a>
               <a href="" class="dropdown-item">
                 <div class="media">
-                  <div class="avatar avatar-sm avatar-online"><img src="../assets/img/boy.svg"
+                  <div class="avatar avatar-sm avatar-online"><img src="assets/img/boy.svg"
                       class="rounded-circle" alt=""></div>
                   <div class="media-body mg-l-15">
                     <p><strong>Joyce Chua</strong> just created a new blog post</p>
@@ -73,7 +81,7 @@
               </a>
               <a href="" class="dropdown-item">
                 <div class="media">
-                  <div class="avatar avatar-sm avatar-online"><img src="../assets/img/boy.svg"
+                  <div class="avatar avatar-sm avatar-online"><img src="assets/img/boy.svg"
                       class="rounded-circle" alt=""></div>
                   <div class="media-body mg-l-15">
                     <p><strong>Althea Cabardo</strong> just created a new blog post</p>
@@ -83,7 +91,7 @@
               </a>
               <a href="" class="dropdown-item">
                 <div class="media">
-                  <div class="avatar avatar-sm avatar-online"><img src="../assets/img/boy.svg"
+                  <div class="avatar avatar-sm avatar-online"><img src="assets/img/boy.svg"
                       class="rounded-circle" alt=""></div>
                   <div class="media-body mg-l-15">
                     <p><strong>Adrian Monino</strong> added new comment on your photo</p>
@@ -96,62 +104,118 @@
           </div>
         </li>
         <li class="nav-item">
-          <img class="uba-logo img-fluid nav-logo" alt="UBA Logo Dark" src="../assets/img/uba_logo_red.svg">
+          <img class="uba-logo img-fluid nav-logo" alt="UBA Logo Dark" src="assets/img/uba_logo_red.svg">
         </li>
       
     </div>
   </nav>
   
 </div>
-    <aside class="asid aside-fixed">
+<div class="d-block d-md-none d-lg-none d-xl-none">
+  <aside class="asid aside-fixed sidepanel" id="mySidepanel">
       
-        <!-- <a href="" class="aside-menu-link">
-          <i data-feather="menu"></i>
-          <i data-feather="x"></i>
-        </a> -->
-      </div>
-      <div class="aside-body bd-t-0 bg-dark-color tx-center">
-       
-        <ul class="nav block-nav nav-asid pd-t-20 tx-center">
-          
-          <li class="nav-item ">
-              <a href="../dashboard.html" class="nav-link">
-                <i data-feather="grid"></i>
-                <p class="mb-0">Home</p>
-              </a>   
-            </li>
-          
-          <li class="nav-item">
-            <a href="./employee/index.html" class="nav-link">
-              <i data-feather="users"></i>
-              <p class="mb-0">Employees</p></a>
-          </li>
-          
-          <li class="nav-item active">
-            <a href="project.html" class="nav-link"><i data-feather="file-plus"></i>
-              <p class="mb-0">Projects</p></a>
-          </li>
+    <!-- <a href="" class="aside-menu-link">
+      <i data-feather="menu"></i>
+      <i data-feather="x"></i>
+    </a> -->
+  <!-- </div> -->
+  <div class="aside-body bd-t-0 bg-dark-color tx-center">
+    <div class="float-right">
+        <a href="javascript:void(0)" class="closebtn float-right pd-20" onclick="closeNav()">&times;</a>
+    </div>
+   
+    <ul class="nav block-nav nav-asid pd-t-20 mg-t-40 tx-center">
+      
+      <li class="nav-item">
+          <a href="./dashboard.html" class="nav-link">
+            <i data-feather="grid"></i>
+            <p class="mb-0">Home</p>
+          </a>   
+        </li>
+      
+      <li class="nav-item">
+        <a href="./employee/index.html" class="nav-link">
+          <i data-feather="users"></i>
+          <p class="mb-0">Employees</p></a>
+      </li>
+      
+      <li class="nav-item active">
+        <a href="./project.html" class="nav-link"><i data-feather="file-plus"></i>
+          <p class="mb-0">Projects</p></a>
+      </li>
 
-          <li class="nav-item">
-            <a href="favourite.html" class="nav-link"><i data-feather="heart"></i>
-              <p class="mb-0">Favourites</p></a>
-          </li>
+      <li class="nav-item">
+        <a href="./favourite.html" class="nav-link"><i data-feather="heart"></i>
+          <p class="mb-0">Favourites</p></a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="history.html" class="nav-link"><i data-feather="rotate-ccw"></i>
+          <p class="mb-0">History</p></a>
+      </li>
+     
+      <li class="nav-item">
+        <a href="setting.html" class="nav-link"><i data-feather="settings"></i>
+          <p class="mb-0">Settings</p></a>
+      </li>
+     
+    </ul>
           
-          <li class="nav-item">
-            <a href="history.html" class="nav-link"><i data-feather="rotate-ccw"></i>
-              <p class="mb-0">History</p></a>
-          </li>
-         
-          <li class="nav-item">
-            <a href="setting.html" class="nav-link"><i data-feather="settings"></i>
-              <p class="mb-0">Settings</p></a>
-          </li>
-         
-        </ul>
-              
-      </div>
-    </aside>
+  </div>
+</aside>
 
+</div>
+<div class="d-none d-md-block d-lg-block d-xl-block">
+  <aside class="asid aside-fixed">
+      
+  <div class="aside-body bd-t-0 bg-dark-color tx-center">
+   
+    <ul class="nav block-nav nav-asid pd-t-20 tx-center">
+      
+      <li class="nav-item">
+          <a href="./dashboard.html" class="nav-link">
+            <i data-feather="grid"></i>
+            <p class="mb-0">Home</p>
+          </a>   
+        </li>
+      
+      <li class="nav-item">
+        <a href="./employee/index.html" class="nav-link">
+          <i data-feather="users"></i>
+          <p class="mb-0">Employees</p></a>
+      </li>
+      
+      <li class="nav-item active">
+        <a href="./project.html" class="nav-link"><i data-feather="file-plus"></i>
+          <p class="mb-0">Projects</p></a>
+      </li>
+
+      <li class="nav-item">
+        <a href="./favourite.html" class="nav-link"><i data-feather="heart"></i>
+          <p class="mb-0">Favourites</p></a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="history.html" class="nav-link"><i data-feather="rotate-ccw"></i>
+          <p class="mb-0">History</p></a>
+      </li>
+     
+      <li class="nav-item">
+        <a href="setting.html" class="nav-link"><i data-feather="settings"></i>
+          <p class="mb-0">Settings</p></a>
+      </li>
+     
+    </ul>
+          
+  </div>
+</aside>
+
+</div>
+
+<!-- ===========================
+  end of sidebar 
+  ==================================
+ -->
     <div class="content ht-100v pd-0">
       
       <div class="content-body pd-t-100">

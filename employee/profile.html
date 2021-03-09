@@ -30,10 +30,18 @@
 
   </head>
   <body>
-<div class="header">
-  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow">
+
+<!-- ===========================
+  start of header and of sidebar 
+  ==================================
+ -->
+ <div class="header">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <div class="d-md-none d-lg-none d-xl-none d-block">
+    <button class="openbtn float-left" onclick="openNav()">&#9776;</button>
+    </div>
     <div class="row header-row">
-      <div class="avatar avatar-md"><img src="../assets/img/icon/chairman.jpg" class="img-fluid rounded-circle" alt=""></div>
+      <div class="avatar avatar-md"><img src="../assets/img/icon/chairman.jpg" class="rounded-circle" alt=""></div>
       <div class="pd-l-10">
         <p class="tx-14 tx-gray mb-1">Tony Elumelu</p>
         <p class="tx-12 tx-grayy mb-0">Chairman</p>
@@ -103,50 +111,111 @@
   </nav>
   
 </div>
-    <aside class="asid aside-fixed">
+<div class="d-block d-md-none d-lg-none d-xl-none">
+  <aside class="asid aside-fixed sidepanel" id="mySidepanel">
       
-      <div class="aside-body bd-t-0 bg-dark-color tx-center">
-       
-        <ul class="nav block-nav nav-asid pd-t-20 tx-center">
-          
-          <li class="nav-item ">
-              <a href="../dashboard.html" class="nav-link">
-                <i data-feather="grid"></i>
-                <p class="mb-0">Home</p>
-              </a>   
-            </li>
-          
-          <li class="nav-item active">
-            <a href="./index.html" class="nav-link">
-              <i data-feather="users"></i>
-              <p class="mb-0">Employees</p></a>
-          </li>
-          
-          <li class="nav-item">
-            <a href="../project.html" class="nav-link"><i data-feather="file-plus"></i>
-              <p class="mb-0">Projects</p></a>
-          </li>
+    <!-- <a href="" class="aside-menu-link">
+      <i data-feather="menu"></i>
+      <i data-feather="x"></i>
+    </a> -->
+  <!-- </div> -->
+  <div class="aside-body bd-t-0 bg-dark-color tx-center">
+    <div class="float-right">
+        <a href="javascript:void(0)" class="closebtn float-right pd-20" onclick="closeNav()">&times;</a>
+    </div>
+   
+    <ul class="nav block-nav nav-asid pd-t-20 mg-t-40 tx-center">
+      
+      <li class="nav-item ">
+          <a href="../dashboard.html" class="nav-link">
+            <i data-feather="grid"></i>
+            <p class="mb-0">Home</p>
+          </a>   
+        </li>
+      
+      <li class="nav-item active" >
+        <a href="./employee/index.html" class="nav-link">
+          <i data-feather="users"></i>
+          <p class="mb-0">Employees</p></a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="../project.html" class="nav-link"><i data-feather="file-plus"></i>
+          <p class="mb-0">Projects</p></a>
+      </li>
 
-          <li class="nav-item">
-            <a href="../favourite.html" class="nav-link"><i data-feather="heart"></i>
-              <p class="mb-0">Favourites</p></a>
-          </li>
+      <li class="nav-item">
+        <a href="../favourite.html" class="nav-link"><i data-feather="heart"></i>
+          <p class="mb-0">Favourites</p></a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="../history.html" class="nav-link"><i data-feather="rotate-ccw"></i>
+          <p class="mb-0">History</p></a>
+      </li>
+     
+      <li class="nav-item">
+        <a href="../setting.html" class="nav-link"><i data-feather="settings"></i>
+          <p class="mb-0">Settings</p></a>
+      </li>
+     
+    </ul>
           
-          <li class="nav-item">
-            <a href="../history.html" class="nav-link"><i data-feather="rotate-ccw"></i>
-              <p class="mb-0">History</p></a>
-          </li>
-         
-          <li class="nav-item">
-            <a href="../setting.html" class="nav-link"><i data-feather="settings"></i>
-              <p class="mb-0">Settings</p></a>
-          </li>
-         
-        </ul>
-              
-      </div>
-    </aside>
+  </div>
+</aside>
 
+</div>
+<div class="d-none d-md-block d-lg-block d-xl-block">
+  <aside class="asid aside-fixed">
+      
+  <div class="aside-body bd-t-0 bg-dark-color tx-center">
+   
+    <ul class="nav block-nav nav-asid pd-t-20 tx-center">
+      
+      <li class="nav-item">
+          <a href="../dashboard.html" class="nav-link">
+            <i data-feather="grid"></i>
+            <p class="mb-0">Home</p>
+          </a>   
+        </li>
+      
+      <li class="nav-item active">
+        <a href="./employee/index.html" class="nav-link">
+          <i data-feather="users"></i>
+          <p class="mb-0">Employees</p></a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="../project.html" class="nav-link"><i data-feather="file-plus"></i>
+          <p class="mb-0">Projects</p></a>
+      </li>
+
+      <li class="nav-item">
+        <a href="../favourite.html" class="nav-link"><i data-feather="heart"></i>
+          <p class="mb-0">Favourites</p></a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="../history.html" class="nav-link"><i data-feather="rotate-ccw"></i>
+          <p class="mb-0">History</p></a>
+      </li>
+     
+      <li class="nav-item">
+        <a href="../setting.html" class="nav-link"><i data-feather="settings"></i>
+          <p class="mb-0">Settings</p></a>
+      </li>
+     
+    </ul>
+          
+  </div>
+</aside>
+
+</div>
+
+<!-- ===========================
+  end of sidebar 
+  ==================================
+ -->
     <div class="content pd-0">
      
         <div class="content-body pd-t-100">
@@ -700,6 +769,19 @@ function goBack() {
           $(this).prev(".card-header").find(".fas").removeClass("fa-angle-up").addClass("fa-angle-down");
         });
       });
+  </script>
+
+   <!-- for togglesidebar -->
+   <script>
+    /* Set the width of the sidebar to 250px (show it) */
+function openNav() {
+document.getElementById("mySidepanel").style.width = "250px";
+}
+
+/* Set the width of the sidebar to 0 (hide it) */
+function closeNav() {
+document.getElementById("mySidepanel").style.width = "0";
+}
   </script>
 
   </body>
