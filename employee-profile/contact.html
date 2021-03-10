@@ -152,271 +152,67 @@
     </section>
     <section class="content">
       <div class="container">
-        <ul class="nav nav-line" id="myTab" role="tablist">
-          <li class="nav-item">
-            <a class="nav-link tab active tx-16" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Personal</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link tab" id="profile-tab tx-16" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Dependents</a>
-          </li>
-          
-        </ul>
-        <div class="tab-content bd-t-0 pd-y-20" id="myTabContent">
-          <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-            <div class="row">
-              <div class="col-lg-8 col-12 mg-t-15 order-2 order-md-1">
-                <div class="card card-body shadow">
-                  <form>
-                    <div class="form-row">
-                      <div class="form-group col-md-6">
-                        <label for="title">Title</label>
-                        <input type="text" class="form-control" id="" placeholder="title">
-                      </div>
-                      <div class="form-group col-md-6">
-                        <label for="firstName">First Name</label>
-                        <input type="text" class="form-control" id="" placeholder="First name">
-                      </div>
-                    </div>
-                    <div class="form-row">
-                      <div class="form-group col-md-6">
-                        <label for="middleName">Middle Name</label>
-                        <input type="email" class="form-control" id="" placeholder="Middle Name">
-                      </div>
-                      <div class="form-group col-md-6">
-                        <label for="lastName">Last Name</label>
-                        <input type="Last name" class="form-control" id="" placeholder="last name">
-                      </div>
-                    </div>
-                    <div class="form-row">
-                      <div class="form-group col-md-6">
-                        <label for="gender">Gender</label>
-                        <div class="row">
-                          <div class="col">
-                            <div class="custom-control custom-radio">
-                              <input type="radio" id="male" name="male" class="custom-control-input" checked>
-                              <label class="custom-control-label" for="male">Male</label>
-                            </div>
-                          </div>
-                          <div class="col">
-                            <div class="custom-control custom-radio">
-                              <input type="radio" id="female" name="female" class="custom-control-input">
-                              <label class="custom-control-label" for="female">Female</label>
-                            </div>
-                          </div>
-                          <div class="col">
-                            <div class="custom-control custom-radio">
-                              <input type="radio" id="others" name="customRadio" class="custom-control-input">
-                              <label class="custom-control-label" for="other">Other</label>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="form-group col-md-6">
-                        <label for="status">Marital Status</label>
-                        <select class="custom-select">
-                          <option selected>Single</option>
-                          <option value="1">Married</option>
-                          <option value="2">Single</option>
-                          <option value="3">Divorced</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="form-row">
-                      <div class="form-group col-md-6">
-                        <label for="DOB">Date Of Birth</label>
-                        <input type="date" class="form-control" id="">
-                      </div>
-                      <div class="form-group col-md-6">
-                        <label for="age">Age</label>
-                        <input type="number" class="form-control" id="" placeholder="24">
-                      </div>
-                    </div>
-                    <div class="form-row">
-                      <div class="form-group col-md-6">
-                        <label for="DOB">Hire Date</label>
-                        <input type="date" class="form-control" id="">
-                      </div>
-                      <div class="form-group col-md-6">
-                        <label for="email">Email Address</label>
-                        <input type="email" class="form-control" id="" placeholder="sheriff@gmail,com">
-                      </div>
-                    </div>
-                    <div class="form-row">
-                      <div class="form-group col-md-6">
-                        <label for="country">Country Of Origin</label>
-                        <select class="custom-select">
-                          <option selected>Select Country</option>
-                          <option value="1">Nigeria</option>
-                          <option value="2">Cameroun</option>
-                          <option value="3">Ghana</option>
-                          <option value="3">USA</option>
-                          <option value="3">Frace</option>
-  
-                        </select>
-                      </div>
-                      <div class="form-group col-md-6">
-                        <label for="country">State/Providence</label>
-                        <select class="custom-select">
-                          <option selected>Select State</option>
-                          <option value="1">Lagos</option>
-                          <option value="2">Abuja</option>
-                          <option value="3">Oyo</option>
-                          <option value="3">Ogun</option>
-                          <option value="3">Rivers</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="form-row">
-                      <div class="form-group col-md-6">
-                        <label for="country">Country Of Residence</label>
-                        <select class="custom-select">
-                          <option selected>Select Country</option>
-                          <option value="1">Nigeria</option>
-                          <option value="2">Cameroun</option>
-                          <option value="3">Ghana</option>
-                          <option value="3">USA</option>
-                          <option value="3">Frace</option>
-  
-                        </select>
-                      </div>
-                      <div class="form-group col-md-6">
-                        <label for="inputPassword4">Are you willing to reloctae?</label>
-                        <div class="row">
-                          <div class="col">
-                            <div class="custom-control custom-radio">
-                              <input type="radio" id="yes" name="yes" class="custom-control-input" checked>
-                              <label class="custom-control-label" for="yes">Yes</label>
-                            </div>
-                          </div>
-                          <div class="col">
-                            <div class="custom-control custom-radio">
-                              <input type="radio" id="no" name="no" class="custom-control-input">
-                              <label class="custom-control-label" for="no">No</label>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="submit" class="btn btn-primary pd-x-30">Save</button>
-                      <button type="submit" class="btn btn-cancel pd-x-30">Cancel</button>
-                    </div>
-                  </form>
+        <div class="row">
+          <div class="col-lg-8 col-12 mg-t-15 order-2 order-md-1 pd-x-0 mx-auto">
+            <div class="card card-body shadow pd-lg-40">
+              <form>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="country">Country Of Origin</label>
+                    <select class="custom-select">
+                      <option selected>Select Country</option>
+                      <option value="1">Nigeria</option>
+                      <option value="2">Cameroun</option>
+                      <option value="3">Ghana</option>
+                      <option value="3">USA</option>
+                      <option value="3">Frace</option>
 
+                    </select>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="phone">Phone Number</label>
+                    <input type="number" class="form-control" id="" placeholder="+23480830909">
+                  </div>
                 </div>
-                
-              </div>
-              <div class="col-lg-4 col-12 mg-t-15 order-1 order-md-2">
+                <div class="form-group">
+                  <label for="phone">Contact Address</label>
+                  <input type="number" class="form-control" id="" placeholder="234 Marina Estate, Lagos">
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="country">City/Suburb</label>
+                    <select class="custom-select">
+                      <option selected>Select City</option>
+                      <option value="1">Nigeria</option>
+                      <option value="2">Cameroun</option>
+                      <option value="3">Ghana</option>
+                      <option value="3">USA</option>
+                      <option value="3">Frace</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="country">State of Residence</label>
+                    <select class="custom-select">
+                      <option selected>Select State</option>
+                      <option value="1">Nigeria</option>
+                      <option value="2">Cameroun</option>
+                      <option value="3">Ghana</option>
+                      <option value="3">USA</option>
+                      <option value="3">Frace</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="phone">Postal/Mailing Code</label>
+                    <input type="number" class="form-control" id="" placeholder="234 Marina Estate, Lagos">
+                  </div>
+                  
+                </div>
+                <div class="modal-footer">
+                  <button type="submit" class="btn btn-primary pd-x-30">Save</button>
+                  <button type="submit" class="btn btn-cancel pd-x-30">Cancel</button>
+                </div>
+              </form>
 
-                <div class="form-drop pd-lg-l-30 pd-lg-t-50">
-                  <div class="drop-zone p-1 rounded-circle">
-                    <div class="cell"> 
-                      <div class="drop-zone__prompt">
-                        <p class="p-14 my-0 text-gray-700">
-                          <img src="/assets/img/icons/avatar.svg" class="img-fluid"/>
-                        </p>
-                      </div>
-                      <input type="file" name="myFile" class="drop-zone__input">
-                    </div>
-                    <i class="fa fa-pen LeftIcon"></i>
-                  </div>
-                  <p class="tx-14 mg-t-15 tx-primary"><u>Change display picture</u></p>
-                  <p class="tx-13 tx-light mb-1">Ensure your face shows clearly.</p>
-                    <p class="tx-13 tx-light">Maximum size allowed is 600kb of PNG,JPEG,JPG</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-            <div class="row">
-              <div class="col-md-4 col-12 mg-t-15">
-                <div class="card shadow">
-                  <div class="card-body">
-                    <form action="">
-                      <div class="form-group">
-                        <label for="firstName">Dependent Name</label>
-                        <input type="text" class="form-control" id="" placeholder="Dependent name">
-                      </div>
-                      <div class="form-group">
-                        <label for="age">Age</label>
-                        <input type="Number" class="form-control" id="" placeholder="Add age">
-                      </div>
-                      <div class="form-group col-md-6">
-                        <label for="country">Relationship</label>
-                        <select class="custom-select">
-                          <option selected>Select Relationship</option>
-                          <option value="1">Brother</option>
-                          <option value="2">Sister</option>
-                          <option value="3">Uncle</option>
-                        </select>
-                      </div>
-                        <div class="modal-footer">
-                          <button type="submit" class="btn btn-primary pd-x-30">Save</button>
-                          <button type="submit" class="btn btn-cancel pd-x-30">Cancel</button>
-                        </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            
-              <div class="col-md-8 col-12 mg-t-15">
-                <div class="card shadow">
-                  <div class="card-body">
-                    <table class="table table-hover table-tab" id="employee">
-                      <thead class="thead-bg thead-pink">
-                        <tr class="tx-uppercase">
-                          <th scope="col">
-                            Dependent
-                        </th>
-                          <th scope="col">Age</th>
-                          <th scope="col">Relationship</th>
-                          <th scope="col"></th>
-                          <th></th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr >
-                          <td>Mercy Williams </td>
-                          <td class="tx-center">24 </td>
-                          <td class="tx-center">Wife </td>
-                          <td>
-                            <i data-feather="edit-2" class="favourite-icon tx-primary"></i>
-                          </td>
-                          <td>
-                            <i data-feather="trash-2" class="favourite-icon tx-primary"></i>
-                          </td>
-                        </tr>
-                        <tr >
-                          
-                          <td>Seyi Basil</td>
-                          <td class="tx-center">6 </td>
-                          <td class="tx-center">Brother </td>
-                          <td>
-                            <i data-feather="edit-2" class="favourite-icon tx-primary"></i>
-                          </td>
-                          <td>
-                            <i data-feather="trash-2" class="favourite-icon tx-primary"></i>
-                          </td>
-                        </tr>
-          
-                        <tr >
-                          
-                          <td>Dan Matthews</td>
-                          <td class="tx-center">40 </td>
-                          <td class="tx-center">Wife</td>
-                          <td>
-                            <i data-feather="edit-2" class="favourite-icon tx-primary"></i>
-                          </td>
-                          <td>
-                            <i data-feather="trash-2" class="favourite-icon tx-primary"></i>
-                          </td>
-                        </tr>
-                        
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
             </div>
             
           </div>
