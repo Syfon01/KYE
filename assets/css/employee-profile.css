@@ -33,6 +33,13 @@ fill:#B11E1E ;
    .perform-tab{
     max-width: 14.0%!important;
   }
+  .header-width{
+    max-width:1280px!important;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
   }
   
   .indicator{

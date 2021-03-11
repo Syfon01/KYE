@@ -180,6 +180,17 @@ svg {
     background-repeat: no-repeat!important;
     height:100vh!important
 }
+.login-bg{
+    background: linear-gradient(rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.3)),
+url('../img/icons/login.jpg') center center fixed !important;
+-webkit-background-size: cover !important;
+-moz-background-size: cover !important;
+-o-background-size: cover !important;
+background-size: cover !important;
+background-repeat: no-repeat!important;
+height:100vh!important  
+}
 .app-title {
     line-height: 12px;
     font-size: 12px !important;
