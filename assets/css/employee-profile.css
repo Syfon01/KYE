@@ -56,7 +56,7 @@ fill:#B11E1E ;
   .drop-zone {
     width: 120px;
     height: 120px;
-    border: 3px solid #D70900;
+    border: 3px solid #B11E1E;
     position: relative;
     color: #666;
     /* overflow: hidden; */
@@ -111,7 +111,7 @@ fill:#B11E1E ;
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    border: 1px solid #D70900;
+    border: 1px solid #B11E1E;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -129,4 +129,7 @@ fill:#B11E1E ;
   table.dataTable.table-tab thead .sorting_asc, table.dataTable thead .sorting_desc{
     background-color: #9e19191a!important;
 
+  }
+  .btn-pink{
+    background-color: #B11E1E1A!important;
   }
