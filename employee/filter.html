@@ -320,7 +320,6 @@
                             </select>
                           </div>
                           
-                          
                         </div>
                       </div>
                     </div>
@@ -443,6 +442,16 @@
                            <i data-feather="plus" class="add-icon"></i>
                             <span class="tx-grayy">Add Years of Experience</span>
                           </a>
+                          <div class="mg-t-10">
+                            <select class="form-control year" name="states[]" multiple="multiple">
+                              <option >Choose age</option>
+                              <option value="1">2-3 years</option>
+                              <option value="2">4-5 years</option>
+                              <option value="3">7-10 years</option>
+                              <option value="4">Above 10</option>
+                            </select>
+                          </div>
+                         
                         </div>
                       </div>
                     </div>
@@ -459,7 +468,17 @@
                           <a href="" class="tx-14">
                            <i data-feather="plus" class="add-icon"></i>
                             <span class="tx-grayy">Add Skills</span>
+                            
                           </a>
+                          <div class="mg-t-10">
+                            <select class="form-control skills" name="states[]" multiple="multiple">
+                              <option >Add your skills</option>
+                              <option value="1">Skill 1</option>
+                              <option value="2">Skill 2</option>
+                              <option value="3">Skill 3</option>
+                              <option value="4">Skill 4</option>
+                            </select>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -477,6 +496,15 @@
                            <i data-feather="plus" class="add-icon"></i>
                             <span class="tx-grayy">Grade Level</span>
                           </a>
+                          <div class="mg-t-10">
+                            <select class="form-control grade" name="states[]" multiple="multiple">
+                              <option >Select your grade</option>
+                              <option value="1">Grade 1</option>
+                              <option value="2">Grade 2</option>
+                              <option value="3">Grade 3</option>
+                              <option value="4">Grade 4</option>
+                            </select>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -494,6 +522,15 @@
                            <i data-feather="plus" class="add-icon"></i>
                             <span class="tx-grayy">Employment Type</span>
                           </a>
+                          <div class="mg-t-10">
+                            <select class="form-control employment" name="states[]" multiple="multiple">
+                              <option >Select Employemnt Type</option>
+                              <option value="1">Grade 1</option>
+                              <option value="2">Grade 2</option>
+                              <option value="3">Grade 3</option>
+                              <option value="4">Grade 4</option>
+                            </select>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -511,6 +548,15 @@
                            <i data-feather="plus" class="add-icon"></i>
                             <span class="tx-grayy">Degree</span>
                           </a>
+                          <div class="mg-t-10">
+                            <select class="form-control degree" name="states[]" multiple="multiple">
+                              <option >Select your Degree</option>
+                              <option value="1">degree 1</option>
+                              <option value="2">degree 2</option>
+                              <option value="3">degree 3</option>
+                              <option value="4">degree 4</option>
+                            </select>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -528,6 +574,16 @@
                            <i data-feather="plus" class="add-icon"></i>
                             <span class="tx-grayy">Age</span>
                           </a>
+                          <div class="mg-t-10">
+                            <input type="text " class="form-control" placeholder="How old are you">
+                            <!-- <select class="form-control age" name="states[]" multiple="multiple">
+                              <option >How old are you</option>
+                              <option value="1">degree 1</option>
+                              <option value="2">degree 2</option>
+                              <option value="3">degree 3</option>
+                              <option value="4">degree 4</option>
+                            </select> -->
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -545,6 +601,15 @@
                            <i data-feather="plus" class="add-icon"></i>
                             <span class="tx-grayy">Certifications</span>
                           </a>
+                          <div class="mg-t-10">
+                            <select class="form-control certification" name="states[]" multiple="multiple">
+                              <option >Select your Certifications</option>
+                              <option value="1">certificate 1</option>
+                              <option value="2">certificate 2</option>
+                              <option value="3">certificate 3</option>
+                              <option value="4">certificate 4</option>
+                            </select>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -733,7 +798,7 @@
     <!-- select 2  -->
 <script>
   $(document).ready(function() {
-    $('.department, .geography, .job-role,.project').select2();
+    $('.department, .geography, .job-role,.project,.age,.year,.certification,.employment,.grade,.degree,.skills').select2();
 });
   var substringMatcher = function(strs) {
 return function findMatches(q, cb) {
