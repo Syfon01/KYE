@@ -222,7 +222,8 @@
       
       <div class="content-body pd-t-100">
        <div>
-         <p class="tx-24 tx-semibold mb-0"> Access Request</p>
+
+         <p class="tx-24 tx-semibold mb-0"> <i data-feather="arrow-left" class="tx-primary" onclick="goBack()"></i> Access Request</p>
          <p class="tx-14 tx-gray">You can grant access to any of the employees from here</p>
        </div>
        
@@ -476,6 +477,10 @@
      let y = document.getElementById("employerTag");
      y.style.display = "none"
     }
+
+    function goBack() {
+  window.history.back();
+};
   </script>
   <script>
     /* Set the width of the sidebar to 250px (show it) */

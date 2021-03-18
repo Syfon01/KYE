@@ -384,3 +384,6 @@ span.multiselect-native-select{
 .multiselect.custom-select{
   min-width: 16rem;
 }
+.select2-container .select2-selection--multiple{
+  min-width: 19.5rem;
+}
