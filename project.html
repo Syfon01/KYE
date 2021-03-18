@@ -226,36 +226,38 @@
        <div class="card mg-t-50">
         <ul class="nav nav-line pd-x-20" id="myTab" role="tablist">
           <li class="nav-item">
-            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Projects I created</a>
+            <a class="nav-link tab active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Projects I created</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Standard Projects</a>
+            <a class="nav-link tab" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Standard Projects</a>
           </li>
           
         </ul>
-        <div class="tab-content bd-t-0 pd-x-20" id="myTabContent">
+        <div class="tab-content bd-t-0" id="myTabContent">
           <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-            <div class="card-header bd-b-0">
-              <div class="col-12 col-md-4 col-lg-3 offset-md-9 px-0">
-                  <div class="row justify-content-between">
-                    <div class="col-8 pd-r-0">
-                      <button class="btn btn-outline-primary w-100" data-toggle="modal" data-target="#exportModal">
+            <div class="card-header bd-b-0 pd-y-5">
+              <div class="">
+                  <div class="row">
+                    <div class="col-md-4  col-12">
+                      <div class="mg-lg-t-10">
+                        <div class="search-form">
+                          <input type="search" class="form-control" placeholder="Search">
+                          <button class="btn" type="button"><i data-feather="search"></i></button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-5 col-0"></div>
+                    <div class="col-md-2 col-8 pd-lg-x-0 mg-t-15 mg-t-lg-0">
+                      <button class="btn btn-outline-primary w-75 float-lg-right" data-toggle="modal" data-target="#exportModal">
                         <span>
                           <i data-feather="download" class="mg-r-5"></i>
                              Export as
                         </span>
                       </button>
                     </div>
-                    <!-- <div class="col-4 pd-r-5">
-                      <button class="btn btn-primary w-100" data-toggle="modal" data-target="#filterModal">
-                        <span>class="tx-center"
-                          <i data-feather="filter" class="mg-r-5"></i>
-                          Filter
-                        </span>
-                      </button>
-                    </div> -->
-                    <div class="col pd-x-0">
-                      <button class="btn btn-primary-outline float-right">
+                    
+                    <div class="col-md-1 col-4 pd-lg-x-0 mg-t-15 mg-t-lg-0">
+                      <button class="btn btn-primary-mg-t-15 mg-t-lg-outline">
                         <span>
                           <i data-feather="printer" class="tx-primary mg-r-5 print-icon"></i>
                           Print
@@ -360,34 +362,36 @@
           
           </div>
           <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-            <div class="card-header bd-b-0">
-              <div class="col-12 col-md-4 col-lg-3 offset-md-9 px-0">
-                  <div class="row justify-content-between">
-                    <div class="col-8 pd-r-0">
-                      <button class="btn btn-outline-primary w-100" data-toggle="modal" data-target="#exportModal">
-                        <span>
-                          <i data-feather="download" class="mg-r-5"></i>
-                             Export as
-                        </span>
-                      </button>
+            <div class="card-header bd-b-0 pd-y-5">
+              <div class="">
+                <div class="row">
+                  <div class="col-md-4  col-12">
+                    <div class="mg-lg-t-5">
+                      <div class="search-form">
+                        <input type="search" class="form-control" placeholder="Search">
+                        <button class="btn" type="button"><i data-feather="search"></i></button>
+                      </div>
                     </div>
-                    <!-- <div class="col-4 pd-r-5">
-                      <button class="btn btn-primary w-100" data-toggle="modal" data-target="#filterModal">
-                        <span>class="tx-center"
-                          <i data-feather="filter" class="mg-r-5"></i>
-                          Filter
-                        </span>
-                      </button>
-                    </div> -->
-                    <div class="col pd-x-0">
-                      <button class="btn btn-primary-outline float-right">
-                        <span>
-                          <i data-feather="printer" class="tx-primary mg-r-5 print-icon"></i>
-                          Print
-                        </span>
-                      </button>
-                    </div>
-                </div>
+                  </div>
+                  <div class="col-md-5 col-0"></div>
+                  <div class="col-md-2 col-8 pd-lg-x-0 mg-t-15 mg-t-lg-0">
+                    <button class="btn btn-outline-primary w-75 float-lg-right" data-toggle="modal" data-target="#exportModal">
+                      <span>
+                        <i data-feather="download" class="mg-r-5"></i>
+                           Export as
+                      </span>
+                    </button>
+                  </div>
+                  
+                  <div class="col-md-1 col-4 pd-lg-x-0 mg-t-15 mg-t-lg-0">
+                    <button class="btn btn-primary-outline">
+                      <span>
+                        <i data-feather="printer" class="tx-primary mg-r-5 print-icon"></i>
+                        Print
+                      </span>
+                    </button>
+                  </div>
+              </div>
               </div>
            </div>
            <div class="card-body">
@@ -564,7 +568,6 @@
     <script src="../assets/lib/datatables.net-responsive-dt/js/responsive.dataTables.min.js"></script>
     <script src="../assets/lib/typeahead.js/typeahead.jquery.min.js"></script>
     <script src="../assets/lib/typeahead.js/typeahead.bundle.min.js"></script>
-
 
     <script src="../assets/lib/chart.js/Chart1.min.js"></script>
     <script src="../assets/lib/chart.js/utils.js"></script>
