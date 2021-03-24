@@ -12,7 +12,8 @@
     <link href="../assets/lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
     <link href="../assets/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
     <link href="../assets/lib/jqvmap/jqvmap.min.css" rel="stylesheet">
-
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css"> -->
+  
     <link href="../assets/lib/prismjs/themes/prism-vs.css" rel="stylesheet">
     <link href="../assets/lib/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet">
     <link href="../assets/lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet">
@@ -99,7 +100,7 @@
                   </div>
                 </div>
               </a>
-              <div class="dropdown-footer"><a href="">View all Notifications</a></div>
+              <div class="dropdown-footer"><a href="./notification.html">View all Notifications</a></div>
             </div>
           </div>
         </li>
@@ -224,36 +225,36 @@
          <p class="tx-14 tx-gray">Here is the list of employees you have taken special interest in</p>
        </div>
        <div class="card mg-t-50">
-         <div class="card-header">
-            <div class="col-12 col-md-4 col-lg-3 offset-md-9 px-0">
-                <div class="row justify-content-between">
-                  <div class="col-8 pd-r-0">
-                    <button class="btn btn-outline-primary w-100" data-toggle="modal" data-target="#exportModal">
-                      <span>
-                        <i data-feather="download" class="mg-r-5"></i>
-                           Export as
-                      </span>
-                    </button>
-                  </div>
-                  <!-- <div class="col-4 pd-r-5">
-                    <button class="btn btn-primary w-100" data-toggle="modal" data-target="#filterModal">
-                      <span>
-                        <i data-feather="filter" class="mg-r-5"></i>
-                        Filter
-                      </span>
-                    </button>
-                  </div> -->
-                  <div class="col pd-x-0">
-                    <button class="btn btn-primary-outline float-right">
-                      <span>
-                        <i data-feather="printer" class="tx-primary mg-r-5 print-icon"></i>
-                        Print
-                      </span>
-                    </button>
-                  </div>
-              </div>
+        <div class="card-header">
+          <div class="col-12 col-md-4 col-lg-3 offset-md-9 px-0">
+              <div class="row justify-content-between">
+                <div class="col-8 pd-r-0">
+                  <button class="btn btn-outline-primary w-100" data-toggle="modal" data-target="#exportModal">
+                    <span>
+                      <i data-feather="download" class="mg-r-5"></i>
+                         Export as
+                    </span>
+                  </button>
+                </div>
+                <!-- <div class="col-4 pd-r-5">
+                  <button class="btn btn-primary w-100" data-toggle="modal" data-target="#filterModal">
+                    <span>
+                      <i data-feather="filter" class="mg-r-5"></i>
+                      Filter
+                    </span>
+                  </button>
+                </div> -->
+                <div class="col pd-x-0">
+                  <button class="btn btn-primary-outline float-right">
+                    <span>
+                      <i data-feather="printer" class="tx-primary mg-r-5 print-icon"></i>
+                      Print
+                    </span>
+                  </button>
+                </div>
             </div>
-         </div>
+          </div>
+       </div>
          <div class="card-body">
           <table class="table table-hover" id="employee">
             <thead class="thead-bg">
@@ -460,6 +461,8 @@
     <script src="../assets/lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
 
     <script src="../assets/lib/prismjs/prism.js"></script>
+    <!-- <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script> -->
+
     <script src="../assets/lib/datatables.net/js/jquery.dataTables.min.js"></script>
     <script src="../assets/lib/datatables.net-dt/js/dataTables.dataTables.min.js"></script>
     <script src="../assets/lib/datatables.net-responsive/js/dataTables.responsive.min.js"></script>

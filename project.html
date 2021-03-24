@@ -216,7 +216,7 @@
   end of sidebar 
   ==================================
  -->
-    <div class="content ht-100v pd-0">
+    <div class="content pd-0">
       
       <div class="content-body pd-t-100">
        <div>
@@ -226,36 +226,34 @@
        <div class="card mg-t-50">
         <ul class="nav nav-line pd-x-20" id="myTab" role="tablist">
           <li class="nav-item">
-            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Projects I created</a>
+            <a class="nav-link tab active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Projects I created</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Standard Projects</a>
+            <a class="nav-link tab" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Standard Projects</a>
           </li>
           
         </ul>
-        <div class="tab-content bd-t-0 pd-x-20" id="myTabContent">
+        <div class="tab-content bd-t-0" id="myTabContent">
           <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
             <div class="card-header bd-b-0">
-              <div class="col-12 col-md-4 col-lg-3 offset-md-9 px-0">
+              <div class="col-12 col-md-5 col-lg-4 offset-md-8 px-0">
                   <div class="row justify-content-between">
-                    <div class="col-8 pd-r-0">
+                    <div class="col-4 pd-r-5">
+                      <a href="./create-project.html" class="btn btn-primary w-100">
+                          Create New
+                      </a>
+                    </div>
+                    <div class="col-5 pd-r-0">
                       <button class="btn btn-outline-primary w-100" data-toggle="modal" data-target="#exportModal">
                         <span>
                           <i data-feather="download" class="mg-r-5"></i>
-                             Export as
+                            Export as
                         </span>
                       </button>
                     </div>
-                    <!-- <div class="col-4 pd-r-5">
-                      <button class="btn btn-primary w-100" data-toggle="modal" data-target="#filterModal">
-                        <span>class="tx-center"
-                          <i data-feather="filter" class="mg-r-5"></i>
-                          Filter
-                        </span>
-                      </button>
-                    </div> -->
+                    
                     <div class="col pd-x-0">
-                      <button class="btn btn-primary-outline float-right">
+                      <button class="btn btn-primary-outline">
                         <span>
                           <i data-feather="printer" class="tx-primary mg-r-5 print-icon"></i>
                           Print
@@ -266,7 +264,7 @@
               </div>
            </div>
            <div class="card-body">
-            <table class="table table-hover" id="employee">
+            <table class="table display table-hover" id="employee">
               <thead class="thead-bg">
                 <tr class="tx-bold">
                   <th scope="col">
@@ -361,26 +359,24 @@
           </div>
           <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
             <div class="card-header bd-b-0">
-              <div class="col-12 col-md-4 col-lg-3 offset-md-9 px-0">
+              <div class="col-12 col-md-5 col-lg-4 offset-md-8 px-0">
                   <div class="row justify-content-between">
-                    <div class="col-8 pd-r-0">
+                    <div class="col-4 pd-r-5">
+                      <a href="./create-project.html" class="btn btn-primary w-100">
+                          Create New
+                      </a>
+                    </div>
+                    <div class="col-5 pd-r-0">
                       <button class="btn btn-outline-primary w-100" data-toggle="modal" data-target="#exportModal">
                         <span>
                           <i data-feather="download" class="mg-r-5"></i>
-                             Export as
+                            Export as
                         </span>
                       </button>
                     </div>
-                    <!-- <div class="col-4 pd-r-5">
-                      <button class="btn btn-primary w-100" data-toggle="modal" data-target="#filterModal">
-                        <span>class="tx-center"
-                          <i data-feather="filter" class="mg-r-5"></i>
-                          Filter
-                        </span>
-                      </button>
-                    </div> -->
+                    
                     <div class="col pd-x-0">
-                      <button class="btn btn-primary-outline float-right">
+                      <button class="btn btn-primary-outline">
                         <span>
                           <i data-feather="printer" class="tx-primary mg-r-5 print-icon"></i>
                           Print
@@ -391,7 +387,7 @@
               </div>
            </div>
            <div class="card-body">
-            <table class="table table-hover" id="standardProject">
+            <table class="table display table-hover" id="standardProject">
               <thead class="thead-bg">
                 <tr class='clickable-row' data-href='../employee/filter.html'>
                   <th scope="col">
@@ -565,7 +561,6 @@
     <script src="../assets/lib/typeahead.js/typeahead.jquery.min.js"></script>
     <script src="../assets/lib/typeahead.js/typeahead.bundle.min.js"></script>
 
-
     <script src="../assets/lib/chart.js/Chart1.min.js"></script>
     <script src="../assets/lib/chart.js/utils.js"></script>
 
@@ -615,25 +610,26 @@ source: substringMatcher(names)
 
 </script>
 
-    <script>
-      $('#employee,#standardProject').DataTable({
-        responsive: true,
-        language: {
-          searchPlaceholder: 'Search...',
-          sSearch: '',
-          lengthMenu: '_MENU_ items/page',
-          columnDefs: [{
-              responsivePriority: 1,
-              targets: 0
-            },
-            {
-              responsivePriority: 2,
-              targets: -1
-            }
-          ]
-        }
-      });
-    </script>
+<script>
+ $(document).ready( function () {
+  $('.display').DataTable({
+    "paging": true,
+    "info": true,
+    "responsive": true,
+    "aoColumnDefs": [{
+        "bSortable": false,
+        "aTargets": ["no-sort"]
+    }],
+    "bInfo": true
+  });
+  
+  $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+    $('.display:visible').each( function(e) {
+      $(this).DataTable().columns.adjust().responsive.recalc();
+    });
+  });
+} );
+ </script>
 
     <script>
       $(document).ready(function(){
@@ -642,6 +638,17 @@ source: substringMatcher(names)
         });
       });
       </script>
+<!-- for togglesidebar -->
+<script>
+  /* Set the width of the sidebar to 250px (show it) */
+function openNav() {
+  document.getElementById("mySidepanel").style.width = "250px";
+}
 
+/* Set the width of the sidebar to 0 (hide it) */
+function closeNav() {
+  document.getElementById("mySidepanel").style.width = "0";
+}
+</script>
   </body>
 </html>
