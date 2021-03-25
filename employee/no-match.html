@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="UBA - Know Your Employee">
+    <title>UBA - Know Your Employee</title>
+
+    <!-- Required External CSS -->
+    <link href="../assets/lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="../assets/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="../assets/lib/jqvmap/jqvmap.min.css" rel="stylesheet">
+
+    <link href="../assets/lib/prismjs/themes/prism-vs.css" rel="stylesheet">
+    <link href="../assets/lib/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="../assets/lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet">
+    <link href="../assets/lib/select2/css/select2.min.css" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png">
+
+    <!-- DashForge CSS -->
+    <link rel="stylesheet" href="../assets/css/dashforge.css">
+
+    <!-- Page CSS --> 
+    <link rel="stylesheet" href="../assets/css/dashboard.css">
+    
+    <!-- for select 2  -->
+
+  </head>
+  <body>
+  
+<!-- ===========================
+  start of header and of sidebar 
+  ==================================
+ -->
+<div class="header">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <div class="d-md-none d-lg-none d-xl-none d-block">
+    <button class="openbtn float-left" onclick="openNav()">&#9776;</button>
+    </div>
+    <div class="row header-row">
+      <div class="avatar avatar-md"><img src="assets/img/icon/chairman.jpg" class="rounded-circle" alt=""></div>
+      <div class="pd-l-10">
+        <p class="tx-14 tx-gray mb-1">Tony Elumelu</p>
+        <p class="tx-12 tx-grayy mb-0">Chairman</p>
+      </div>
+    </div> 
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto pd-r-40">
+        
+        
+        <li class="nav-item active pd-r-40 pd-t-5">
+          <div class="dropdown dropdown-notification">
+            <a href="" class="dropdown-link new-indicator" data-toggle="dropdown">
+              <i data-feather="bell"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right">
+              <div class="dropdown-header">Notifications</div>
+              <a href="" class="dropdown-item">
+                <div class="media">
+                  <div class="avatar avatar-sm avatar-online"><img src="assets/img/boy.svg"
+                      class="rounded-circle" alt=""></div>
+                  <div class="media-body mg-l-15">
+                    <p>Congratulate <strong>Socrates Itumay</strong> for work anniversaries</p>
+                    <span>Mar 15 12:32pm</span>
+                  </div>
+                </div>
+              </a>
+              <a href="" class="dropdown-item">
+                <div class="media">
+                  <div class="avatar avatar-sm avatar-online"><img src="assets/img/boy.svg"
+                      class="rounded-circle" alt=""></div>
+                  <div class="media-body mg-l-15">
+                    <p><strong>Joyce Chua</strong> just created a new blog post</p>
+                    <span>Mar 13 04:16am</span>
+                  </div>
+                </div>
+              </a>
+              <a href="" class="dropdown-item">
+                <div class="media">
+                  <div class="avatar avatar-sm avatar-online"><img src="assets/img/boy.svg"
+                      class="rounded-circle" alt=""></div>
+                  <div class="media-body mg-l-15">
+                    <p><strong>Althea Cabardo</strong> just created a new blog post</p>
+                    <span>Mar 13 02:56am</span>
+                  </div>
+                </div>
+              </a>
+              <a href="" class="dropdown-item">
+                <div class="media">
+                  <div class="avatar avatar-sm avatar-online"><img src="../assets/img/boy.svg"
+                      class="rounded-circle" alt=""></div>
+                  <div class="media-body mg-l-15">
+                    <p><strong>Adrian Monino</strong> added new comment on your photo</p>
+                    <span>Mar 12 10:40pm</span>
+                  </div>
+                </div>
+              </a>
+              <div class="dropdown-footer"><a href="">View all Notifications</a></div>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item">
+          <img class="uba-logo img-fluid nav-logo" alt="UBA Logo Dark" src="assets/img/uba_logo_red.svg">
+        </li>
+      
+    </div>
+  </nav>
+  
+</div>
+<div class="d-block d-md-none d-lg-none d-xl-none">
+  <aside class="asid aside-fixed sidepanel" id="mySidepanel">
+      
+    <!-- <a href="" class="aside-menu-link">
+      <i data-feather="menu"></i>
+      <i data-feather="x"></i>
+    </a> -->
+  <!-- </div> -->
+  <div class="aside-body bd-t-0 bg-dark-color tx-center">
+    <div class="float-right">
+        <a href="javascript:void(0)" class="closebtn float-right pd-20" onclick="closeNav()">&times;</a>
+    </div>
+   
+    <ul class="nav block-nav nav-asid pd-t-20 mg-t-40 tx-center">
+      
+      <li class="nav-item">
+          <a href="../dashboard.html" class="nav-link">
+            <i data-feather="grid"></i>
+            <p class="mb-0">Home</p>
+          </a>   
+        </li>
+      
+      <li class="nav-item active">
+        <a href="./employee/index.html" class="nav-link">
+          <i data-feather="users"></i>
+          <p class="mb-0">Employees</p></a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="../project.html" class="nav-link"><i data-feather="file-plus"></i>
+          <p class="mb-0">Projects</p></a>
+      </li>
+
+      <li class="nav-item">
+        <a href="../favourite.html" class="nav-link"><i data-feather="heart"></i>
+          <p class="mb-0">Favourites</p></a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="../history.html" class="nav-link"><i data-feather="rotate-ccw"></i>
+          <p class="mb-0">History</p></a>
+      </li>
+     
+      <li class="nav-item">
+        <a href="../setting.html" class="nav-link"><i data-feather="settings"></i>
+          <p class="mb-0">Settings</p></a>
+      </li>
+     
+    </ul>
+          
+  </div>
+</aside>
+
+</div>
+<div class="d-none d-md-block d-lg-block d-xl-block">
+  <aside class="asid aside-fixed">
+      
+  <div class="aside-body bd-t-0 bg-dark-color tx-center">
+   
+    <ul class="nav block-nav nav-asid pd-t-20 tx-center">
+      
+      <li class="nav-item">
+          <a href="../dashboard.html" class="nav-link">
+            <i data-feather="grid"></i>
+            <p class="mb-0">Home</p>
+          </a>   
+        </li>
+      
+      <li class="nav-item active">
+        <a href="./employee/index.html" class="nav-link">
+          <i data-feather="users"></i>
+          <p class="mb-0">Employees</p></a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="../project.html" class="nav-link"><i data-feather="file-plus"></i>
+          <p class="mb-0">Projects</p></a>
+      </li>
+
+      <li class="nav-item">
+        <a href="../favourite.html" class="nav-link"><i data-feather="heart"></i>
+          <p class="mb-0">Favourites</p></a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="../history.html" class="nav-link"><i data-feather="rotate-ccw"></i>
+          <p class="mb-0">History</p></a>
+      </li>
+     
+      <li class="nav-item">
+        <a href="../setting.html" class="nav-link"><i data-feather="settings"></i>
+          <p class="mb-0">Settings</p></a>
+      </li>
+     
+    </ul>
+          
+  </div>
+</aside>
+
+</div>
+
+<!-- ===========================
+  end of sidebar 
+  ==================================
+ -->
+    <div class="content pd-0">
+      ￼
+
+        <div class="content-body pd-t-75">
+          <div class="row">
+            <div class="col-md-4 col-12 mg-t-10 mg-lg-t-0">
+              <div class="">
+                <span onclick="goBack()" class="tx-20 tx-semibold back-icon"><i data-feather="arrow-left" class="tx-primary"></i> Filter Search</span>
+                <p class="tx-14 ">Narrow down your search with precise data</p>
+              </div>
+            </div>
+            <div class="col-md-8 col-12 mg-t-10 mg-lg-t-0">
+              
+            </div>
+          </div>
+          <div class="row mg-t-10">
+            <div class="col-md-4 col-12 mg-t-15 mg-lg-t-0">
+              <div class="card ht-50v">
+                <div class="card-header">
+                  <div class="search-form">
+                    <input type="search" id="theBasics" class="form-control" placeholder="Search by Keywords">
+                    <button class="btn" type="button"><i data-feather="search"></i></button>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div id="accordion">
+                    <div class="card bd-b-0">
+                      <div class="card-header pd-10" id="headingOne">
+                        <div class="d-flex justify-content-between collapse-btn"  data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          <p class="tx-14 mb-0">Custom Projects</p>
+                          <p class="tx-14 tx-normal mb-0"><i class="fas fa-plus ml-2"></i></p>
+                        </div>                   
+                      </div>
+                  
+                      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div class="card-body pd-10">
+                          <a href="" class="tx-14">
+                           <i data-feather="plus" class="add-icon"></i>
+                            <span class="tx-grayy">Add Project</span>
+                          </a>
+                          <div class="mg-t-10">
+                            <select class="form-control project" name="states[]" multiple="multiple">
+                              <option >Choose Custom Project</option>
+                              <option value="1">Country MD/CEO</option>
+                              <option value="2">Country DMD</option>
+                              <option value="3">Country MD</option>
+                              <option value="4">Group Head Operation</option>
+                            </select>
+                          </div>
+                          
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="card bd-b-0">
+                      <div class="card-header pd-10" id="headingTwo">
+                        <div class="d-flex justify-content-between collapse-btn"  data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseOne">
+                          <p class="tx-14 mb-0">Department</p>
+                          <p class=" mb-0 panel-title"><i class="fas fa-plus ml-2"></i></p>
+                        </div>
+                      </div>
+                      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                        <div class="card-body pd-10">
+                          <a href="" class="tx-14">
+                           <i data-feather="plus" class="add-icon"></i>
+                            <span class="tx-grayy">Add Department</span>
+                          </a>
+                          <div class="mg-t-10">
+                            <select class="form-control department" name="states[]" multiple="multiple">
+                              <option >Type a division</option>
+                              <option value="1">Retail Banking</option>
+                              <option value="2">Loans Operations</option>
+                              <option value="3">Private Banking</option>
+                              <option value="4">Corporate Banking</option>
+                            </select>
+                          </div>
+                          
+                        </div>
+                      </div>
+                    </div>
+    
+                    <div class="card bd-b-0">
+                      <div class="card-header pd-10" id="headingThree">
+                        <div class="d-flex justify-content-between collapse-btn"  data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseOne">
+                          <p class="tx-14 mb-0">Geography</p>
+                          <p class=" mb-0 panel-title"><i class="fas fa-plus ml-2"></i></p>
+                        </div>
+                      </div>
+                      <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                        <div class="card-body pd-10">
+                          <a href="" class="tx-14">
+                           <i data-feather="plus" class="add-icon"></i>
+                            <span class="tx-grayy">Add Geography</span>
+                          </a>
+                          <div class="mg-t-10">
+                            
+                              <div class="tab-content">
+                                  <div id="region" class="tab-pane active">
+                                    <select class="form-control geography" name="states[]" multiple="multiple">
+                                      <option >Input Region</option>
+                                      <option value="1">Cameroun</option>
+                                      <option value="2">Nigeria</option>
+                                      <option value="3">Ghana</option>
+                                      <option value="4">DR Congo</option>
+                                    </select>
+                                  </div>
+                                  <div id="branches" class="tab-pane">
+                                    <select class="form-control geography" name="states[]" multiple="multiple">
+                                      <option >Input Branch</option>
+                                      <option value="1">Marina</option>
+                                      <option value="2">Lekki</option>
+                                      <option value="3">Surulere</option>
+                                      <option value="4">VI</option>
+                                    </select>
+                                  </div>
+                                  <div id="headquaters" class="tab-pane">
+                                    <select class="form-control geography" name="states[]" multiple="multiple">
+                                      <option >Input Headquarter</option>
+                                      <option value="1">Headquarters 1</option>
+                                      <option value="2">Headquarters 1</option>
+                                      <option value="3">Headquarters 1</option>
+                                      <option value="4">Headquarters 1</option>
+                                    </select>
+                                  </div>
+                                  <div id="postal" class="tab-pane">
+                                    <select class="form-control geography" name="states[]" multiple="multiple">
+                                      <option >Input Postal Code</option>
+                                      <option value="1">3499566</option>
+                                      <option value="2">45667887</option>
+                                      <option value="3">45566666</option>
+                                      <option value="4">3425578</option>
+                                    </select>
+                                  </div>
+                              </div>
+                              <div class="nav nav-tabs flex-column mg-t-20" role="tablist">
+                                <div class="custom-control custom-radio d-block">
+                                    <input id="region-input" checked name="customRadio" class="custom-control-input" type="radio" data-target="#region">
+                                    <label for="region-input" class="custom-control-label">Region</label>
+                                </div>
+                                <div class="custom-control custom-radio">
+                                    <input id="branch-input" name="customRadio" class="custom-control-input" type="radio" data-target="#branches">
+                                    <label for="branch-input" class="custom-control-label">Branches</label>
+                                </div>
+                                <div class="custom-control custom-radio">
+                                    <input id="headquarters-input" name="customRadio" class="custom-control-input" type="radio" data-target="#headquaters">
+                                    <label for="headquarters-input" class="custom-control-label">Company Headquarters</label>
+                                </div>
+                                <div class="custom-control custom-radio">
+                                  <input id="postal-input" name="customRadio" class="custom-control-input" type="radio" data-target="#postal">
+                                  <label for="postal-input" class="custom-control-label">Postal Code</label>
+                              </div>
+                                </div>
+                                                                                    
+                          </div>
+                          
+                        </div>
+                      </div>
+                    </div>
+    
+                    <div class="card bd-b-0">
+                      <div class="card-header pd-10" id="headingFour">
+                        <div class="d-flex justify-content-between collapse-btn"  data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseOne">
+                          <p class="tx-14 mb-0">Job Role</p>
+                          <p class=" mb-0 panel-title"><i class="fas fa-plus ml-2"></i></p>
+                        </div>
+                      </div>
+                      <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                        <div class="card-body pd-10">
+                          <a href="" class="tx-14">
+                           <i data-feather="plus" class="add-icon"></i>
+                            <span class="tx-grayy">Add Job Role</span>
+                          </a>
+                          <div class="mg-t-10">
+                            <select class="form-control job-role" name="jobs[]" multiple="multiple">
+                              <option >Type job role</option>
+                              <option value="1">Bank Teller</option>
+                              <option value="2">Bank Officer</option>
+                              <option value="3">Business analyst</option>
+                              <option value="4">IT personnel</option>
+                            </select>
+                          </div>
+                          
+                        </div>
+                      </div>
+                    </div>
+    
+                    <div class="card bd-b-0">
+                      <div class="card-header pd-10" id="headingFive">
+                        <div class="d-flex justify-content-between collapse-btn"  data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseOne">
+                          <p class="tx-14 mb-0">Years of Experience</p>
+                          <p class=" mb-0 panel-title"><i class="fas fa-plus ml-2"></i></p>
+                        </div>
+                      </div>
+                      <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                        <div class="card-body pd-10">
+                          <a href="" class="tx-14">
+                           <i data-feather="plus" class="add-icon"></i>
+                            <span class="tx-grayy">Add Years of Experience</span>
+                          </a>
+                          <div class="mg-t-10">
+                            <select class="form-control year" name="states[]" multiple="multiple">
+                              <option >Choose age</option>
+                              <option value="1">2-3 years</option>
+                              <option value="2">4-5 years</option>
+                              <option value="3">7-10 years</option>
+                              <option value="4">Above 10</option>
+                            </select>
+                          </div>
+                         
+                        </div>
+                      </div>
+                    </div>
+    
+                    <div class="card bd-b-0">
+                      <div class="card-header pd-10" id="headingSix">
+                        <div class="d-flex justify-content-between collapse-btn"  data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseOne">
+                          <p class="tx-14 mb-0">Skills</p>
+                          <p class=" mb-0 panel-title"><i class="fas fa-plus ml-2"></i></p>
+                        </div>
+                      </div>
+                      <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
+                        <div class="card-body pd-10">
+                          <a href="" class="tx-14">
+                           <i data-feather="plus" class="add-icon"></i>
+                            <span class="tx-grayy">Add Skills</span>
+                            
+                          </a>
+                          <div class="mg-t-10">
+                            <select class="form-control skills" name="states[]" multiple="multiple">
+                              <option >Add your skills</option>
+                              <option value="1">Skill 1</option>
+                              <option value="2">Skill 2</option>
+                              <option value="3">Skill 3</option>
+                              <option value="4">Skill 4</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+    
+                    <div class="card bd-b-0">
+                      <div class="card-header pd-10" id="headingSeven">
+                        <div class="d-flex justify-content-between collapse-btn"  data-toggle="collapse" data-target="#collapseSeven" aria-expanded="true" aria-controls="collapseOne">
+                          <p class="tx-14 mb-0">Grade Level</p>
+                          <p class=" mb-0 panel-title"><i class="fas fa-plus ml-2"></i></p>
+                        </div>
+                      </div>
+                      <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion">
+                        <div class="card-body pd-10">
+                          <a href="" class="tx-14">
+                           <i data-feather="plus" class="add-icon"></i>
+                            <span class="tx-grayy">Grade Level</span>
+                          </a>
+                          <div class="mg-t-10">
+                            <select class="form-control grade" name="states[]" multiple="multiple">
+                              <option >Select your grade</option>
+                              <option value="1">Grade 1</option>
+                              <option value="2">Grade 2</option>
+                              <option value="3">Grade 3</option>
+                              <option value="4">Grade 4</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+    
+                    <div class="card bd-b-0">
+                      <div class="card-header pd-10" id="headingEight">
+                        <div class="d-flex justify-content-between collapse-btn"  data-toggle="collapse" data-target="#collapseEight" aria-expanded="true" aria-controls="collapseOne">
+                          <p class="tx-14 mb-0">Employment Type</p>
+                          <p class=" mb-0 panel-title"><i class="fas fa-plus ml-2"></i></p>
+                        </div>
+                      </div>
+                      <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordion">
+                        <div class="card-body pd-10">
+                          <a href="" class="tx-14">
+                           <i data-feather="plus" class="add-icon"></i>
+                            <span class="tx-grayy">Employment Type</span>
+                          </a>
+                          <div class="mg-t-10">
+                            <select class="form-control employment" name="states[]" multiple="multiple">
+                              <option >Select Employemnt Type</option>
+                              <option value="1">Grade 1</option>
+                              <option value="2">Grade 2</option>
+                              <option value="3">Grade 3</option>
+                              <option value="4">Grade 4</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+    
+                    <div class="card bd-b-0">
+                      <div class="card-header pd-10" id="headingNine">
+                        <div class="d-flex justify-content-between collapse-btn"  data-toggle="collapse" data-target="#collapseNine" aria-expanded="true" aria-controls="collapseOne">
+                          <p class="tx-14 mb-0">Degree</p>
+                          <p class=" mb-0 panel-title"><i class="fas fa-plus ml-2"></i></p>
+                        </div>
+                      </div>
+                      <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordion">
+                        <div class="card-body pd-10">
+                          <a href="" class="tx-14">
+                           <i data-feather="plus" class="add-icon"></i>
+                            <span class="tx-grayy">Degree</span>
+                          </a>
+                          <div class="mg-t-10">
+                            <select class="form-control degree" name="states[]" multiple="multiple">
+                              <option >Select your Degree</option>
+                              <option value="1">degree 1</option>
+                              <option value="2">degree 2</option>
+                              <option value="3">degree 3</option>
+                              <option value="4">degree 4</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  
+                    <div class="card bd-b-0">
+                      <div class="card-header pd-10" id="headingTen">
+                        <div class="d-flex justify-content-between collapse-btn"  data-toggle="collapse" data-target="#collapseTen" aria-expanded="true" aria-controls="collapseOne">
+                          <p class="tx-14 mb-0">Age</p>
+                          <p class=" mb-0 panel-title"><i class="fas fa-plus ml-2"></i></p>
+                        </div>
+                      </div>
+                      <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#accordion">
+                        <div class="card-body pd-10">
+                          <a href="" class="tx-14">
+                           <i data-feather="plus" class="add-icon"></i>
+                            <span class="tx-grayy">Age</span>
+                          </a>
+                          <div class="mg-t-10">
+                            <input type="text " class="form-control" placeholder="How old are you">
+                            <!-- <select class="form-control age" name="states[]" multiple="multiple">
+                              <option >How old are you</option>
+                              <option value="1">degree 1</option>
+                              <option value="2">degree 2</option>
+                              <option value="3">degree 3</option>
+                              <option value="4">degree 4</option>
+                            </select> -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  
+                    <div class="card bd-b-0">
+                      <div class="card-header pd-10" id="headingEleven">
+                        <div class="d-flex justify-content-between collapse-btn"  data-toggle="collapse" data-target="#collapseEleven" aria-expanded="true" aria-controls="collapseOne">
+                          <p class="tx-14 mb-0">Certifications</p>
+                          <p class=" mb-0 panel-title"><i class="fas fa-plus ml-2"></i></p>
+                        </div>
+                      </div>
+                      <div id="collapseEleven" class="collapse" aria-labelledby="headingEleven" data-parent="#accordion">
+                        <div class="card-body pd-10">
+                          <a href="" class="tx-14">
+                           <i data-feather="plus" class="add-icon"></i>
+                            <span class="tx-grayy">Certifications</span>
+                          </a>
+                          <div class="mg-t-10">
+                            <select class="form-control certification" name="states[]" multiple="multiple">
+                              <option >Select your Certifications</option>
+                              <option value="1">certificate 1</option>
+                              <option value="2">certificate 2</option>
+                              <option value="3">certificate 3</option>
+                              <option value="4">certificate 4</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  
+                  
+                  </div>
+                  <div class="modal-footer mg-t-30">
+                    <button type="button" class="btn btn-primary" >Apply Filter</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+    
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            <div class="col-md-8 col-12 mg-t-15 mg-lg-t-0">
+              <div class="card card-hei">
+                <div class="card-body">
+                  <div class="tx-center pd-y-50 pd-lg-y-100">
+                    <img src="../assets/img/icon/empty.svg" class="img-fluid"/>
+                    <p class="tx-20 tx-medium mg-t-50">No Match Yet</p>
+                    <p class="tx-14">Start search by customising your search criteria</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+
+               <!-- favourite modal  -->
+        <div class="modal fade" id="favouriteModal" tabindex="-1" role="dialog" aria-labelledby="favouriteModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+            <div class="modal-content">
+              
+              <div class="modal-body tx-center pd-y-20">
+                <div class="pd-y-30">
+                <img src="../assets/img/icon/success.svg" class="img-fluid"/>
+                </div>
+               <p class="tx-18 tx-semibold">Success!</p>
+               <p class="tx-14 tx-gray">This profile has been added to your Favourite list</p>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <script src="../assets/lib/jquery/jquery.min.js"></script>
+    <script src="../assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/lib/feather-icons/feather.min.js"></script>
+    <script src="../assets/lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+
+    <script src="../assets/lib/prismjs/prism.js"></script>
+    <script src="../assets/lib/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="../assets/lib/datatables.net-dt/js/dataTables.dataTables.min.js"></script>
+    <script src="../assets/lib/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="../assets/lib/datatables.net-responsive-dt/js/responsive.dataTables.min.js"></script>
+    <script src="../assets/lib/typeahead.js/typeahead.jquery.min.js"></script>
+    <script src="../assets/lib/typeahead.js/typeahead.bundle.min.js"></script>
+    <script src="../assets/lib/select2/js/select2.min.js"></script>
+
+
+
+    <script src="../assets/lib/chart.js/Chart1.min.js"></script>
+    <script src="../assets/lib/chart.js/utils.js"></script>
+
+    <script src="../assets/js/dashforge.js"></script>
+    <script src="../assets/js/dashforge.aside.js"></script>
+    <script src="../assets/js/dashforge.sampledata.js"></script>
+
+    <!-- append theme customizer -->
+    <script src="../assets/lib/js-cookie/js.cookie.js"></script>
+    <!-- <script src="../assets/js/dashforge.settings.js"></script> -->
+    <!-- select 2  -->
+<script>
+  $(document).ready(function() {
+    $('.department, .geography, .job-role,.project,.age,.year,.certification,.employment,.grade,.degree,.skills').select2();
+});
+  var substringMatcher = function(strs) {
+return function findMatches(q, cb) {
+  var matches, substrRegex;
+
+  // an array that will be populated with substring matches
+  matches = [];
+
+  // regex used to determine if a string contains the substring `q`
+  substrRegex = new RegExp(q, 'i');
+
+  // iterate through the pool of strings and for any string that
+  // contains the substring `q`, add it to the `matches` array
+  $.each(strs, function(i, str) {
+    if (substrRegex.test(str)) {
+      matches.push(str);
+    }
+  });
+
+  cb(matches);
+};
+};
+
+var names = ['Seyi Peters', 'Bassey Elijah', 'Arizona Jones', 'Tammy Abraham', 'California Bill',
+'Isa Seyi', 'Clinton Barack',"Will Smith" , "Dave Dan", 'Kelvin smith'
+];
+
+$('#theBasics').typeahead({
+hint: true,
+highlight: true,
+minLength: 1
+},
+{
+name: 'names',
+source: substringMatcher(names)
+});
+
+function goBack() {
+  window.history.back();
+};
+
+// radio button tab 
+
+$(document).ready(function () {
+  $('input[name="customRadio"]').click(function () {
+      $(this).tab('show');
+      $(this).removeClass('active');
+  });
+})
+</script>
+ 
+<script>
+  $(document).ready(function(){
+    // Add minus icon for collapse element which is open by default
+    $(".collapse.show").each(function(){
+      $(this).prev(".card-header").find(".fas").addClass("fa-minus").removeClass("fa-plus");
+    });
+    // Toggle plus minus icon on show hide of collapse element
+    $(".collapse").on('show.bs.collapse', function(){
+      $(this).prev(".card-header").find(".fas").removeClass("fa-plus").addClass("fa-minus");
+    }).on('hide.bs.collapse', function(){
+      $(this).prev(".card-header").find(".fas").removeClass("fa-minus").addClass("fa-plus");
+    });
+  });
+  </script>
+   <!-- for togglesidebar -->
+   <script>
+    /* Set the width of the sidebar to 250px (show it) */
+function openNav() {
+document.getElementById("mySidepanel").style.width = "250px";
+}
+
+/* Set the width of the sidebar to 0 (hide it) */
+function closeNav() {
+document.getElementById("mySidepanel").style.width = "0";
+}
+  </script>
+
+  </body>
+</html>
