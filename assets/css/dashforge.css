@@ -57,7 +57,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-family: "Roboto", sans-serif !important;
+  font-family: "Rubix", sans-serif !important;
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.5;
@@ -151,7 +151,7 @@ sup {
 
 a {
   color: #B11E1E;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Rubik', sans-serif;
   text-decoration: none;
   background-color: transparent; }
   a:hover {
