@@ -13,7 +13,7 @@
 }
 .nav-link.active.btn-tab{
   background-color: #B11E1E;
-  color: #fff;
+  color: #fff!important;
 }
 .nav-link.btn-tab svg{
 color: #B11E1E;
@@ -23,6 +23,10 @@ fill:#B11E1E ;
   color: #fff;
   fill: #fff;
   }
+  .nav-link.active.btn-tab  span img{
+    /* background-color: #fff!important; */
+    filter:  brightness(0) invert(1);
+    }
   .nav-link.btn-tab {
     background-color: #E3E2E2;
   }
@@ -39,6 +43,9 @@ fill:#B11E1E ;
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
+  }
+  .navbar-menu{
+    max-width: 990px!important;
   }
   }
   
@@ -139,4 +146,33 @@ fill:#B11E1E ;
   }
   .btn-pink{
     background-color: #B11E1E1A!important;
+  }
+  .bg-green{
+    background-color: #27AE60!important;
+  }
+  .bg-pink{
+    background-color: #FFA8A8!important;
+  }
+  .bg-baby-pink{
+    background-color: #FCD5B5!important;
+  }
+  .bg-light-blue{
+    background-color: #33B2D2!important;
+  }
+  .bg-blue-deem{
+    background-color: #69B1E9!important;
+  }
+  .bg-yellow{
+    background-color: #FFDA44!important;
+  }
+  .bg-brown-2{
+    background-color: #FCD5B5!important;
+  }
+  .bg-blue-light{
+    background-color: #729FD8!important;
+  }
+  .image-box{
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 3px 5px;
+    border-radius: 4px;
   }

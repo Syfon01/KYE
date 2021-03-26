@@ -64,7 +64,7 @@ background-color: transparent;
 }
 .header{
   position: fixed;
-  height: 100px;
+  height: 70px;
   width: 100%;
   display: block;
   z-index: 9999;
@@ -118,6 +118,9 @@ background-color: transparent;
   }
   .aside-body{
     height: 100vh;
+  }
+  .exp-btn{
+    width: 100%!important;
   }
   
 }
@@ -311,6 +314,9 @@ employee section
 .table{
   width: 100%!important;
 }
+.card-hei{
+  height: 100%;
+}
 /*==============================================================
  end of employee section  
  =============================================================*/
@@ -362,4 +368,28 @@ employee section
 
 .openbtn:hover {
   background-color: #444;
+}
+
+.nav-link.tab.active{
+color: #000;
+font-weight: 500;
+}
+
+.tag-block{
+  border-radius: 5px;
+}
+#employerTag{
+  display: inline-block;
+}
+#userAccess{
+  display: none;
+}
+span.multiselect-native-select{
+  display: block;
+}
+.multiselect.custom-select{
+  min-width: 16rem;
+}
+.select2-container .select2-selection--multiple{
+  min-width: 19.5rem;
 }

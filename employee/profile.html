@@ -341,7 +341,7 @@
                     </div>
                     <div class="col-1">
                       <button class="btn btn-transparent tx-primary pd-x-0" data-toggle="modal" data-target="#favouriteModal">
-                        <i data-feather="heart" class="fill-clock icon-lg"></i>     
+                        <i data-feather="heart" class="fill-clock icon-lg" id="fillFavo" onclick="fillFavourite()"></i>     
                      </button>
                      
                     </div>
@@ -782,6 +782,10 @@ document.getElementById("mySidepanel").style.width = "250px";
 function closeNav() {
 document.getElementById("mySidepanel").style.width = "0";
 }
+function fillFavourite() {
+     let y = document.getElementById("fillFavo");
+     y.firstElementChild.style.fill = "red"
+    }
   </script>
 
   </body>

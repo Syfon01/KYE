@@ -622,10 +622,17 @@ input:checked+.slider:before {
   .pad-large{
     padding-top: 11.1rem;
   }
+  .signup-pad{
+    padding-top: 7rem;
+}
+
 }
 @media (min-width: 1600px){
     .pad-large {
         padding-top: 15.2rem;
+    }
+    .signup-pad{
+        padding-top: 7rem;
     }
 }
 .tx-hover:hover{
