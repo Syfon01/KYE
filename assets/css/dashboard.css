@@ -11,6 +11,13 @@
   max-width: 100px!important;
   padding: 0px!important;
 }
+@media (min-width: 768px) and (max-width: 1025.98px) { 
+  .content-body{
+    margin-left: 110px!important;
+    /* margin-bottom: 200px; */
+  }
+}
+
 @media (min-width:1200px){
   .aside-fixed + .content{
     margin-left: 0px;
