@@ -232,6 +232,24 @@
           <form>           
          
            <div>
+            <div class="row">
+              <div class="col-md-3 col-12">
+               <p class="tx-14">Input Project Name</p>
+               
+              </div>
+              <div class="col-md-8 col-12">
+               <div class="col-lg-10 col-12 pd-x-0">
+                 <div class="input-group mg-b-10">
+                   <input type="text" class="form-control" placeholder="Project's Name" aria-label="Project's Name" aria-describedby="basic-addon2">
+                   <!-- <div class="input-group-append">
+                     <span class="input-group-text bg-primary tx-white pd-x-15" id="basic-addon2">Add</span>
+                   </div> -->
+                 </div>
+               </div>
+               
+              </div>
+            </div>
+ 
             <div class="row mg-t-30">
               <div class="col-md-3 col-12">
               <p class="tx-14">Select Filters:</p>
@@ -241,7 +259,7 @@
                 <div class="row">
                   <div class="col-lg-2 col-6 mg-t-15">
                     <div class="custom-control custom-checkbox">
-                      <input type="checkbox" class="custom-control-input toggleCheck" id="all">
+                      <input type="checkbox" class="custom-control-input toggleCheck" id="all" onclick="myAll()">
                       <label class="custom-control-label" for="all">All</label>
                     </div>
                   </div>
@@ -474,18 +492,11 @@
       });
       
      $(function() {
-  $('.toggleCheck').on("change",function() { 
-    $('.'+$(this).attr('data-name')).toggle(this.checked); // toggle instead
-  }).change(); // trigger the change
-});
-    // $(document).ready(function(){
-    //   $('#dept').change(function(){
-    //   if(this.checked)
-    //   $('#dept-section').fadeIn('slow');
-    //   else
-    //   $('#dept-section').fadeOut('slow');
-    //   });
-    // });
+      $('.toggleCheck').on("change",function() { 
+        $('.'+$(this).attr('data-name')).toggle(this.checked); // toggle instead
+      }).change(); 
+    });
+  
   </script>
 <script>
   function fullAdmin(){
