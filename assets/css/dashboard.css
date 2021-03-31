@@ -223,7 +223,7 @@ employee section
 }
 
 .large-right .modal-dialog {
-  width: 420px!important;
+  width: 370px!important;
   top: 60px;
 }
 
@@ -400,3 +400,16 @@ span.multiselect-native-select{
 .select2-container .select2-selection--multiple{
   min-width: 19.5rem;
 }
+.project-div{
+  display: none;
+}
+@media (min-width: 768px) and (max-width: 1025.98px) {
+  .row.header-row {
+    margin-top: 10px!important;
+  }
+  .multiselect.custom-select{
+    min-width: 12rem;
+  }
+  
+
+ }
