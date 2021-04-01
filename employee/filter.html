@@ -239,7 +239,7 @@
                   </div>
                   </div>
                   <div class="col-md-3 col-5">
-                    <button class="btn btn-transparent pd-y-0" data-toggle="modal" data-target="#exportModal">
+                    <button class="btn btn-transparent pd-y-0"  data-toggle="modal" data-target="#saveModal">
                       <span>
                         <i data-feather="folder-plus" class="mg-r-5 tx-primary"></i>
                            Save to Project
@@ -765,6 +765,89 @@
             </div>
           </div>
         </div>
+
+         <!-- export modal  -->
+         <div class="modal fade" id="exportModal" tabindex="-1" role="dialog" aria-labelledby="exportModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exportModalLabel">EXPORT AS</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p class="tx-13">Select to export your file in any of these formats</p>
+                <div class="custom-control custom-radio pd-y-10">
+                  <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" checked>
+                  <label class="custom-control-label" for="customRadio1"><img src="../assets/img/icon/pdf.svg" class="img-fluid mg-r-5"/>PDF</label>
+                </div>
+
+                <div class="custom-control custom-radio pd-y-10">
+                  <input type="radio" id="customExcel" name="customRadio" class="custom-control-input">
+                  <label class="custom-control-label" for="customExcel"><img src="../assets/img/icon/excel.svg" class="img-fluid mg-r-5"/>Excel</label>
+                </div>
+
+                <div class="custom-control custom-radio pd-y-10">
+                  <input type="radio" id="customCSV" name="customRadio" class="custom-control-input" >
+                  <label class="custom-control-label" for="customCSV"> <img src="../assets/img/icon/file.svg" class="img-fluid mg-r-5"/> CSV</label>
+                </div>
+                
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#successModal">Export</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+          <!-- save modal  -->
+    <div class="modal fade" id="saveModal" tabindex="-1" role="dialog" aria-labelledby="saveModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="saveModalLabel">Add 10 employees to projects</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="notes" class="d-block">Do you want to save to existing projects?</label>
+                <select class="custom-select">
+                  <option selected>Choose Existing Projects</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="project" class="d-block">Is it a new project?</label>
+                <input type="text" class="form-control" placeholder="Type New Project New">
+              </div>
+              <div class="form-group">
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="customCheck1">
+                  <label class="custom-control-label" for="customCheck1">Make visible to other users</label>
+                </div>
+              </div>
+             
+            </form>
+            
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary pd-x-20" data-dismiss="modal" data-toggle="modal" data-target="#successModal">Save</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
 
       </div>
     </div>
