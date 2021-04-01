@@ -481,12 +481,30 @@
         
 
           <div class="modal-footer mg-t-50 bd-t-0">
-            <button type="button" class="btn btn-primary pd-x-40">Save</button>
+            <button type="button" class="btn btn-primary pd-x-40" data-toggle="modal" data-target="#successModal">Save</button>
             <button type="button" class="btn btn-secondary pd-x-30">Cancel</button>
           </div>
          </div>
         
        </div>
+
+        <!-- success modal  -->
+        <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+            <div class="modal-content">
+              
+              <div class="modal-body tx-center pd-y-20">
+                <div class="pd-y-30">
+                <img src="../assets/img/icon/success.svg" class="img-fluid"/>
+                </div>
+               <p class="tx-18 tx-semibold">Success!</p>
+               <p class="tx-14 tx-gray">New Project Created</p>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+
 
     
     </div><!-- container -->
