@@ -401,20 +401,24 @@
                     <div class="col-lg-4 col-12">
                       <div class="d-flex justify-content-between">
                         <div>
-                          <select class="custom-select">
+                          <form action="" id="selectFilter" method="">
+                          <select class="custom-select" onchange="change()">
                             <option selected>Filter By</option>
                             <option value="1">Age</option>
                             <option value="2">Date</option>
                             <option value="3"></option>
                           </select>
+                        </form>
                         </div>
                         <div>
-                          <select class="custom-select">
+                          <form action="" id="selectFilter" method="">
+                          <select class="custom-select" onchange="change()">
                             <option selected>Monthly</option>
                             <option value="1">Weekly</option>
                             <option value="2">Monthly</option>
                             <option value="3">Yearly</option>
                           </select>
+                          </form>
                         </div>
                       </div>
                     </div>
@@ -856,6 +860,7 @@
           data: datapie2,
           options: optionpie2
         });
+        
     </script>
 
   <!-- for togglesidebar -->
@@ -871,5 +876,11 @@
     }
     
   </script>
+  <!-- filter page  -->
+  <script>
+    function change(){
+        document.getElementById("selectFilter").submit();
+    }
+    </script>
   </body>
 </html>
