@@ -32,26 +32,97 @@
   </head>
   <body>
   
+
 <!-- ===========================
   start of header and of sidebar 
   ==================================
  -->
-<div class="header">
+ <div class="header">
   <nav class="navbar navbar-expand-lg navbar-light bg-white">
     <div class="d-md-none d-lg-none d-xl-none d-block">
     <button class="openbtn float-left" onclick="openNav()">&#9776;</button>
     </div>
-    <div class="row header-row">
-      <div class="avatar avatar-md"><img src="assets/img/icon/chairman.jpg" class="rounded-circle" alt=""></div>
-      <div class="pd-l-10">
-        <p class="tx-14 tx-gray mb-1">Tony Elumelu</p>
-        <p class="tx-12 tx-grayy mb-0">Chairman</p>
+    <div class="d-none d-md-block d-lg-block d-xl-block">
+      <div class="row header-row">
+        <div class="avatar avatar-md"><img src="assets/img/icon/chairman.jpg" class="rounded-circle" alt=""></div>
+        <div class="pd-l-10">
+          <p class="tx-14 tx-gray mb-1">Tony Elumelu</p>
+          <p class="tx-12 tx-grayy mb-0">Chairman</p>
+        </div>
+      </div> 
+  
+    </div>
+   
+    <!-- toast  -->
+ <div class="d-md-none d-lg-none d-xl-none d-block">
+  <div class="row mr-1">
+    <div class="alert alert-show mb-0" role="alert">
+      <i data-feather="check-circle" class="check-circle mr-3"></i>
+      10 Candidates found
+    </div>
+   
+    <div class="dropdown dropdown-notification pd-x-10 pd-t-5">
+      <a href="" class="dropdown-link new-indicator" data-toggle="dropdown">
+        <i data-feather="bell"></i>
+      </a>
+      <div class="dropdown-menu dropdown-menu-right">
+        <div class="dropdown-header">Notifications</div>
+        <a href="" class="dropdown-item">
+          <div class="media">
+            <div class="avatar avatar-sm avatar-online"><img src="assets/img/boy.svg"
+                class="rounded-circle" alt=""></div>
+            <div class="media-body mg-l-15">
+              <p>Congratulate <strong>Socrates Itumay</strong> for work anniversaries</p>
+              <span>Mar 15 12:32pm</span>
+            </div>
+          </div>
+        </a>
+        <a href="" class="dropdown-item">
+          <div class="media">
+            <div class="avatar avatar-sm avatar-online"><img src="assets/img/boy.svg"
+                class="rounded-circle" alt=""></div>
+            <div class="media-body mg-l-15">
+              <p><strong>Joyce Chua</strong> just created a new blog post</p>
+              <span>Mar 13 04:16am</span>
+            </div>
+          </div>
+        </a>
+        <a href="" class="dropdown-item">
+          <div class="media">
+            <div class="avatar avatar-sm avatar-online"><img src="assets/img/boy.svg"
+                class="rounded-circle" alt=""></div>
+            <div class="media-body mg-l-15">
+              <p><strong>Althea Cabardo</strong> just created a new blog post</p>
+              <span>Mar 13 02:56am</span>
+            </div>
+          </div>
+        </a>
+        <a href="" class="dropdown-item">
+          <div class="media">
+            <div class="avatar avatar-sm avatar-online"><img src="assets/img/boy.svg"
+                class="rounded-circle" alt=""></div>
+            <div class="media-body mg-l-15">
+              <p><strong>Adrian Monino</strong> added new comment on your photo</p>
+              <span>Mar 12 10:40pm</span>
+            </div>
+          </div>
+        </a>
+        <div class="dropdown-footer"><a href="./notification.html">View all Notifications</a></div>
       </div>
-    </div> 
+  </div>
+  
+  </div>
+
+</div>
+
   
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto pd-r-40">
-        
+       <!-- alert desktop -->
+        <div class="alert alert-show mg-r-150 pd-r-200 mb-0" role="alert">
+          <i data-feather="check-circle" class="check-circle mr-3"></i>
+          10 Candidates found
+        </div>
         
         <li class="nav-item active pd-r-40 pd-t-5">
           <div class="dropdown dropdown-notification">
@@ -127,14 +198,14 @@
    
     <ul class="nav block-nav nav-asid pd-t-20 mg-t-40 tx-center">
       
-      <li class="nav-item">
+      <li class="nav-item active">
           <a href="../dashboard.html" class="nav-link">
             <i data-feather="grid"></i>
             <p class="mb-0">Home</p>
           </a>   
         </li>
       
-      <li class="nav-item active">
+      <li class="nav-item">
         <a href="./employee/index.html" class="nav-link">
           <i data-feather="users"></i>
           <p class="mb-0">Employees</p></a>
@@ -173,14 +244,14 @@
    
     <ul class="nav block-nav nav-asid pd-t-20 tx-center">
       
-      <li class="nav-item">
+      <li class="nav-item active">
           <a href="../dashboard.html" class="nav-link">
             <i data-feather="grid"></i>
             <p class="mb-0">Home</p>
           </a>   
         </li>
       
-      <li class="nav-item active">
+      <li class="nav-item ">
         <a href="./employee/index.html" class="nav-link">
           <i data-feather="users"></i>
           <p class="mb-0">Employees</p></a>
@@ -216,7 +287,7 @@
 <!-- ===========================
   end of sidebar 
   ==================================
- -->
+ -->   
     <div class="content pd-0">
       ￼
 
@@ -258,7 +329,9 @@
               </div>
             </div>
           </div>
+          
           <div class="row mg-t-10">
+                        
             <div class="col-md-4 col-12 mg-t-15 mg-lg-t-0">
               <div class="card ht-50v">
                 <div class="card-header">

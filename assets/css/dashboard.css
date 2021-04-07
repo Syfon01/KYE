@@ -129,6 +129,10 @@ background-color: transparent;
   .exp-btn{
     width: 100%!important;
   }
+  .select2-container .select2-selection--multiple{
+    min-width: 17.5rem!important;
+  }
+  
   
 }
 .bg-red{
@@ -419,6 +423,12 @@ span.multiselect-native-select{
   border-radius: 50%;
   display: inline-block;
 }
-
-
-
+.alert-show{
+  border-left: 4px solid #5AA700!important;
+  border: 1px solid#5AA700;
+  
+}
+.check-circle{
+  fill: #5AA700!important;
+  color: #fff!important;
+}
