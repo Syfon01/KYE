@@ -957,7 +957,9 @@
     <!-- select 2  -->
 <script>
   $(document).ready(function() {
-    $('.department, .geography, .job-role,.project,.age,.year,.certification,.employment,.grade,.degree,.skills').select2();
+    $('.department, .geography, .job-role,.project,.age,.year,.certification,.employment,.grade,.degree,.skills').select2({
+      width: '100%' 
+    });
 });
   var substringMatcher = function(strs) {
 return function findMatches(q, cb) {

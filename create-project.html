@@ -361,9 +361,9 @@
               <div class="col-md-10 col-12">
                 <div class="form-row">
                   <div class="form-group col-xl-4 col-md-6 col-12 project-div dept-section">
+                    
                     <label for="dept">Department</label>
-                    <select id="department" multiple="multiple" class="form-control">
-                      <option value="all">All</option>
+                    <select id="department" multiple="multiple" name="states[]" class="form-control">
                       <option value="loans">Loans Operation</option>
                       <option value="private">Private Banking</option>
                       <option value="corporate">Corporate Banking</option>
@@ -526,6 +526,7 @@
     <script src="../assets/lib/typeahead.js/typeahead.bundle.min.js"></script>
     <script src="../assets/lib/chart.js/Chart1.min.js"></script>
     <script src="../assets/lib/chart.js/utils.js"></script>
+    <script src="../assets/lib/select2/js/select2.min.js"></script>
 
     <script src="../assets/js/dashforge.js"></script>
     <script src="../assets/js/dashforge.aside.js"></script>
@@ -535,15 +536,21 @@
 
     <script type="text/javascript">
       $(document).ready(function() {
-          $('#department,#geography,#job-role,#emp-type,#certifications,#languages,#degrees,#grades,#skills,#experiences').multiselect();
+          $('#department,#geography,#job-role,#emp-type,#certifications,#languages,#degrees,#grades,#skills,#experiences').select2({
+            width: '100%' 
+          });
       });
-      
+//     
      $(function() {
       $('.toggleCheck').on("change",function() { 
         $('.'+$(this).attr('data-name')).toggle(this.checked); // toggle instead
       }).change(); 
     });
   
+ 
+  </script>
+  <script>
+    
   </script>
 <script>
   function fullAdmin(){

@@ -130,7 +130,7 @@ background-color: transparent;
     width: 100%!important;
   }
   .select2-container .select2-selection--multiple{
-    min-width: 17.5rem!important;
+    /* min-width: 17.5rem!important; */
   }
   
   
@@ -402,7 +402,7 @@ span.multiselect-native-select{
   min-width: 16rem;
 }
 .select2-container .select2-selection--multiple{
-  min-width: 19.5rem;
+  /* min-width: 18.5rem; */
 }
 .project-div{
   display: none;
