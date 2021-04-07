@@ -227,47 +227,12 @@
          <p class="tx-14 tx-gray">You can grant access to any of the employees from here</p>
        </div>
        
-       <div class="card mg-t-20 pd-x-20">
-         <div class="card-body mb-3">
-          <form>           
-           <div class="row">
-             <div class="col-md-3 col-12">
-              <p class="tx-14">Input Employee Name</p>
-              
-             </div>
-             <div class="col-md-8 col-12">
-              <div class="col-lg-5 col-12 pd-x-0">
-                <div class="input-group mg-b-10">
-                  <input type="text" class="form-control" placeholder="Employee's Name" aria-label="Employee's Name" aria-describedby="basic-addon2">
-                  <div class="input-group-append">
-                    <span class="input-group-text bg-primary tx-white pd-x-15" id="basic-addon2">Add</span>
-                  </div>
-                </div>
-              </div>
-              <div class="mg-t-20">
-              <p class="tx-14">Employees Added <span class="image-boxx pd-x-10 pd-y-5 mg-l-10 tx-dark">3</span></p>
-              
-              <p>
-                    <span class="bg-primary tx-white tx-14 mg-5 pd-y-5 pd-x-10 tag-block" id="employerTag"> Olanrewaju Olakunle 0 
-                    <button class="btn tx-white" type="button" onclick="removeTag()"><i data-feather="x"></i></button>
-                    </span>
-                    <span class="bg-primary tx-white tx-14 mg-5 pd-y-5 pd-x-10 tag-block" id="employerTag"> Olanrewaju Olakunle 0 
-                      <button class="btn tx-white" type="button" onclick="removeTag()"><i data-feather="x"></i></button>
-                      </span>
-                      <span class="bg-primary tx-white tx-14 mg-5 pd-y-5 pd-x-10 tag-block" id="employerTag"> Olanrewaju Olakunle 0 
-                        <button class="btn tx-white" type="button" onclick="removeTag()"><i data-feather="x"></i></button>
-                        </span>
-               
-                        
-                
-              </p>
-              </div>
-             </div>
-           </div>
-
+       <div class="card mg-t-20 pd-x-20 ht-100v">
+         <div class="card-body mb-3 access">
+          
            <div class="row mg-t-30">
             <div class="col-md-3 col-12">
-             <p class="tx-14">Allow Access To:</p>
+             <p class="tx-14">What will you like to do:</p>
              
             </div>
             <div class="col-md-9 col-12">
@@ -275,227 +240,25 @@
                 <div class="row">
                   <div class="col">
                     <div class="custom-control custom-radio">
-                      <input type="radio" id="admin" name="customRadio" class="custom-control-input" onclick="fullAdmin()" checked>
-                      <label class="custom-control-label" for="admin">Full Admin</label>
+                      <input type="radio" id="add" name="customRadio" class="custom-control-input" checked>
+                      <label class="custom-control-label" for="add">Add User</label>
                     </div>
                   </div>
                   <div class="col">
                     <div class="custom-control custom-radio">
-                      <input type="radio" id="user" name="customRadio" class="custom-control-input" onclick="myFunction()">
-                      <label class="custom-control-label" for="user">User access</label>
+                      <input type="radio" id="remove" name="customRadio" class="custom-control-input">
+                      <label class="custom-control-label" for="remove">Remove User</label>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
             </div>
-            <div id="userAccess">
-              <div class="row mg-t-30">
-                <div class="col-md-3 col-12">
-                <p class="tx-14">Allow Access To:</p>
-                
-                </div>
-                <div class="col-md-9 col-12">
-                  <div class="row">
-                    <div class="col-lg-2 col-6 mg-t-15">
-                      <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input toggleCheck" id="all" onclick="myAll()">
-                        <label class="custom-control-label" for="all">All</label>
-                      </div>
-                    </div>
-                    <div class="col-lg-2 col-6 mg-t-15">
-                      <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input toggleCheck" data-name="dept-section" id="dept">
-                        <label class="custom-control-label" for="dept">Department</label>
-                      </div>
-                    </div>
-                    <div class="col-lg-2 col-6 mg-t-15">
-                      <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input toggleCheck" data-name="geo-section" id="geo">
-                        <label class="custom-control-label" for="geo">Geography</label>
-                      </div>
-                    </div>
-                    <div class="col-lg-2 col-6 mg-t-15">
-                      <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input toggleCheck" data-name="job-section" id="job">
-                        <label class="custom-control-label" for="job">Job Role</label>
-                      </div>
-                    </div>
-                    <div class="col-lg-3 col-6 mg-t-15">
-                      <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input toggleCheck" data-name="exp-section" id="years">
-                        <label class="custom-control-label" for="years">Years of Experience</label>
-                      </div>
-                    </div>
-                    <div class="col-lg-2 col-6 mg-t-15">
-                      <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input toggleCheck" data-name="skill-section" id="skill">
-                        <label class="custom-control-label" for="skill">Skills</label>
-                      </div>
-                    </div>
-                    <div class="col-lg-2 col-6 mg-t-15">
-                      <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input toggleCheck" data-name="grade-section" id="grade">
-                        <label class="custom-control-label" for="grade">Grade Level</label>
-                      </div>
-                    </div>
-                    <div class="col-lg-2 col-6 mg-t-15">
-                      <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input toggleCheck" data-name="degree-section" id="degree">
-                        <label class="custom-control-label" for="degree">Degree</label>
-                      </div>
-                    </div>
-                    <div class="col-lg-2 col-6 mg-t-15">
-                      <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input toggleCheck" data-name="lang-section" id="language">
-                        <label class="custom-control-label" for="language">Languages</label>
-                      </div>
-                    </div>
-                    <div class="col-lg-2 col-6 mg-t-15">
-                      <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input toggleCheck" data-name="cert-section" id="cerf">
-                        <label class="custom-control-label" for="cerf">Certifications</label>
-                      </div>
-                    </div>
-                    <div class="col-lg-3 col-6 mg-t-15  ">
-                      <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input toggleCheck" data-name="employ-section" id="employment">
-                        <label class="custom-control-label" for="employment">Employment Type</label>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="row mg-t-30">
-                <div class="col-md-3 col-12">
-                <p class="tx-14">As selected above:</p>
-                
-                </div>
-                <div class="col-md-9 col-12">
-                  <div class="form-row">
-                    <div class="form-group col-xl-4 col-md-6 col-12 project-div dept-section">
-                      <label for="dept">Department</label>
-                      <select id="department" multiple="multiple" class="form-control">
-                        <option value="all">All</option>
-                        <option value="loans">Loans Operation</option>
-                        <option value="private">Private Banking</option>
-                        <option value="corporate">Corporate Banking</option>
-                        <option value="finance">Finance</option>
-                        <option value="human-resource">Human Resources</option>
-                        <option value="admin">Admin</option>
-                    </select>
-                    </div>
-                    <div class="form-group col-xl-4 col-md-6 col-12 project-div geo-section">
-                      <label for="geography">Geography</label>
-                      <select id="geography" multiple="multiple" class="form-control">
-                        <option value="all">All</option>
-                        <option value="congo">Congo DC</option>
-                        <option value="nigeria">Nigeria</option>
-                        <option value="ghana">Ghana</option>
-                        <option value="kenya">Kenya</option>
-                        <option value="liberia">Liberia</option>
-                    </select>
-                    </div>
-                    <div class="form-group col-xl-4 col-md-6 col-12 project-div job-section">
-                      <label for="job-role">Job Role</label>
-                      <select id="job-role" multiple="multiple" class="form-control">
-                        <option value="all">All</option>
-                        <option value="accountant">Accountant</option>
-                        <option value="relationship-manager">Relationship Manager</option>
-                        <option value="financial-analyst">Financial Analyst</option>
-                        <option value="bank-teller">Bank Teller</option>
-                        <option value="consumer-analyst">Consumer Credit Analyst</option>
-                    </select>
-                    </div>
-                    <div class="form-group col-xl-4 col-md-6 col-12 project-div exp-section">
-                      <label for="experiences">Years of Experience</label>
-                      <select id="experiences" multiple="multiple" class="form-control">
-                        <option value="all">All</option>
-                        <option value="accountant">1-3</option>
-                        <option value="relationship-manager">Relationship Manager</option>
-                        <option value="financial-analyst">Financial Analyst</option>
-                        <option value="bank-teller">Bank Teller</option>
-                        <option value="consumer-analyst">Consumer Credit Analyst</option>
-                    </select>
-                    </div>
-                    <div class="form-group col-xl-4 col-md-6 col-12 project-div skill-section">
-                      <label for="skills">Skills</label>
-                      <select id="skills" multiple="multiple" class="form-control">
-                        <option value="all">All</option>
-                        <option value="accountant">Accountant</option>
-                        <option value="relationship-manager">Relationship Manager</option>
-                        <option value="financial-analyst">Financial Analyst</option>
-                        <option value="bank-teller">Bank Teller</option>
-                        <option value="consumer-analyst">Consumer Credit Analyst</option>
-                    </select>
-                    </div>
-                    <div class="form-group col-xl-4 col-md-6 col-12 project-div grade-section">
-                      <label for="grades">Grade Level</label>
-                      <select id="grades" multiple="multiple" class="form-control">
-                        <option value="all">All</option>
-                        <option value="accountant">Accountant</option>
-                        <option value="relationship-manager">Relationship Manager</option>
-                        <option value="financial-analyst">Financial Analyst</option>
-                        <option value="bank-teller">Bank Teller</option>
-                        <option value="consumer-analyst">Consumer Credit Analyst</option>
-                    </select>
-                    </div>
-                    <div class="form-group col-xl-4 col-md-6 col-12 project-div degree-section">
-                      <label for="degrees">Degree</label>
-                      <select id="degrees" multiple="multiple" class="form-control">
-                        <option value="all">All</option>
-                        <option value="accountant">Accountant</option>
-                        <option value="relationship-manager">Relationship Manager</option>
-                        <option value="financial-analyst">Financial Analyst</option>
-                        <option value="bank-teller">Bank Teller</option>
-                        <option value="consumer-analyst">Consumer Credit Analyst</option>
-                    </select>
-                    </div>
-                    <div class="form-group col-xl-4 col-md-6 col-12 project-div lang-section">
-                      <label for="languages">Languages</label>
-                      <select id="languages" multiple="multiple" class="form-control">
-                        <option value="all">All</option>
-                        <option value="accountant">Accountant</option>
-                        <option value="relationship-manager">Relationship Manager</option>
-                        <option value="financial-analyst">Financial Analyst</option>
-                        <option value="bank-teller">Bank Teller</option>
-                        <option value="consumer-analyst">Consumer Credit Analyst</option>
-                    </select>
-                    </div>
-                    <div class="form-group col-xl-4 col-md-6 col-12 project-div cert-section">
-                      <label for="certifications">Certifications</label>
-                      <select id="certifications" multiple="multiple" class="form-control">
-                        <option value="all">All</option>
-                        <option value="accountant">Accountant</option>
-                        <option value="relationship-manager">Relationship Manager</option>
-                        <option value="financial-analyst">Financial Analyst</option>
-                        <option value="bank-teller">Bank Teller</option>
-                        <option value="consumer-analyst">Consumer Credit Analyst</option>
-                    </select>
-                    </div>
-                    <div class="form-group col-xl-4 col-md-6 col-12 project-div employ-section">
-                      <label for="emp-type">Employment Type</label>
-                      <select id="emp-type" multiple="multiple" class="form-control">
-                        <option value="all">All</option>
-                        <option value="accountant">Accountant</option>
-                        <option value="relationship-manager">Relationship Manager</option>
-                        <option value="financial-analyst">Financial Analyst</option>
-                        <option value="bank-teller">Bank Teller</option>
-                        <option value="consumer-analyst">Consumer Credit Analyst</option>
-                    </select>
-                    </div>
-                  </div>
-                    
-                </div>
-              </div>
-            </div>
-           
-          </form>
+            
         
 
           <div class="modal-footer mg-t-50 bd-t-0">
-            <button type="button" class="btn btn-primary pd-x-30">Request</button>
+            <button type="button" class="btn btn-primary pd-x-30 request">Proceed</button>
             <button type="button" class="btn btn-secondary pd-x-30">Cancel</button>
           </div>
          </div>
@@ -537,6 +300,18 @@
       }).change(); 
     });
   
+  </script>
+  <script>
+    $('.access .request').click(function (e) {
+        //$.cookie("CamSession1", "CAM");  
+        if ($('#add').is(':checked')) {
+            window.location.replace("./setting-access.html");
+        }
+        else if ($('#remove').is(':checked')) {
+            window.location.replace("./setting-user.html");
+        }
+        // $('.access').hide();
+    });
   </script>
 <script>
   function fullAdmin(){

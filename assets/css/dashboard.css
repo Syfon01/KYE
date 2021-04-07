@@ -410,6 +410,15 @@ span.multiselect-native-select{
   .multiselect.custom-select{
     min-width: 12rem;
   }
-  
 
  }
+ .dot {
+  height: 4px;
+  width: 4px;
+  background-color: #B11E1E;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+
+
