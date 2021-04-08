@@ -236,11 +236,18 @@
               
              </div>
              <div class="col-md-8 col-12">
-              <div class="col-lg-5 col-12 pd-x-0">
-                <div class="input-group mg-b-10">
-                  <input type="text" class="form-control" placeholder="Employee's Name" aria-label="Employee's Name" aria-describedby="basic-addon2">
+              <div class="col-lg-6 col-12 pd-x-0">
+                <div class="input-group">
+                  <select id="name" multiple="multiple" name="states[]" class="form-control">
+                    <option value="name1">Princewill Boss</option>
+                    <option value="name2">Emmanuel Chairman</option>
+                    <option value="name3">Bernard Bright</option>
+                    <option value="name4">Basil Bassey</option>
+                    <option value="name5">Yemi Tunde</option>
+                    <option value="name6">Martha Charles</option>
+                  </select>
                   <div class="input-group-append">
-                    <span class="input-group-text bg-primary tx-white pd-x-15" id="basic-addon2">Add</span>
+                    <button class="btn btn-primary tx-white pd-x-15" type="button">Add</button>
                   </div>
                 </div>
               </div>
@@ -519,7 +526,7 @@
     <script src="../assets/lib/typeahead.js/typeahead.bundle.min.js"></script>
     <script src="../assets/lib/chart.js/Chart1.min.js"></script>
     <script src="../assets/lib/chart.js/utils.js"></script>
-
+    <script src="../assets/lib/select2/js/select2.min.js"></script>
     <script src="../assets/js/dashforge.js"></script>
     <script src="../assets/js/dashforge.aside.js"></script>
     <script src="../assets/js/dashforge.sampledata.js"></script>
@@ -532,6 +539,10 @@
             width: '100%' 
           });
       });
+      $(document).ready(function() {
+          $('#name').select2();
+      });
+
      $(function() {
       $('.toggleCheck').on("change",function() { 
         $('.'+$(this).attr('data-name')).toggle(this.checked); // toggle instead
