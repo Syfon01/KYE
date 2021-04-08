@@ -528,9 +528,10 @@
 
     <script type="text/javascript">
        $(document).ready(function() {
-          $('#department,#geography,#job-role,#emp-type,#certifications,#languages,#degrees,#grades,#skills,#experiences').multiselect();
+          $('#department,#geography,#job-role,#emp-type,#certifications,#languages,#degrees,#grades,#skills,#experiences').select2({
+            width: '100%' 
+          });
       });
-      
      $(function() {
       $('.toggleCheck').on("change",function() { 
         $('.'+$(this).attr('data-name')).toggle(this.checked); // toggle instead

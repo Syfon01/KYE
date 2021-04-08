@@ -305,10 +305,10 @@
     $('.access .request').click(function (e) {
         //$.cookie("CamSession1", "CAM");  
         if ($('#add').is(':checked')) {
-            window.location.replace("./setting-access.html");
+            window.location.href = "./setting-access.html";
         }
         else if ($('#remove').is(':checked')) {
-            window.location.replace("./setting-user.html");
+            window.location.href = "./setting-user.html";
         }
         // $('.access').hide();
     });
