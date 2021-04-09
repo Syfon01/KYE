@@ -306,9 +306,13 @@
                   <div class="row">
                     <div class="col-lg-2 col-6 mg-t-15">
                       <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input toggleCheck" id="all" onclick="myAll()">
-                        <label class="custom-control-label" for="all">All</label>
+                        <input type="checkbox" class="custom-control-input toggleCheck" data-name="yearAge-section" id="agee">
+                        <label class="custom-control-label" for="agee">Age</label>
                       </div>
+                      <!-- <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input toggleCheck" data-name="age-section" id="age">
+                        <label class="custom-control-label" for="age">Age</label>
+                      </div> -->
                     </div>
                     <div class="col-lg-2 col-6 mg-t-15">
                       <div class="custom-control custom-checkbox">
@@ -381,6 +385,19 @@
                 </div>
                 <div class="col-md-9 col-12">
                   <div class="form-row">
+                    <div class="form-group col-xl-4 col-md-6 col-12 project-div yearAge-section">
+                      <label for="age">Age</label>
+                      <div class="input-group">
+                        <input type="text" class="form-control" aria-label="Text input with dropdown button">
+                        <div class="input-group-append">
+                          <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item">Infinitesimal</a>
+                            <a class="dropdown-item">Range</a>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
                     <div class="form-group col-xl-4 col-md-6 col-12 project-div dept-section">
                       <label for="dept">Department</label>
                       <select id="department" multiple="multiple" class="form-control">
@@ -393,6 +410,7 @@
                         <option value="admin">Admin</option>
                     </select>
                     </div>
+                    
                     <div class="form-group col-xl-4 col-md-6 col-12 project-div geo-section">
                       <label for="geography">Geography</label>
                       <select id="geography" multiple="multiple" class="form-control">
@@ -535,7 +553,7 @@
 
     <script type="text/javascript">
        $(document).ready(function() {
-          $('#department,#geography,#job-role,#emp-type,#certifications,#languages,#degrees,#grades,#skills,#experiences').select2({
+          $('#yearAge,#department,#geography,#job-role,#emp-type,#certifications,#languages,#degrees,#grades,#skills,#experiences').select2({
             width: '100%' 
           });
       });

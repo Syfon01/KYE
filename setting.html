@@ -223,43 +223,428 @@
       <div class="content-body pd-t-100">
        <div>
 
-         <p class="tx-24 tx-semibold mb-0"> <i data-feather="arrow-left" class="tx-primary" onclick="goBack()"></i> Access Request</p>
-         <p class="tx-14 tx-gray">You can grant access to any of the employees from here</p>
+         <p class="tx-24 tx-semibold mb-0"> <i data-feather="arrow-left" class="tx-primary" onclick="goBack()"></i> User Access</p>
+         <p class="tx-14 tx-gray">Add or delete users from here</p>
        </div>
        
-       <div class="card mg-t-20 pd-x-20 ht-100v">
-         <div class="card-body mb-3 access">
-          
-           <div class="row mg-t-30">
-            <div class="col-md-3 col-12">
-             <p class="tx-14">What will you like to do:</p>
-             
-            </div>
-            <div class="col-md-9 col-12">
-              <div class="col-md-5 col-12 pd-x-0">
-                <div class="row">
-                  <div class="col">
-                    <div class="custom-control custom-radio">
-                      <input type="radio" id="add" name="customRadio" class="custom-control-input" checked>
-                      <label class="custom-control-label" for="add">Add User</label>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="custom-control custom-radio">
-                      <input type="radio" id="remove" name="customRadio" class="custom-control-input">
-                      <label class="custom-control-label" for="remove">Remove User</label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            </div>
+       <div class="card mg-t-20 pd-x-20">
+         <div class="card-body mb-3">
+         
+          <ul class="nav nav-line" id="myTab" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link tab active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">All</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link tab" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Admin</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link tab" id="user-tab" data-toggle="tab" href="#user" role="tab" aria-controls="profile" aria-selected="false">User</a>
+            </li>
             
-        
+            
+          </ul>
+          <div class="tab-content bd-t-0" id="myTabContent">
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+              <div class="card-header pd-x-0 bd-b-0">
+                <div class="d-flex justify-content-end">
+                    <div class="col-6 col-lg-2 col-md-3 pd-r-5">
+                      <a href="./setting-access.html" class="btn btn-primary w-100">
+                          Add User 
+                      </a>
+                    </div>
+                     <div class="col-6 col-lg-2 col-md-3 pd-r-5">
+                      <button class="btn btn-outline-primary w-100">
+                          Delete All
+                      </button>
+                    </div>
+                  </div>
+                </div> 
+             <div class="card-body pd-x-0 pd-t-10">
+              <table class="table display table-hover" id="employee">
+                <thead class="thead-bg">
+                  <tr class="tx-bold">
+                    <th scope="col">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input " id="customCheck">
+                        <label class="custom-control-label pd-y-10" for="customCheck">
+                        </label>
+                      </div>
+                  </th>
+                    <th scope="col">First Name</th>
+                    <th scope="col" class="">Last Name</th>
+                    <th scope="col" class="">Job Role</th>
+                    <th scope="col" class="">Grade</th>
+                    <th scope="col" class="">Department</th>
+                    <th scope="col" class="">Division</th>
+                    <th scope="col">Access Type</th>
+                    <th></th>
+                  </tr>
+                </thead>
+  
+                <tbody>
+                  <tr class=''>
+                    <th scope="row">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck2">
+                        <label class="custom-control-label" for="customCheck2">
+                          <div class="avatar avatar-sm"><img src="./assets/img/icon/placeholder.jpg" class="rounded-circle" alt=""></div>
+                        </label>
+                      </div>
+                    </th>
+                    <td>Elenor </td>
+                    <td class="">Basil</td>
+                    <td class="">Fullstack developer</td>
+                    <td>Team Lead </td>
+                    <td>Development</td>
+                    <td>Lagos</td>
+                    <td>User</td>
+                    <td>
+                        <div class="dropdown">
+                        <span class="" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </span>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" href="./setting-access.html">Edit</a>
+                          <a class="dropdown-item" href="#">Delete</a>
+                        </div>
+                      </div>
+                      </td>
+                  </tr>
+                  <tr class=''>
+                    <th scope="row">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck2">
+                        <label class="custom-control-label" for="customCheck2">
+                          <div class="avatar avatar-sm"><img src="./assets/img/icon/placeholder.jpg" class="rounded-circle" alt=""></div>
+                        </label>
+                      </div>
+                    </th>
+                    <td>Elenor </td>
+                    <td class="">Basil</td>
+                    <td class="">Fullstack developer</td>
+                    <td>Team Lead </td>
+                    <td>Development</td>
+                    <td>Lagos</td>
+                    <td>User</td>
+                    <td>
+                        <div class="dropdown">
+                        <span class="" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </span>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" href="./setting-access.html">Edit</a>
+                          <a class="dropdown-item" href="#">Delete</a>
+                        </div>
+                      </div>
+                      </td>
+                  </tr>
+                  <tr class=''>
+                    <th scope="row">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck2">
+                        <label class="custom-control-label" for="customCheck2">
+                          <div class="avatar avatar-sm"><img src="./assets/img/icon/placeholder.jpg" class="rounded-circle" alt=""></div>
+                        </label>
+                      </div>
+                    </th>
+                    <td>Elenor </td>
+                    <td class="">Basil</td>
+                    <td class="">Fullstack developer</td>
+                    <td>Team Lead </td>
+                    <td>Development</td>
+                    <td>Lagos</td>
+                    <td>User</td>
+                    <td>
+                        <div class="dropdown">
+                        <span class="" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </span>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" href="./setting-access.html">Edit</a>
+                          <a class="dropdown-item" href="#">Delete</a>
+                        </div>
+                      </div>
+                      </td>
+                  </tr>
+                </tbody>
+              </table>
+             </div>
+            
+            </div>
+            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+              <div class="card-header pd-x-0 bd-b-0">
+                <div class="d-flex justify-content-end">
+                    <div class="col-6 col-lg-2 col-md-3 pd-r-5">
+                      <a href="./setting-access.html" class="btn btn-primary w-100">
+                          Add User 
+                      </a>
+                    </div>
+                    <div class="col-6 col-lg-2 col-md-3 pd-r-5">
+                      <button class="btn btn-outline-primary w-100">
+                          Delete All
+                      </button>
+                    </div>
+                  </div>
+              </div>
+             <div class="card-body pd-x-0 pd-t-10">
+              <table class="table display table-hover" id="">
+                <thead class="thead-bg">
+                  <tr class="tx-bold">
+                    <th scope="col">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input " id="customCheck">
+                        <label class="custom-control-label pd-y-10" for="customCheck">
+                        </label>
+                      </div>
+                  </th>
+                    <th scope="col">First Name</th>
+                    <th scope="col" class="">Last Name</th>
+                    <th scope="col" class="">Job Role</th>
+                    <th scope="col" class="">Grade</th>
+                    <th scope="col" class="">Department</th>
+                    <th scope="col" class="">Division</th>
+                    <th scope="col">Access Type</th>
+                    <th></th>
+                  </tr>
+                </thead>
+  
+                <tbody>
+                  <tr class=''>
+                    <th scope="row">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck2">
+                        <label class="custom-control-label" for="customCheck2">
+                          <div class="avatar avatar-sm"><img src="./assets/img/icon/placeholder.jpg" class="rounded-circle" alt=""></div>
+                        </label>
+                      </div>
+                    </th>
+                    <td>Elenor </td>
+                    <td class="">Basil</td>
+                    <td class="">Fullstack developer</td>
+                    <td>Team Lead </td>
+                    <td>Development</td>
+                    <td>Lagos</td>
+                    <td>User</td>
+                    <td>
+                        <div class="dropdown">
+                        <span class="" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </span>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" href="./setting-access.html">Edit</a>
+                          <a class="dropdown-item" href="#">Delete</a>
+                        </div>
+                      </div>
+                      </td>
+                  </tr>
+                  <tr class=''>
+                    <th scope="row">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck2">
+                        <label class="custom-control-label" for="customCheck2">
+                          <div class="avatar avatar-sm"><img src="./assets/img/icon/placeholder.jpg" class="rounded-circle" alt=""></div>
+                        </label>
+                      </div>
+                    </th>
+                    <td>Elenor </td>
+                    <td class="">Basil</td>
+                    <td class="">Fullstack developer</td>
+                    <td>Team Lead </td>
+                    <td>Development</td>
+                    <td>Lagos</td>
+                    <td>User</td>
+                    <td>
+                        <div class="dropdown">
+                        <span class="" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </span>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" href="./setting-access.html">Edit</a>
+                          <a class="dropdown-item" href="#">Delete</a>
+                        </div>
+                      </div>
+                      </td>
+                  </tr>
+                  <tr class=''>
+                    <th scope="row">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck2">
+                        <label class="custom-control-label" for="customCheck2">
+                          <div class="avatar avatar-sm"><img src="./assets/img/icon/placeholder.jpg" class="rounded-circle" alt=""></div>
+                        </label>
+                      </div>
+                    </th>
+                    <td>Elenor </td>
+                    <td class="">Basil</td>
+                    <td class="">Fullstack developer</td>
+                    <td>Team Lead </td>
+                    <td>Development</td>
+                    <td>Lagos</td>
+                    <td>User</td>
+                    <td>
+                        <div class="dropdown">
+                        <span class="" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </span>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" href="./setting-access.html">Edit</a>
+                          <a class="dropdown-item" href="#">Delete</a>
+                        </div>
+                      </div>
+                      </td>
+                  </tr>
+                </tbody>
+              </table>
+             </div>
+            
+            </div>
+            <div class="tab-pane fade" id="user" role="tabpanel" aria-labelledby="user-tab">
+              <div class="card-header pd-x-0 bd-b-0">
+                <div class="d-flex justify-content-end">
+                    <div class="col-6 col-lg-2 col-md-3 pd-r-5">
+                      <a href="./setting-access.html" class="btn btn-primary w-100">
+                          Add User 
+                      </a>
+                    </div>
+                    <div class="col-6 col-lg-2 col-md-3 pd-r-5">
+                      <button class="btn btn-outline-primary w-100">
+                          Delete All
+                      </button>
+                    </div>
+                  </div>
+              </div>
+             <div class="card-body pd-x-0 pd-t-10">
+              <table class="table display table-hover" id="">
+                <thead class="thead-bg">
+                  <tr class="tx-bold">
+                    <th scope="col">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input " id="customCheck">
+                        <label class="custom-control-label pd-y-10" for="customCheck">
+                        </label>
+                      </div>
+                  </th>
+                    <th scope="col">First Name</th>
+                    <th scope="col" class="">Last Name</th>
+                    <th scope="col" class="">Job Role</th>
+                    <th scope="col" class="">Grade</th>
+                    <th scope="col" class="">Department</th>
+                    <th scope="col" class="">Division</th>
+                    <th scope="col">Access Type</th>
+                    <th></th>
+                  </tr>
+                </thead>
+  
+                <tbody>
+                  <tr class=''>
+                    <th scope="row">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck2">
+                        <label class="custom-control-label" for="customCheck2">
+                          <div class="avatar avatar-sm"><img src="./assets/img/icon/placeholder.jpg" class="rounded-circle" alt=""></div>
+                        </label>
+                      </div>
+                    </th>
+                    <td>Elenor </td>
+                    <td class="">Basil</td>
+                    <td class="">Fullstack developer</td>
+                    <td>Team Lead </td>
+                    <td>Development</td>
+                    <td>Lagos</td>
+                    <td>User</td>
+                    <td>
+                        <div class="dropdown">
+                        <span class="" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </span>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" href="./setting-access.html">Edit</a>
+                          <a class="dropdown-item" href="#">Delete</a>
+                        </div>
+                      </div>
+                      </td>
+                  </tr>
+                  <tr class=''>
+                    <th scope="row">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck2">
+                        <label class="custom-control-label" for="customCheck2">
+                          <div class="avatar avatar-sm"><img src="./assets/img/icon/placeholder.jpg" class="rounded-circle" alt=""></div>
+                        </label>
+                      </div>
+                    </th>
+                    <td>Elenor </td>
+                    <td class="">Basil</td>
+                    <td class="">Fullstack developer</td>
+                    <td>Team Lead </td>
+                    <td>Development</td>
+                    <td>Lagos</td>
+                    <td>User</td>
+                    <td>
+                        <div class="dropdown">
+                        <span class="" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </span>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" href="./setting-access.html">Edit</a>
+                          <a class="dropdown-item" href="#">Delete</a>
+                        </div>
+                      </div>
+                      </td>
+                  </tr>
+                  <tr class=''>
+                    <th scope="row">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck2">
+                        <label class="custom-control-label" for="customCheck2">
+                          <div class="avatar avatar-sm"><img src="./assets/img/icon/placeholder.jpg" class="rounded-circle" alt=""></div>
+                        </label>
+                      </div>
+                    </th>
+                    <td>Elenor </td>
+                    <td class="">Basil</td>
+                    <td class="">Fullstack developer</td>
+                    <td>Team Lead </td>
+                    <td>Development</td>
+                    <td>Lagos</td>
+                    <td>User</td>
+                    <td>
+                        <div class="dropdown">
+                        <span class="" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </span>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" href="./setting-access.html">Edit</a>
+                          <a class="dropdown-item" href="#">Delete</a>
+                        </div>
+                      </div>
+                      </td>
+                  </tr>
+                </tbody>
+              </table>
+             </div>
+            
+            </div>
 
-          <div class="modal-footer mg-t-50 bd-t-0">
-            <button type="button" class="btn btn-primary pd-x-30 request">Proceed</button>
-            <button type="button" class="btn btn-secondary pd-x-30">Cancel</button>
+              
           </div>
          </div>
         
@@ -278,8 +663,13 @@
     <script src="../assets/lib/feather-icons/feather.min.js"></script>
     <script src="../assets/lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
     <script src="../assets/lib/prismjs/prism.js"></script>
+    <script src="../assets/lib/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="../assets/lib/datatables.net-dt/js/dataTables.dataTables.min.js"></script>
+    <script src="../assets/lib/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="../assets/lib/datatables.net-responsive-dt/js/responsive.dataTables.min.js"></script>
     <script src="../assets/lib/typeahead.js/typeahead.jquery.min.js"></script>
     <script src="../assets/lib/typeahead.js/typeahead.bundle.min.js"></script>
+
     <script src="../assets/lib/chart.js/Chart1.min.js"></script>
     <script src="../assets/lib/chart.js/utils.js"></script>
 
@@ -289,30 +679,27 @@
     <!-- for multiselect dropdown  -->
     <script type="text/javascript" src="../assets/js/bootstrap-multiselect.js"></script>
 
-    <script type="text/javascript">
-       $(document).ready(function() {
-          $('#department,#geography,#job-role,#emp-type,#certifications,#languages,#degrees,#grades,#skills,#experiences').multiselect();
-      });
-      
-     $(function() {
-      $('.toggleCheck').on("change",function() { 
-        $('.'+$(this).attr('data-name')).toggle(this.checked); // toggle instead
-      }).change(); 
-    });
-  
-  </script>
-  <script>
-    $('.access .request').click(function (e) {
-        //$.cookie("CamSession1", "CAM");  
-        if ($('#add').is(':checked')) {
-            window.location.href = "./setting-access.html";
-        }
-        else if ($('#remove').is(':checked')) {
-            window.location.href = "./setting-user.html";
-        }
-        // $('.access').hide();
-    });
-  </script>
+    <script>
+      $(document).ready( function () {
+       $('.display').DataTable({
+         "paging": true,
+         "info": true,
+         "responsive": true,
+         "aoColumnDefs": [{
+             "bSortable": false,
+             "aTargets": ["no-sort"]
+         }],
+         "bInfo": true
+       });
+       
+       $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+         $('.display:visible').each( function(e) {
+           $(this).DataTable().columns.adjust().responsive.recalc();
+         });
+       });
+     } );
+      </script>
+     
 <script>
   function fullAdmin(){
     let x = document.getElementById("userAccess");
