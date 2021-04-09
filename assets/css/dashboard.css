@@ -432,3 +432,10 @@ span.multiselect-native-select{
   fill: #5AA700!important;
   color: #fff!important;
 }
+.compare-img{
+  width: 100px;
+  height: 100px;
+}
+.bg-compare{
+  background-color: #F9F9F9!important;
+}

@@ -392,7 +392,7 @@
           </div>
           <div class="row mg-t-30">
             <div class="col-md-12 col-xl-8 col-12 mg-t-10">
-              <div class="card">
+              <div class="card card-hei">
                 <div class="card-header pd-y-20 bd-b-0">
                   <div class="row">
                     <div class="col-lg-8 col-12">
@@ -404,8 +404,8 @@
                           <form action="" id="selectFilter" method="">
                           <select class="custom-select" onchange="change()">
                             <option selected>Filter By</option>
-                            <option value="1">Age</option>
-                            <option value="2">Date</option>
+                            <option value="1">Country</option>
+                            <option value="2">Age</option>
                             <option value="3"></option>
                           </select>
                         </form>
@@ -413,10 +413,10 @@
                         <div>
                           <form action="" id="selectFilter" method="">
                           <select class="custom-select" onchange="change()">
-                            <option selected>Monthly</option>
-                            <option value="1">Weekly</option>
-                            <option value="2">Monthly</option>
-                            <option value="3">Yearly</option>
+                            <option selected>Country</option>
+                            <option value="1">Nigeria</option>
+                            <option value="2">Tchad</option>
+                            <option value="3">Ghana</option>
                           </select>
                           </form>
                         </div>
@@ -439,7 +439,7 @@
               </div>
             </div>
             <div class="col-md-12 col-xl-4 col-12 mg-t-10">
-              <div class="card">
+              <div class="card card-hei">
                 <div class="card-header">
                   <div class="d-flex justify-content-between">
                     <p class="tx-bold tx-18 title-text my-0">Reminder</p>
@@ -706,20 +706,14 @@
       var chart = document.getElementById('chart').getContext('2d'),
         gradient = chart.createLinearGradient(0, 0, 0, 450);
 
-      gradient.addColorStop(0, 'rgba(237, 21,0, 100)');
-      gradient.addColorStop(0.5, 'rgba(255, 0, 0, 0.01)');
-      gradient.addColorStop(1, 'rgba(255, 255, 255, 0)');
-
-
       var data = {
-        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'],
+        labels: ['DRC', 'Burkina Faso', 'Cameroun', 'Congo DRC', 'Congo Brazzaville', 'Cote D’ivoire', 'Gabon', 'Ghana', 'Guinea', 'Kenya', 'Liberia', 'Mali', 'Mozambique', 'Nigeria', 'Senegal', 'Sierra Leone', 'Tanzania', 'Tchad', 'Uganda', 'Zambia'],
         datasets: [{
-          label: 'Monthly',
-          backgroundColor: gradient,
-          pointBackgroundColor: 'white',
+          backgroundColor: '#B11E1E',
+				  borderColor: '#B11E1E',
+          fill: false,
+          data: [0, 900, 1000, 4500,340, 2300, 345, 780, 547,6000,2310,987,567, 9907,3000, 5090, 7709,300,7860,5000],
           borderWidth: 2,
-          borderColor: '#D70900',
-          data: [640, 250, 505, 4500, 547, 1234,3000, 5090, 6709,300,7860,9000]
         }]
       };
 
@@ -733,16 +727,20 @@
         },
         scales: {
           xAxes: [{
-            gridLines: {
-              color: 'rgba(200, 200, 200, 0.1)',
-              lineWidth: 1
-            }
+            display: true,
+            scaleLabel: {
+							display: true,
+							labelString: 'Countries'
+						},
+            
           }],
           yAxes: [{
-            gridLines: {
-              color: 'rgba(200, 200, 200, 0.1)',
-              lineWidth: 1
-            }
+            display: true,
+            scaleLabel: {
+							display: true,
+							labelString: 'No of Employees'
+						},
+          
           }]
         },
         elements: {
@@ -751,16 +749,16 @@
           }
         },
         legend: {
-          display: true
+          display: false
         },
         point: {
           backgroundColor: 'white'
         },
         tooltips: {
           titleFontFamily: 'Open Sans',
-          backgroundColor: 'rgba(0,0,0,0.3)',
+          backgroundColor: 'rgba(0,0,0,0.9)',
           titleFontColor: 'red',
-          caretSize: 5,
+          caretSize: 8,
           cornerRadius: 2,
           xPadding: 10,
           yPadding: 10
@@ -777,28 +775,7 @@
       // progressbar.js@1.0.0 version is used
       // Docs: http://progressbarjs.readthedocs.org/en/1.0.0/
 
-      var bar = new ProgressBar.Circle(progresscontainer, {
-        color: '#FFEA82',
-        trailColor: '#f4f4f4',
-        trailWidth: 6,
-        duration: 1400,
-        easing: 'bounce',
-        strokeWidth: 6,
-        from: {
-          color: '#FFEA82',
-          a: 0
-        },
-        to: {
-          color: '#ED6A5A',
-          a: 1
-        },
-        // Set default step function for all animate calls
-        step: function (state, circle) {
-          circle.path.setAttribute('stroke', state.color);
-        }
-      });
-
-      bar.animate(0.77); // Number from 0.0 to 1.0
+    
     </script>
     <script>
 

@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="UBA - Know Your Employee">
+    <title>UBA - Know Your Employee</title>
+
+    <!-- Required External CSS -->
+    <link href="../assets/lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="../assets/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="../assets/lib/jqvmap/jqvmap.min.css" rel="stylesheet">
+
+    <link href="../assets/lib/prismjs/themes/prism-vs.css" rel="stylesheet">
+    <link href="../assets/lib/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="../assets/lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet">
+    <link href="../assets/lib/select2/css/select2.min.css" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png">
+
+    <!-- DashForge CSS -->
+    <link rel="stylesheet" href="../assets/css/dashforge.css">
+
+    <!-- Page CSS --> 
+    <link rel="stylesheet" href="../assets/css/dashboard.css">
+    
+
+  </head>
+  <body>
+
+<!-- ===========================
+  start of header and of sidebar 
+  ==================================
+ -->
+ <div class="header">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <div class="d-md-none d-lg-none d-xl-none d-block">
+    <button class="openbtn float-left" onclick="openNav()">&#9776;</button>
+    </div>
+    <div class="row header-row">
+      <div class="avatar avatar-md"><img src="../assets/img/icon/chairman.jpg" class="rounded-circle" alt=""></div>
+      <div class="pd-l-10">
+        <p class="tx-14 tx-gray mb-1">Tony Elumelu</p>
+        <p class="tx-12 tx-grayy mb-0">Chairman</p>
+      </div>
+    </div> 
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto pd-r-40">
+        
+        
+        <li class="nav-item active pd-r-40 pd-t-5">
+          <div class="dropdown dropdown-notification">
+            <a href="" class="dropdown-link new-indicator" data-toggle="dropdown">
+              <i data-feather="bell"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right">
+              <div class="dropdown-header">Notifications</div>
+              <a href="" class="dropdown-item">
+                <div class="media">
+                  <div class="avatar avatar-sm avatar-online"><img src="../assets/img/boy.svg"
+                      class="rounded-circle" alt=""></div>
+                  <div class="media-body mg-l-15">
+                    <p>Congratulate <strong>Socrates Itumay</strong> for work anniversaries</p>
+                    <span>Mar 15 12:32pm</span>
+                  </div>
+                </div>
+              </a>
+              <a href="" class="dropdown-item">
+                <div class="media">
+                  <div class="avatar avatar-sm avatar-online"><img src="../assets/img/boy.svg"
+                      class="rounded-circle" alt=""></div>
+                  <div class="media-body mg-l-15">
+                    <p><strong>Joyce Chua</strong> just created a new blog post</p>
+                    <span>Mar 13 04:16am</span>
+                  </div>
+                </div>
+              </a>
+              <a href="" class="dropdown-item">
+                <div class="media">
+                  <div class="avatar avatar-sm avatar-online"><img src="../assets/img/boy.svg"
+                      class="rounded-circle" alt=""></div>
+                  <div class="media-body mg-l-15">
+                    <p><strong>Althea Cabardo</strong> just created a new blog post</p>
+                    <span>Mar 13 02:56am</span>
+                  </div>
+                </div>
+              </a>
+              <a href="" class="dropdown-item">
+                <div class="media">
+                  <div class="avatar avatar-sm avatar-online"><img src="../assets/img/boy.svg"
+                      class="rounded-circle" alt=""></div>
+                  <div class="media-body mg-l-15">
+                    <p><strong>Adrian Monino</strong> added new comment on your photo</p>
+                    <span>Mar 12 10:40pm</span>
+                  </div>
+                </div>
+              </a>
+              <div class="dropdown-footer"><a href="">View all Notifications</a></div>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item">
+          <img class="uba-logo img-fluid nav-logo" alt="UBA Logo Dark" src="../assets/img/uba_logo_red.svg">
+        </li>
+      
+    </div>
+  </nav>
+  
+</div>
+<div class="d-block d-md-none d-lg-none d-xl-none">
+  <aside class="asid aside-fixed sidepanel" id="mySidepanel">
+      
+    <!-- <a href="" class="aside-menu-link">
+      <i data-feather="menu"></i>
+      <i data-feather="x"></i>
+    </a> -->
+  <!-- </div> -->
+  <div class="aside-body bd-t-0 bg-dark-color tx-center">
+    <div class="float-right">
+        <a href="javascript:void(0)" class="closebtn float-right pd-20" onclick="closeNav()">&times;</a>
+    </div>
+   
+    <ul class="nav block-nav nav-asid pd-t-20 mg-t-40 tx-center">
+      
+      <li class="nav-item ">
+          <a href="../dashboard.html" class="nav-link">
+            <i data-feather="grid"></i>
+            <p class="mb-0">Home</p>
+          </a>   
+        </li>
+      
+      <li class="nav-item active" >
+        <a href="./employee/index.html" class="nav-link">
+          <i data-feather="users"></i>
+          <p class="mb-0">Employees</p></a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="../project.html" class="nav-link"><i data-feather="file-plus"></i>
+          <p class="mb-0">Projects</p></a>
+      </li>
+
+      <li class="nav-item">
+        <a href="../favourite.html" class="nav-link"><i data-feather="heart"></i>
+          <p class="mb-0">Favourites</p></a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="../history.html" class="nav-link"><i data-feather="rotate-ccw"></i>
+          <p class="mb-0">History</p></a>
+      </li>
+     
+      <li class="nav-item">
+        <a href="../setting.html" class="nav-link"><i data-feather="settings"></i>
+          <p class="mb-0">Settings</p></a>
+      </li>
+     
+    </ul>
+          
+  </div>
+</aside>
+
+</div>
+<div class="d-none d-md-block d-lg-block d-xl-block">
+  <aside class="asid aside-fixed">
+      
+  <div class="aside-body bd-t-0 bg-dark-color tx-center">
+   
+    <ul class="nav block-nav nav-asid pd-t-20 tx-center">
+      
+      <li class="nav-item">
+          <a href="../dashboard.html" class="nav-link">
+            <i data-feather="grid"></i>
+            <p class="mb-0">Home</p>
+          </a>   
+        </li>
+      
+      <li class="nav-item active">
+        <a href="./employee/index.html" class="nav-link">
+          <i data-feather="users"></i>
+          <p class="mb-0">Employees</p></a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="../project.html" class="nav-link"><i data-feather="file-plus"></i>
+          <p class="mb-0">Projects</p></a>
+      </li>
+
+      <li class="nav-item">
+        <a href="../favourite.html" class="nav-link"><i data-feather="heart"></i>
+          <p class="mb-0">Favourites</p></a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="../history.html" class="nav-link"><i data-feather="rotate-ccw"></i>
+          <p class="mb-0">History</p></a>
+      </li>
+     
+      <li class="nav-item">
+        <a href="../setting.html" class="nav-link"><i data-feather="settings"></i>
+          <p class="mb-0">Settings</p></a>
+      </li>
+     
+    </ul>
+          
+  </div>
+</aside>
+
+</div>
+
+<!-- ===========================
+  end of sidebar 
+  ==================================
+ -->
+    <div class="content pd-0">
+        <div class="content-body pd-t-100">
+          <div>
+            <p class="tx-24 tx-semibold mb-0"> <i data-feather="arrow-left" class="tx-primary" onclick="goBack()"></i> Compare Profiles</p>
+            <p class="tx-14 tx-gray">View the difference between the selected profiles</p>
+          </div>
+          
+          <div class="row">
+            <div class="col-md-6 col-lg-6 col-12 mg-t-20">
+              <div class="card bg-compare">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-3 col-4 pd-y-10">
+                      <img src="../assets/img/prof.png" class="img-fluid compare-img"/>
+                    </div>
+                    <div class="col-md-6 col-8 pd-y-10">
+                      <p class="tx-16 tx-medium mb-2">Sherif Sorunke</p>
+                      <p class="tx-14 tx-light mb-0">Team Lead, Assistant General Manager</p>
+                      <p class="mb-1"><span class="tx-14">Lekki, Lagos |</span> <span class="tx-medium">Full Time</span></p>
+                      <p class="tx-12 tx-medium tx-uppercase">15 years experience</p>
+                    </div>
+                    <div class="col-md-3 col-6 pd-y-10">
+                      <p class="tx-18 tx-medium mb-0"><span class="tx-primary">80%</span> match</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-3 col-4">
+                      <p class="tx-14 tx-light mb-0">Education:</p>
+                    </div>
+                    <div class="col-md-6 col-7">
+                      <p class="tx-14 tx-light mb-0">Royal Holloway, University of London, MBA University of Lagos. Bsc, Economics</p>
+                    </div>
+                    <div class="col-md-3 col-2">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card mt-3 pd-5">
+                <div class="card-header pd-y-10 pd-x-20 card-header-pink " id="">
+                  <div class="d-flex justify-content-between"   >
+                    <p class="tx-16 tx-medium mb-0">Match Analysis
+                    </p> 
+                  </div> 
+                </div>
+                <div class="card-body">
+                  <div class="row justify-content-between">
+                    <div class="col-md-2 pd-lg-x-0 col-4 tx-right mg-t-10">
+                      <p class="tx-14  tx-light mb-0">Certification:</p>
+                    </div>
+                    <div class="col-md-10 col-12 mg-t-10">
+                      <p class="tx-14 mb-0">
+                        <span class="bd pd-5 tx-dark tx-medium mg-x-5">Java Enterprise Certification</span>
+                        <span class="bd pd-5 tx-gray-500 mg-x-5">Oracle Associate Certificate</span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="row justify-content-between mg-t-10">
+                    <div class="col-md-2 pd-lg-x-0 col-4 tx-right mg-t-10">
+                      <p class="tx-14  tx-light mb-0">Languages:</p>
+                    </div>
+                    <div class="col-md-10 col-8 mg-t-10">
+                      <p class="tx-14 mb-0">
+                        <span class="bd pd-5 tx-dark tx-medium mg-x-5">English</span>
+                        <span class="bd pd-5 tx-gray-500 mg-x-5">Portuguese</span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="row justify-content-between mg-t-10">
+                    <div class="col-md-2 pd-lg-x-0 col-4 tx-right mg-t-10">
+                      <p class="tx-14  tx-light mb-0">Projects:</p>
+                    </div>
+                    <div class="col-md-10 col-8 mg-t-10">
+                      <p class="tx-14 mb-0 tx-medium">
+                       4
+                      </p>
+                    </div>
+                  </div>
+                  <div class="row justify-content-between mg-t-10">
+                    <div class="col-md-2 pd-lg-x-0 col-4 tx-right mg-t-10">
+                      <p class="tx-14  tx-light mb-0">Sanctions:</p>
+                    </div>
+                    <div class="col-md-10 col-8 mg-t-10">
+                      <p class="tx-14 mb-0 tx-medium">
+                       None
+                      </p>
+                    </div>
+                  </div>
+                  <div class="row justify-content-between mg-t-10">
+                    <div class="col-md-2 pd-lg-x-0 col-4 tx-right mg-t-10">
+                      <p class="tx-14  tx-light mb-0">Skills:</p>
+                    </div>
+                    <div class="col-md-10 col-8 mg-t-10">
+                      <p class="tx-14 mb-0 tx-medium">
+                       6
+                      </p>
+                    </div>
+                  </div>
+                  <div class="row justify-content-between mg-t-10">
+                    <div class="col-md-2 pd-lg-x-0 col-4 tx-right mg-t-10">
+                      <p class="tx-14  tx-light mb-0">Courses:</p>
+                    </div>
+                    <div class="col-md-10 col-8 mg-t-10">
+                      <p class="tx-14 mb-0 tx-medium">
+                       6
+                      </p>
+                    </div>
+                  </div>
+                </div>                  
+              </div>
+
+            <div>
+              <p class="tx-18 tx-medium mb-0 mt-4">Analysis Breakdown</p>
+              <div class="card mt-2 pd-5">
+                <div class="card-header pd-y-10 pd-x-20 card-header-pink " id="headingProject">
+                  <div class="d-flex justify-content-between collapse-btn"  data-toggle="collapse" data-target="#collapseProject" aria-expanded="true" aria-controls="collapseProject">
+                    <p class="tx-16 tx-medium mb-0">Project Memberships
+                    <span class="mg-l-30 bagde badge-pink">2</span>
+                    </p> 
+                    <p class="tx-14 tx-normal mb-0"><i class="fas fa-angle-down ml-2"></i></p>
+                  </div> 
+                </div>
+
+                <div class="card-body">
+                  <div class="">
+                    <p class="tx-16 tx-medium mb-0">Corporate Council on African Investment Mission to Nigeria</p>
+                    <p class="tx-14 mb-1">United Bank for Africa(Oct 2020)</p>
+                    <p class="tx-14 mb-1">Mapped key stakeholders and facilitated high-level engagements with c-suite executives and senior government officials to drive multimillion-dollar investment</p>
+                  </div>
+                </div>
+                
+                <div id="collapseProject" class="collapse" aria-labelledby="headingProject" data-parent="#accordion">
+                  <div class="card-body bd-t">
+                    <div class="">
+                      <p class="tx-16 tx-medium mb-0">Corporate Council on African Investment Mission to Nigeria</p>
+                      <p class="tx-14 mb-1">United Bank for Africa(Oct 2020)</p>
+                      <p class="tx-14 mb-1">Mapped key stakeholders and facilitated high-level engagements with c-suite executives and senior government officials to drive multimillion-dollar investment</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="card mt-3 pd-5">
+                <div class="card-header pd-y-10 pd-x-20 card-header-pink " id="">
+                  <div class="d-flex justify-content-between"   >
+                    <p class="tx-16 tx-medium mb-0">Skills
+                    <span class="mg-l-30 bagde badge-pink">4</span>
+                    </p> 
+                  </div> 
+                </div>
+
+                <div class="card-body">
+                      <p class="tx-14 mb-0">
+                        <span class="bd pd-5 tx-gray-500 mg-x-5">Leadership</span>
+                        <span class="bd pd-5 tx-gray-500 mg-x-5">Customer Service</span>
+                        <span class="bd pd-5 tx-gray-500 mg-x-5">Microsoft Office</span>
+                        <span class="bd pd-5 tx-dark mg-x-5">Cybersecurity</span>
+                      </p>
+                </div>                  
+              </div>
+
+              <div class="card mt-3 pd-5">
+                <div class="card-header pd-y-10 pd-x-20 card-header-pink " id="headingHonour">
+                  <div class="d-flex justify-content-between collapse-btn"  data-toggle="collapse" data-target="#collapseHonour" aria-expanded="true" aria-controls="collapseHonour">
+                    <p class="tx-16 tx-medium mb-0">Rewards
+                    <span class="mg-l-30 bagde badge-pink">3</span>
+                    </p> 
+                    <p class="tx-14 tx-normal mb-0"><i class="fas fa-angle-down ml-2"></i></p>
+                  </div> 
+                </div>
+
+                <div class="card-body">
+                      <p class="tx-16 tx-medium mb-0">Collins Powell Fellows</p>
+                      <p class="tx-14 mb-0">Oct 2020</p>
+                </div>
+                
+                <div id="collapseHonour" class="collapse" aria-labelledby="headingHonour" data-parent="#accordion">
+                  <div class="card-body bd-t pd-t-0">
+                    <div class="pd-t-10 pd-x-0">
+                      <p class="tx-16 tx-medium mb-0">W. Arthur Lewis Fellowship</p>
+                      <p class="tx-14 mb-0">Dec 2018</p>
+                    </div>
+                  </div>
+                  <div class="card-body bd-t pd-t-0">
+                    <div class="pd-t-10 pd-x-0">
+                      <p class="tx-16 tx-medium mb-0">SAIS General Fellows</p>
+                      <p class="tx-14 mb-0">Oct 2017</p>
+                    </div>
+                  </div>
+                </div>
+              </div>                  
+               
+              
+              <div class="card mt-3 pd-5">
+                <div class="card-header pd-y-10 pd-x-20 card-header-pink " id="headingCourse">
+                  <div class="d-flex justify-content-between collapse-btn"  data-toggle="collapse" data-target="#collapseCourse" aria-expanded="true" aria-controls="collapseCourse">
+                    <p class="tx-16 tx-medium mb-0">Courses
+                    <span class="mg-l-30 bagde badge-pink">2</span>
+                    </p> 
+                    <p class="tx-14 tx-normal mb-0"><i class="fas fa-angle-down ml-2"></i></p>
+                  </div> 
+                </div>
+
+                <div class="card-body">
+                    <div class="row justify-content-between">
+                      <div class="col-md-10 col-8">
+                        <p class="tx-16 tx-medium mb-0">Strategic Marketing</p>
+                        <p class="tx-14 mb-0">Oct 2020</p>
+                      </div>
+                      <div class="col-md-2 col-4 pd-l-0">
+                        <p class="tx-16 tx-medium mb-0 float-lg-right">Completed</p>
+                      </div>
+                    </div>
+                </div>
+                
+                <div id="collapseCourse" class="collapse" aria-labelledby="headingCourse" data-parent="#accordion">
+                  <div class="card-body bd-t">
+                    <div class="row justify-content-between">
+                      <div class="col-md-10 col-8">
+                        <p class="tx-16 tx-medium mb-0">Effective Leadership Sprint</p>
+                        <p class="tx-14 mb-0">Oct 2020</p>
+                      </div>
+                      <div class="col-md-2 col-4 pd-l-0">
+                        <p class="tx-16 tx-medium mb-0 float-lg-right">In Progress</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>                  
+             
+              <div class="card mt-3 pd-5">
+                <div class="card-header pd-y-10 pd-x-20 card-header-pink " id="headingSanctions">
+                  <div class="d-flex justify-content-between collapse-btn"  data-toggle="collapse" data-target="#collapseSanctions" aria-expanded="true" aria-controls="collapseSanctions">
+                    <p class="tx-16 tx-medium mb-0">Sanctions
+                    <!-- <span class="mg-l-30 bagde badge-pink">2</span> -->
+                    </p> 
+                    <!-- <p class="tx-14 tx-normal mb-0"><i class="fas fa-angle-down ml-2"></i></p> -->
+                  </div> 
+                </div>
+                <div class="card-body">
+                  <p class="tx-16 tx-medium mb-0">None</p>
+                </div>
+              </div>                  
+            </div>  
+             
+            </div>
+            <div class="col-md-6 col-lg-6 col-12 mg-t-20">
+              <div class="card bg-compare">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-3 col-3 pd-y-10">
+                      <img src="../assets/img/prof.png" class="img-fluid compare-img"/>
+                    </div>
+                    <div class="col-md-6 col-7 pd-y-10">
+                      <p class="tx-16 tx-medium mb-2">Annie Macaulay</p>
+                      <p class="tx-14 tx-light mb-0">Team Lead, Assistant General Manager</p>
+                      <p class="mb-1"><span class="tx-14">Lekki, Lagos |</span> <span class="tx-medium">Full Time</span></p>
+                      <p class="tx-12 tx-medium tx-uppercase">15 years experience</p>
+                    </div>
+                    <div class="col-md-3 col-2 pd-y-10">
+                      <p class="tx-18 tx-medium mb-0"><span class="tx-primary">75%</span> match</p>
+                    </div>
+
+                    <div class="col-md-3 col-3">
+                      <p class="tx-14 tx-light mb-0">Education:</p>
+                    </div>
+                    <div class="col-md-6 col-7">
+                      <p class="tx-14 tx-light mb-0">Royal Holloway, University of London, MBA University of Lagos. Bsc, Economics</p>
+                    </div>
+                    <div class="col-md-3 col-2">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card mt-3 pd-5">
+                <div class="card-header pd-y-10 pd-x-20 card-header-pink " id="">
+                  <div class="d-flex justify-content-between"   >
+                    <p class="tx-16 tx-medium mb-0">Match Analysis
+                    </p> 
+                  </div> 
+                </div>
+                <div class="card-body">
+                  <div class="row justify-content-between">
+                    <div class="col-md-2 pd-lg-x-0 col-4 tx-right mg-t-10">
+                      <p class="tx-14  tx-light mb-0">Certification:</p>
+                    </div>
+                    <div class="col-md-10 col-12 mg-t-10">
+                      <p class="tx-14 mb-0">
+                        <span class="bd pd-5 tx-dark tx-medium mg-x-5">Java Enterprise Certification</span>
+                        <span class="bd pd-5 tx-gray-500 mg-x-5">Oracle Associate Certificate</span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="row justify-content-between mg-t-10">
+                    <div class="col-md-2 pd-lg-x-0 col-4 tx-right mg-t-10">
+                      <p class="tx-14  tx-light mb-0">Languages:</p>
+                    </div>
+                    <div class="col-md-10 col-8 mg-t-10">
+                      <p class="tx-14 mb-0">
+                        <span class="bd pd-5 tx-dark tx-medium mg-x-5">English</span>
+                        <span class="bd pd-5 tx-gray-500 mg-x-5">Portuguese</span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="row justify-content-between mg-t-10">
+                    <div class="col-md-2 pd-lg-x-0 col-4 tx-right mg-t-10">
+                      <p class="tx-14  tx-light mb-0">Projects:</p>
+                    </div>
+                    <div class="col-md-10 col-8 mg-t-10">
+                      <p class="tx-14 mb-0 tx-medium">
+                       4
+                      </p>
+                    </div>
+                  </div>
+                  <div class="row justify-content-between mg-t-10">
+                    <div class="col-md-2 pd-lg-x-0 col-4 tx-right mg-t-10">
+                      <p class="tx-14  tx-light mb-0">Sanctions:</p>
+                    </div>
+                    <div class="col-md-10 col-8 mg-t-10">
+                      <p class="tx-14 mb-0 tx-medium">
+                       None
+                      </p>
+                    </div>
+                  </div>
+                  <div class="row justify-content-between mg-t-10">
+                    <div class="col-md-2 pd-lg-x-0 col-4 tx-right mg-t-10">
+                      <p class="tx-14  tx-light mb-0">Skills:</p>
+                    </div>
+                    <div class="col-md-10 col-8 mg-t-10">
+                      <p class="tx-14 mb-0 tx-medium">
+                       6
+                      </p>
+                    </div>
+                  </div>
+                  <div class="row justify-content-between mg-t-10">
+                    <div class="col-md-2 pd-lg-x-0 col-4 tx-right mg-t-10">
+                      <p class="tx-14  tx-light mb-0">Courses:</p>
+                    </div>
+                    <div class="col-md-10 col-8 mg-t-10">
+                      <p class="tx-14 mb-0 tx-medium">
+                       6
+                      </p>
+                    </div>
+                  </div>
+                </div>                  
+              </div>
+
+              <div>
+                <p class="tx-18 tx-medium mb-0 mt-4">Analysis Breakdown</p>
+                <div class="card mt-2 pd-5">
+                  <div class="card-header pd-y-10 pd-x-20 card-header-pink " id="headingProject">
+                    <div class="d-flex justify-content-between collapse-btn"  data-toggle="collapse" data-target="#collapseProject" aria-expanded="true" aria-controls="collapseProject">
+                      <p class="tx-16 tx-medium mb-0">Project Memberships
+                      <span class="mg-l-30 bagde badge-pink">1</span>
+                      </p> 
+                      <!-- <p class="tx-14 tx-normal mb-0"><i class="fas fa-angle-down ml-2"></i></p> -->
+                    </div> 
+                  </div>
+  
+                  <div class="card-body">
+                    <div class="">
+                      <p class="tx-16 tx-medium mb-0">Corporate Council on African Investment Mission to Nigeria</p>
+                      <p class="tx-14 mb-1">United Bank for Africa(Oct 2020)</p>
+                      <p class="tx-14 mb-1">Mapped key stakeholders and facilitated high-level engagements with c-suite executives and senior government officials to drive multimillion-dollar investment</p>
+                    </div>
+                  </div>
+                  
+                  <!-- <div id="collapseProject" class="collapse" aria-labelledby="headingProject" data-parent="#accordion">
+                    <div class="card-body bd-t">
+                      <div class="">
+                        <p class="tx-16 tx-medium mb-0">Corporate Council on African Investment Mission to Nigeria</p>
+                        <p class="tx-14 mb-1">United Bank for Africa(Oct 2020)</p>
+                        <p class="tx-14 mb-1">Mapped key stakeholders and facilitated high-level engagements with c-suite executives and senior government officials to drive multimillion-dollar investment</p>
+                      </div>
+                    </div>
+                  </div> -->
+                </div>
+                
+                <div class="card mt-3 pd-5">
+                  <div class="card-header pd-y-10 pd-x-20 card-header-pink " id="">
+                    <div class="d-flex justify-content-between"   >
+                      <p class="tx-16 tx-medium mb-0">Skills
+                      <span class="mg-l-30 bagde badge-pink">3</span>
+                      </p> 
+                    </div> 
+                  </div>
+  
+                  <div class="card-body">
+                        <p class="tx-14 mb-0">
+                          <span class="bd pd-5 tx-gray-500 mg-x-5">Leadership</span>
+                          <span class="bd pd-5 tx-gray-500 mg-x-5">Customer Service</span>
+                          <span class="bd pd-5 tx-gray-500 mg-x-5">Microsoft Office</span>
+                        </p>
+                  </div>                  
+                </div>
+  
+                <div class="card mt-3 pd-5">
+                  <div class="card-header pd-y-10 pd-x-20 card-header-pink " id="headingHonour">
+                    <div class="d-flex justify-content-between collapse-btn"  data-toggle="collapse" data-target="#collapseHonour" aria-expanded="true" aria-controls="collapseHonour">
+                      <p class="tx-16 tx-medium mb-0">Rewards
+                      <span class="mg-l-30 bagde badge-pink">2</span>
+                      </p> 
+                      <p class="tx-14 tx-normal mb-0"><i class="fas fa-angle-down ml-2"></i></p>
+                    </div> 
+                  </div>
+  
+                  <div class="card-body">
+                        <p class="tx-16 tx-medium mb-0">Collins Powell Fellows</p>
+                        <p class="tx-14 mb-0">Oct 2020</p>
+                  </div>
+                  
+                  <div id="collapseHonour" class="collapse" aria-labelledby="headingHonour" data-parent="#accordion">
+                    <div class="card-body bd-t pd-t-0">
+                      <div class="pd-t-10 pd-x-0">
+                        <p class="tx-16 tx-medium mb-0">W. Arthur Lewis Fellowship</p>
+                        <p class="tx-14 mb-0">Dec 2018</p>
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>                  
+                 
+                
+                <div class="card mt-3 pd-5">
+                  <div class="card-header pd-y-10 pd-x-20 card-header-pink " id="headingCourse">
+                    <div class="d-flex justify-content-between collapse-btn"  data-toggle="collapse" data-target="#collapseCourse" aria-expanded="true" aria-controls="collapseCourse">
+                      <p class="tx-16 tx-medium mb-0">Courses
+                      <span class="mg-l-30 bagde badge-pink">2</span>
+                      </p> 
+                      <p class="tx-14 tx-normal mb-0"><i class="fas fa-angle-down ml-2"></i></p>
+                    </div> 
+                  </div>
+  
+                  <div class="card-body">
+                      <div class="row justify-content-between">
+                        <div class="col-md-10 col-8">
+                          <p class="tx-16 tx-medium mb-0">Strategic Marketing</p>
+                          <p class="tx-14 mb-0">Oct 2020</p>
+                        </div>
+                        <div class="col-md-2 col-4 pd-l-0">
+                          <p class="tx-16 tx-medium mb-0 float-lg-right">Completed</p>
+                        </div>
+                      </div>
+                  </div>
+                  
+                  <div id="collapseCourse" class="collapse" aria-labelledby="headingCourse" data-parent="#accordion">
+                    <div class="card-body bd-t">
+                      <div class="row justify-content-between">
+                        <div class="col-md-10 col-8">
+                          <p class="tx-16 tx-medium mb-0">Effective Leadership Sprint</p>
+                          <p class="tx-14 mb-0">Oct 2020</p>
+                        </div>
+                        <div class="col-md-2 col-4 pd-l-0">
+                          <p class="tx-16 tx-medium mb-0 float-lg-right">In Progress</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>                  
+               
+                <div class="card mt-3 pd-5">
+                  <div class="card-header pd-y-10 pd-x-20 card-header-pink " id="headingSanctions">
+                    <div class="d-flex justify-content-between collapse-btn"  data-toggle="collapse" data-target="#collapseSanctions" aria-expanded="true" aria-controls="collapseSanctions">
+                      <p class="tx-16 tx-medium mb-0">Sanctions
+                      <!-- <span class="mg-l-30 bagde badge-pink">2</span> -->
+                      </p> 
+                      <!-- <p class="tx-14 tx-normal mb-0"><i class="fas fa-angle-down ml-2"></i></p> -->
+                    </div> 
+                  </div>
+                  <div class="card-body">
+                    <p class="tx-16 tx-medium mb-0">None</p>
+                  </div>
+                </div>                  
+              </div>
+            </div>
+          </div>
+          
+  
+      </div>
+    </div>
+
+    <script src="../assets/lib/jquery/jquery.min.js"></script>
+    <script src="../assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/lib/feather-icons/feather.min.js"></script>
+    <script src="../assets/lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+
+    <script src="../assets/lib/prismjs/prism.js"></script>
+    <script src="../assets/lib/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="../assets/lib/datatables.net-dt/js/dataTables.dataTables.min.js"></script>
+    <script src="../assets/lib/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="../assets/lib/datatables.net-responsive-dt/js/responsive.dataTables.min.js"></script>
+    <script src="../assets/lib/typeahead.js/typeahead.jquery.min.js"></script>
+    <script src="../assets/lib/typeahead.js/typeahead.bundle.min.js"></script>
+
+
+    <script src="../assets/lib/chart.js/Chart1.min.js"></script>
+    <script src="../assets/lib/chart.js/utils.js"></script>
+
+    <script src="../assets/js/dashforge.js"></script>
+    <script src="../assets/js/dashforge.aside.js"></script>
+    <script src="../assets/js/dashforge.sampledata.js"></script>
+
+    <!-- append theme customizer -->
+    <script src="../assets/lib/js-cookie/js.cookie.js"></script>
+    <!-- <script src="../assets/js/dashforge.settings.js"></script> -->
+<script>
+  var substringMatcher = function(strs) {
+return function findMatches(q, cb) {
+  var matches, substrRegex;
+
+  // an array that will be populated with substring matches
+  matches = [];
+
+  // regex used to determine if a string contains the substring `q`
+  substrRegex = new RegExp(q, 'i');
+
+  // iterate through the pool of strings and for any string that
+  // contains the substring `q`, add it to the `matches` array
+  $.each(strs, function(i, str) {
+    if (substrRegex.test(str)) {
+      matches.push(str);
+    }
+  });
+
+  cb(matches);
+};
+};
+
+var names = ['Seyi Peters', 'Bassey Elijah', 'Arizona Jones', 'Tammy Abraham', 'California Bill',
+'Isa Seyi', 'Clinton Barack',"Will Smith" , "Dave Dan", 'Kelvin smith'
+];
+
+$('#theBasics').typeahead({
+hint: true,
+highlight: true,
+minLength: 1
+},
+{
+name: 'names',
+source: substringMatcher(names)
+});
+
+function goBack() {
+  window.history.back();
+};
+</script>
+ 
+<script>
+  $(document).ready(function(){
+        // Add minus icon for collapse element which is open by default
+        $(".collapse.show").each(function(){
+          $(this).prev(".card-header").find(".fas").addClass("fa-angle-up").removeClass("fa-angle-down");
+        });
+        // Toggle plus minus icon on show hide of collapse element
+        $(".collapse").on('show.bs.collapse', function(){
+          $(this).prev(".card-header").find(".fas").removeClass("fa-angle-down").addClass("fa-angle-up");
+        }).on('hide.bs.collapse', function(){
+          $(this).prev(".card-header").find(".fas").removeClass("fa-angle-up").addClass("fa-angle-down");
+        });
+      });
+  </script>
+
+   <!-- for togglesidebar -->
+   <script>
+    /* Set the width of the sidebar to 250px (show it) */
+function openNav() {
+document.getElementById("mySidepanel").style.width = "250px";
+}
+
+/* Set the width of the sidebar to 0 (hide it) */
+function closeNav() {
+document.getElementById("mySidepanel").style.width = "0";
+}
+function fillFavourite() {
+     let y = document.getElementById("fillFavo");
+     y.firstElementChild.style.fill = "red"
+    }
+  </script>
+
+  </body>
+</html>
