@@ -387,16 +387,13 @@
                   <div class="form-row">
                     <div class="form-group col-xl-4 col-md-6 col-12 project-div yearAge-section">
                       <label for="age">Age</label>
-                      <div class="input-group">
-                        <input type="text" class="form-control" aria-label="Text input with dropdown button">
-                        <div class="input-group-append">
-                          <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-                          <div class="dropdown-menu">
-                            <a class="dropdown-item">Infinitesimal</a>
-                            <a class="dropdown-item">Range</a>
-                        </div>
-                      </div>
-                    </div>
+                      <input type="text" class="form-control" list="ages" />
+                        <datalist id="ages">
+                          <option>25-30 years</option>
+                          <option>30-40years</option>
+                          <option>40-50years</option>
+                          <option>Over 60 years</option>
+                        </datalist>
                     </div>
                     <div class="form-group col-xl-4 col-md-6 col-12 project-div dept-section">
                       <label for="dept">Department</label>
