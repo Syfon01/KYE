@@ -266,6 +266,11 @@
                          <span class="input-group-text bg-primary tx-white pd-x-15" id="basic-addon2">Add</span>
                        </div> -->
                      </div>
+                     <label for="Date of Birth">
+                      Enter the Date:
+                      <input type='date' id='date' name='date' class="form-control" >
+
+                  </label>
                    </div>
                    
                   </div>
@@ -547,8 +552,8 @@
       }).change(); 
     });
   
- 
   </script>
+  <script>$('#date').datepicker({ dateFormat: 'dd-mm-yy' }).val();</script>
   <script>
     
   </script>

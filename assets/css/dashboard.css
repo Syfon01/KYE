@@ -79,7 +79,8 @@ background-color: transparent;
 }
 .aside-fixed{
   top: 65px;
-  height: 100vh;
+  min-height: 100vh;
+  /* margin-bottom: 40px!important; */
 }
 .offset-div{
   margin-top: -10%;
@@ -438,4 +439,15 @@ span.multiselect-native-select{
 }
 .bg-compare{
   background-color: #F9F9F9!important;
+}
+
+/* talent  */
+.fill{
+  fill: #EFEFEF;
+}
+.clickable-row{
+  cursor: pointer;
+}
+.card-height{
+  min-height: 50%;
 }
