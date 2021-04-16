@@ -978,6 +978,9 @@ source: substringMatcher(names)
          $(".clickable-row").click(function() {
              window.location = $(this).data("href");
          });
+         $("#customCheck").click(function () {
+     $('input:checkbox').not(this).prop('checked', this.checked);
+ });
        });
        </script>
  

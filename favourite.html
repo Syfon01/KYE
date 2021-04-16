@@ -269,8 +269,8 @@
               <tr>
                 <th scope="col">
                   <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input "  name="select-all" id="select-all">
-                    <label class="custom-control-label pd-y-10" for="select-all">
+                    <input type="checkbox" class="custom-control-input" id="customCheck">
+                    <label class="custom-control-label pd-y-10" for="customCheck">
                     </label>
                   </div>
                 </th>
@@ -790,18 +790,9 @@ source: substringMatcher(names)
         });
 
         // Listen for click on toggle checkbox
-      $('#select-all').click(function(event) {   
-          if(this.checked) {
-              // Iterate each checkbox
-              $(':checkbox').each(function() {
-                  this.checked = true;                        
-              });
-          } else {
-              $(':checkbox').each(function() {
-                  this.checked = false;                       
-              });
-          }
-      });
+        $("#customCheck").click(function () {
+     $('input:checkbox').not(this).prop('checked', this.checked);
+    });
       });
       </script>
 

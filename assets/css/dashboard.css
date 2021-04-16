@@ -451,3 +451,7 @@ span.multiselect-native-select{
 .card-height{
   min-height: 50%;
 }
+.select2-container .select2-selection--multiple .select2-selection__rendered{
+  max-height: 75px;
+  overflow-y: auto!important;
+}

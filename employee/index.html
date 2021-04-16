@@ -824,18 +824,10 @@ source: substringMatcher(names)
           $(this).prev(".card-header").find(".fas").removeClass("fa-minus").addClass("fa-plus");
         });
 
-        $('#customCheck').click(function(event) {   
-          if(this.checked) {
-              // Iterate each checkbox
-              $(':checkbox').each(function() {
-                  this.checked = true;                        
-              });
-          } else {
-              $(':checkbox').each(function() {
-                  this.checked = false;                       
-              });
-          }
-      });
+        $("#customCheck").click(function () {
+     $('input:checkbox').not(this).prop('checked', this.checked);
+ });
+
       });
       </script>
        <!-- for togglesidebar -->
