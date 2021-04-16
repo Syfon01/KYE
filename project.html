@@ -277,8 +277,8 @@
                 <tr class="tx-bold">
                   <th scope="col">
                     <div class="custom-control custom-checkbox">
-                      <input type="checkbox" class="custom-control-input " id="customCheck">
-                      <label class="custom-control-label pd-y-10" for="customCheck">
+                      <input type="checkbox" class="custom-control-input "  name="select-all" id="select-all">
+                      <label class="custom-control-label pd-y-10" for="select-all">
                       </label>
                     </div>
                 </th>
@@ -644,6 +644,18 @@ source: substringMatcher(names)
         $(".clickable-row").click(function() {
             window.location = $(this).data("href");
         });
+        $('#select-all').click(function(event) {   
+          if(this.checked) {
+              // Iterate each checkbox
+              $(':checkbox').each(function() {
+                  this.checked = true;                        
+              });
+          } else {
+              $(':checkbox').each(function() {
+                  this.checked = false;                       
+              });
+          }
+      });
       });
       </script>
 <!-- for togglesidebar -->
