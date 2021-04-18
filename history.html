@@ -17,6 +17,7 @@
     <link href="../assets/lib/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet">
     <link href="../assets/lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet">
     <link href="../assets/lib/select2/css/select2.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png">
@@ -231,8 +232,9 @@
          <p class="tx-24 tx-semibold mb-0"> Activity History</p>
          <p class="tx-14 tx-gray">Your activity history is listed starting from most recent</p>
        </div>
-       <div class="d-flex justify-content-between mg-t-40">
-         <div>
+
+       <div class="row justify-content-between mg-t-40">
+         <div class="col-md-2 col-7">
           <div class="row">
             <div class="col">
               <span>Sort by</span>
@@ -247,14 +249,23 @@
             </div>
          </div>
          </div>
-         <div>
-          <button class="btn btn-primary-outline">
-            <span>
-              <i data-feather="printer" class="tx-primary mg-r-5 print-icon"></i>
-              Print
-            </span>
-          </button>
-         </div>
+         <div class="col-md-4 col-12 mg-t-10 mg-md-t-0">
+           <div class="row">
+            <div id="reportrange" class="form-control date-picker tx-13 ml-4 col-8">
+              <i class="fa fa-calendar"></i>&nbsp;
+              <span></span> <i class="fa fa-caret-down"></i>
+          </div>
+           <div>
+            <button class="btn btn-primary-outline">
+              <span>
+                <i data-feather="printer" class="tx-primary mg-r-5 print-icon"></i>
+                Print
+              </span>
+            </button>
+           </div>
+           </div>
+           
+        </div>
        </div>
        <div class="card mg-t-20 pd-x-20">
          <div class="card-header pd-x-0">
@@ -671,64 +682,34 @@
 
     <!-- append theme customizer -->
     <script src="../assets/lib/js-cookie/js.cookie.js"></script>
-    <!-- <script src="../assets/js/dashforge.settings.js"></script> -->
-<script>
-  var substringMatcher = function(strs) {
-return function findMatches(q, cb) {
-  var matches, substrRegex;
-
-  // an array that will be populated with substring matches
-  matches = [];
-
-  // regex used to determine if a string contains the substring `q`
-  substrRegex = new RegExp(q, 'i');
-
-  // iterate through the pool of strings and for any string that
-  // contains the substring `q`, add it to the `matches` array
-  $.each(strs, function(i, str) {
-    if (substrRegex.test(str)) {
-      matches.push(str);
-    }
-  });
-
-  cb(matches);
-};
-};
-
-var names = ['Seyi Peters', 'Bassey Elijah', 'Arizona Jones', 'Tammy Abraham', 'California Bill',
-'Isa Seyi', 'Clinton Barack',"Will Smith" , "Dave Dan", 'Kelvin smith'
-];
-
-$('#theBasics').typeahead({
-hint: true,
-highlight: true,
-minLength: 1
-},
-{
-name: 'names',
-source: substringMatcher(names)
-});
-
-</script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 
     <script>
-      $('#employee').DataTable({
-        responsive: true,
-        language: {
-          searchPlaceholder: 'Search...',
-          sSearch: '',
-          lengthMenu: '_MENU_ items/page',
-          columnDefs: [{
-              responsivePriority: 1,
-              targets: 0
-            },
-            {
-              responsivePriority: 2,
-              targets: -1
-            }
-          ]
+     //date picker
+     $(document).ready( function () {
+     let start = moment().subtract(29, 'days');
+    let end = moment();
+
+    function cb(start, end) {
+        $('#reportrange span').html(start.format('MMMM D YYYY') + ' - ' + end.format('MMMM D YYYY'));
+    }
+
+    $('#reportrange').daterangepicker({
+        startDate: start,
+        endDate: end,
+        ranges: {
+          'Today': [moment(), moment()],
+          'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+          'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+          'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+          'This Month': [moment().startOf('month'), moment().endOf('month')],
+          'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
         }
-      });
+    }, cb);
+
+    cb(start, end); 
+ });
     </script>
 
     <script>
